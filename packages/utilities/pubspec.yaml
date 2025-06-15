@@ -1,0 +1,25 @@
+name: utilities
+description: "Utilities package."
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Пакет для открытия URL ссылок
+  url_launcher: ^6.3.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # Пакет с набором правил линтера.
+  flutter_lints: ^6.0.0
+
+flutter:
+  generate: true
+
