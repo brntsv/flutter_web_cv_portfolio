@@ -121,6 +121,7 @@ sealed class AppTheme {
         skyGray: UiKitColor.skyGray,
         darkGray: UiKitColor.darkGray,
         lightGray: UiKitColor.lightGray,
+        blue: UiKitColor.blue,
       );
 
   static TextStyleExt _createTextStyleExt() => TextStyleExt(

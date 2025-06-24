@@ -16,6 +16,9 @@ class UiKitColor {
   /// Color: #000000
   static const Color black = Color(0xFF000000);
 
+  /// Color: #007AFF
+  static const Color blue = Color(0xFF007AFF);
+
   /// Color: #2C2D2E
   static const Color darkGray = Color(0xFF2C2D2E);
 

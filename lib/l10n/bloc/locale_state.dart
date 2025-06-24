@@ -1,9 +1,14 @@
 part of 'locale_bloc.dart';
 
-class LocaleState extends Equatable {
-  final Locale locale;
-
+/// {@template locale_state.class}
+/// Состояние языка
+/// {@endtemplate}
+final class LocaleState extends Equatable {
+  /// {@macro locale_state.class}
   const LocaleState(this.locale);
+
+  /// Язык
+  final Locale locale;
 
   @override
   List<Object> get props => [locale];

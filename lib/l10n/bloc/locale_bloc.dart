@@ -6,10 +6,12 @@ import 'package:web/web.dart' as web;
 part 'locale_event.dart';
 part 'locale_state.dart';
 
+/// {@template locale_bloc.class}
 /// Блок для работы с языком
-class LocaleBloc extends Bloc<LocaleEvent, LocaleState> {
+/// {@endtemplate}
+final class LocaleBloc extends Bloc<LocaleEvent, LocaleState> {
   /// {@macro locale_bloc.class}
-  LocaleBloc() : super(const LocaleState(Locale('ru'))) {
+  LocaleBloc() : super(const LocaleState(_defaultLocale)) {
     on<LoadLocale>(_onLoadLocale);
     on<ChangeLocale>(_onChangeLocale);
 
@@ -17,11 +19,16 @@ class LocaleBloc extends Bloc<LocaleEvent, LocaleState> {
     add(const LoadLocale());
   }
 
+  static const _ru = 'ru';
+  static const _en = 'en';
+  static const _defaultLocale = Locale(_ru);
+  static const _keyLocale = 'appLanguage';
+
   void _onLoadLocale(LoadLocale event, Emitter<LocaleState> emit) {
     try {
       final localStorage = web.window.localStorage;
-      final savedLang = localStorage.getItem('appLanguage');
-      if (savedLang != null && (savedLang == 'ru' || savedLang == 'en')) {
+      final savedLang = localStorage.getItem(_keyLocale);
+      if (savedLang != null && (savedLang == _ru || savedLang == _en)) {
         emit(LocaleState(Locale(savedLang)));
       }
     } on Exception catch (_) {
@@ -31,7 +38,7 @@ class LocaleBloc extends Bloc<LocaleEvent, LocaleState> {
 
   void _onChangeLocale(ChangeLocale event, Emitter<LocaleState> emit) {
     try {
-      web.window.localStorage.setItem('appLanguage', event.locale.languageCode);
+      web.window.localStorage.setItem(_keyLocale, event.locale.languageCode);
       emit(LocaleState(event.locale));
     } on Exception catch (_) {
       // Обработка исключений

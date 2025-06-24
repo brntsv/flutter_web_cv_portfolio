@@ -6,7 +6,11 @@ import 'package:ui_kit/theme/theme.dart';
 
 import '../../l10n/generated/app_localizations.g.dart';
 
-class App extends StatefulWidget {
+/// {@template app.class}
+/// Главный виджет приложения
+/// {@endtemplate}
+final class App extends StatefulWidget {
+  /// {@macro app.class}
   const App({super.key});
 
   @override

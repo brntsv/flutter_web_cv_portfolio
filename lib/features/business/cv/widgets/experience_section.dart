@@ -29,7 +29,7 @@ class ExperienceSection extends StatelessWidget {
                 date: l10n.nanAgencyPeriod,
               ),
             ),
-    
+
             // Информация о работе
             const Expanded(
               flex: 3,
@@ -234,7 +234,12 @@ class _ProjectsSection extends StatelessWidget {
           appearClass: 2,
         ),
         AnimatedTextWithLinks(
-          text: l10n.nanAgencyProjectsDesc,
+          text: l10n.nanAgencyProjectsRealtOne,
+          appearDuration: 8,
+          appearClass: 2,
+        ),
+        AnimatedTextWithLinks(
+          text: l10n.nanAgencyProjectsNovex,
           appearDuration: 8,
           appearClass: 2,
         ),

@@ -12,7 +12,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get portfolio => 'Портфолио';
 
   @override
-  String get yourName => 'Никита Баранцев, Flutter Developer';
+  String get yourName => 'Никита Баранцев';
+
+  @override
+  String get yourJob => 'Flutter Developer';
 
   @override
   String get email => 'brntsv.n@gmail.com';
@@ -24,22 +27,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get location => 'Новосибирск, Россия';
 
   @override
-  String get telegramName => '@bntsv';
+  String get telegramUrl => 'Telegram: [@bntsv](https://t.me/bntsv)';
 
   @override
-  String get githubName => 'brntsv';
-
-  @override
-  String get telegramPrefix => 'Telegram: ';
-
-  @override
-  String get githubPrefix => 'GitHub: ';
-
-  @override
-  String get telegramUrl => 'https://t.me/bntsv';
-
-  @override
-  String get githubUrl => 'https://github.com/brntsv';
+  String get githubUrl => 'GitHub: [brntsv](https://github.com/brntsv)';
 
   @override
   String get aboutMe => 'Обо мне';
@@ -115,8 +106,12 @@ class AppLocalizationsRu extends AppLocalizations {
       'Проекты, на которых работал продолжительное время:';
 
   @override
-  String get nanAgencyProjectsDesc =>
-      '— Realt.One [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU) | [App Store](https://apps.apple.com/us/app/realt-one/id6742776096)\n— Novex [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU) | [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837)';
+  String get nanAgencyProjectsRealtOne =>
+      '— Realt.One [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU) | [App Store](https://apps.apple.com/us/app/realt-one/id6742776096)';
+
+  @override
+  String get nanAgencyProjectsNovex =>
+      '— Novex [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU) | [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837)';
 
   @override
   String get skills => 'Навыки';
@@ -154,4 +149,15 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get increment => 'Увеличить';
+
+  @override
+  String get aboutMeBlog =>
+      'Привет! Я Никита, Flutter разработчик. Работаю в аутсорс команде в Новосибирске. Стараюсь применять лучшие практики разработки, слежу за трендами и расширяю свой стек. Сейчас кроме Flutter интересуюсь Rust и Swift.';
+
+  @override
+  String get cv => 'Резюме';
+
+  @override
+  String get blogFooterDesc =>
+      'Эта страница создана на Flutter Web, серверная часть реализована с помощью Firebase. Вы [можете посмотреть код](https://github.com/brntsv/flutter_web_cv_portfolio) на Github';
 }

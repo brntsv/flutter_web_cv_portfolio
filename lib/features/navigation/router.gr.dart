@@ -11,6 +11,22 @@
 part of 'router.dart';
 
 /// generated route for
+/// [BlogPage]
+class BlogRoute extends PageRouteInfo<void> {
+  const BlogRoute({List<PageRouteInfo>? children})
+    : super(BlogRoute.name, initialChildren: children);
+
+  static const String name = 'BlogRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const BlogPage();
+    },
+  );
+}
+
+/// generated route for
 /// [CvPage]
 class CvRoute extends PageRouteInfo<void> {
   const CvRoute({List<PageRouteInfo>? children})

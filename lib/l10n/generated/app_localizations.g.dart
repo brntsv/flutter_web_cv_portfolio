@@ -107,8 +107,14 @@ abstract class AppLocalizations {
   /// No description provided for @yourName.
   ///
   /// In ru, this message translates to:
-  /// **'Никита Баранцев, Flutter Developer'**
+  /// **'Никита Баранцев'**
   String get yourName;
+
+  /// No description provided for @yourJob.
+  ///
+  /// In ru, this message translates to:
+  /// **'Flutter Developer'**
+  String get yourJob;
 
   /// No description provided for @email.
   ///
@@ -128,40 +134,16 @@ abstract class AppLocalizations {
   /// **'Новосибирск, Россия'**
   String get location;
 
-  /// No description provided for @telegramName.
-  ///
-  /// In ru, this message translates to:
-  /// **'@bntsv'**
-  String get telegramName;
-
-  /// No description provided for @githubName.
-  ///
-  /// In ru, this message translates to:
-  /// **'brntsv'**
-  String get githubName;
-
-  /// No description provided for @telegramPrefix.
-  ///
-  /// In ru, this message translates to:
-  /// **'Telegram: '**
-  String get telegramPrefix;
-
-  /// No description provided for @githubPrefix.
-  ///
-  /// In ru, this message translates to:
-  /// **'GitHub: '**
-  String get githubPrefix;
-
   /// No description provided for @telegramUrl.
   ///
   /// In ru, this message translates to:
-  /// **'https://t.me/bntsv'**
+  /// **'Telegram: [@bntsv](https://t.me/bntsv)'**
   String get telegramUrl;
 
   /// No description provided for @githubUrl.
   ///
   /// In ru, this message translates to:
-  /// **'https://github.com/brntsv'**
+  /// **'GitHub: [brntsv](https://github.com/brntsv)'**
   String get githubUrl;
 
   /// No description provided for @aboutMe.
@@ -290,11 +272,17 @@ abstract class AppLocalizations {
   /// **'Проекты, на которых работал продолжительное время:'**
   String get nanAgencyProjects;
 
-  /// No description provided for @nanAgencyProjectsDesc.
+  /// No description provided for @nanAgencyProjectsRealtOne.
   ///
   /// In ru, this message translates to:
-  /// **'— Realt.One [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU) | [App Store](https://apps.apple.com/us/app/realt-one/id6742776096)\n— Novex [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU) | [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837)'**
-  String get nanAgencyProjectsDesc;
+  /// **'— Realt.One [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU) | [App Store](https://apps.apple.com/us/app/realt-one/id6742776096)'**
+  String get nanAgencyProjectsRealtOne;
+
+  /// No description provided for @nanAgencyProjectsNovex.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Novex [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU) | [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837)'**
+  String get nanAgencyProjectsNovex;
 
   /// No description provided for @skills.
   ///
@@ -367,6 +355,24 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Увеличить'**
   String get increment;
+
+  /// No description provided for @aboutMeBlog.
+  ///
+  /// In ru, this message translates to:
+  /// **'Привет! Я Никита, Flutter разработчик. Работаю в аутсорс команде в Новосибирске. Стараюсь применять лучшие практики разработки, слежу за трендами и расширяю свой стек. Сейчас кроме Flutter интересуюсь Rust и Swift.'**
+  String get aboutMeBlog;
+
+  /// No description provided for @cv.
+  ///
+  /// In ru, this message translates to:
+  /// **'Резюме'**
+  String get cv;
+
+  /// No description provided for @blogFooterDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Эта страница создана на Flutter Web, серверная часть реализована с помощью Firebase. Вы [можете посмотреть код](https://github.com/brntsv/flutter_web_cv_portfolio) на Github'**
+  String get blogFooterDesc;
 }
 
 class _AppLocalizationsDelegate

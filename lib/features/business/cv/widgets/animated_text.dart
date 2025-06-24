@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ui_kit/constants/base_constants.dart';
+import 'package:ui_kit/theme/theme.dart';
 
+/// {@template animated_text.class}
 /// Анимация текста
+/// {@endtemplate}
 class AnimatedText extends StatelessWidget {
   /// {@macro animated_text.class}
   const AnimatedText({
@@ -31,15 +35,16 @@ class AnimatedText extends StatelessWidget {
     // Общая продолжительность анимации
     final totalDuration = appearDuration;
 
+    final color = colors(context);
+
     return Wrap(
-      spacing: 4,
-      runSpacing: 4,
+      spacing: BaseConst.base4,
+      runSpacing: BaseConst.base4,
       children: List.generate(words.length, (index) {
         // Вычисляем "класс" анимации (1-20) аналогично filiph.net
         final animationClass = _getAnimationClass(index, appearClass);
 
         // Определяем параметры анимации для каждого класса
-        // На filiph.net используется 20 различных keyframes (appear1-appear20)
         final animationParams = _getAnimationParams(animationClass);
 
         return TweenAnimationBuilder<double>(
@@ -54,8 +59,8 @@ class AnimatedText extends StatelessWidget {
             '${words[index]}${index == words.length - 1 ? "" : " "}',
             style: style?.copyWith(
               color: Color.lerp(
-                Colors.white,
-                style?.color ?? Colors.black,
+                color.white,
+                style?.color ?? color.black,
                 value,
               ),
             ),

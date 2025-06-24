@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
 import 'package:flutter_web/l10n/widgets/language_switcher.dart';
 
+/// {@template portfolio_page.class}
+/// Страница портфолио
+/// {@endtemplate}
 @RoutePage()
-class PortfolioPage extends StatefulWidget {
+final class PortfolioPage extends StatefulWidget {
+  /// {@macro portfolio_page.class}
   const PortfolioPage({super.key});
 
   @override
@@ -34,7 +38,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
         ),
         actions: const [
           Padding(
-            padding: EdgeInsets.only(right: 8.0),
+            padding: EdgeInsets.only(right: 8),
             child: LanguageSwitcher(),
           ),
         ],
