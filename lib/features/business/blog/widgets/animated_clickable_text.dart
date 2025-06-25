@@ -1,25 +1,33 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:utilities/url_launcher/url_launcher.dart';
 
-/// Анимация текста с ссылками
-class AnimatedTextWithLinks extends StatelessWidget {
-  /// {@macro animated_text_with_links.class}
-  const AnimatedTextWithLinks({
+/// Анимированный кликабельный текст
+class AnimatedClickableText extends StatelessWidget {
+  /// {@macro animated_clickable_text.class}
+  const AnimatedClickableText({
     required this.text,
     required this.appearDuration,
     required this.appearClass,
+    this.onTap,
+    this.description = '',
     super.key,
   });
 
   /// Текст
   final String text;
 
+  /// Описание
+  final String description;
+
   /// Длительность анимации
   final double appearDuration;
 
   /// Класс анимации
   final int appearClass;
+
+  /// Коллбэк для нажатия
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) => Text.rich(
@@ -31,55 +39,38 @@ class AnimatedTextWithLinks extends StatelessWidget {
     final color = colors(context);
     final spans = <InlineSpan>[];
 
-    final linkRegex = RegExp(r'\[(.*?)\]\((.*?)\)');
-    var lastMatchEnd = 0;
-    var wordIndex = 0;
-
-    // Обработка ссылок
-    for (final match in linkRegex.allMatches(text)) {
-      // Добавляем текст до ссылки
-      if (match.start > lastMatchEnd) {
-        final beforeLink = text.substring(lastMatchEnd, match.start);
-        if (beforeLink.isNotEmpty) {
-          spans.addAll(
-            _buildWordsSpans(
-              beforeLink,
-              textStyle.baseText,
-              wordIndex,
-              context,
-            ),
-          );
-          wordIndex += beforeLink.split(' ').length;
-        }
-      }
-
-      // Добавляем саму ссылку (как отдельное слово)
-      final linkText = match.group(1)!;
-      final linkUrl = match.group(2)!;
+    // Разбиваем основной текст на слова
+    final words = text.split(' ');
+    for (var i = 0; i < words.length; i++) {
+      final word = words[i];
+      final isLastWord = i == words.length - 1;
 
       spans.add(
         _buildAnimatedWordWidget(
-          linkText,
-          textStyle.baseText.copyWith(color: color.blue),
-          wordIndex,
-          linkUrl,
+          '$word${isLastWord && description.isEmpty ? "" : " "}',
+          textStyle.baseText.copyWith(
+            color: onTap != null ? color.blue : color.black,
+          ),
+          i,
+          true, // это кликабельная часть
           context,
         ),
       );
-      wordIndex++;
-
-      lastMatchEnd = match.end;
     }
 
-    // Добавляем оставшийся текст после последней ссылки
-    if (lastMatchEnd < text.length) {
-      final afterLinks = text.substring(lastMatchEnd);
-      if (afterLinks.isNotEmpty) {
-        spans.addAll(
-          _buildWordsSpans(
-            afterLinks,
+    // Добавляем описание, если есть
+    if (description.isNotEmpty) {
+      final descWords = description.split(' ');
+      for (var i = 0; i < descWords.length; i++) {
+        final word = descWords[i];
+        final isLastWord = i == descWords.length - 1;
+
+        spans.add(
+          _buildAnimatedWordWidget(
+            '$word${isLastWord ? "" : " "}',
             textStyle.baseText,
-            wordIndex,
+            words.length + i, // продолжаем индексацию
+            false, // описание не кликабельное
             context,
           ),
         );
@@ -89,38 +80,11 @@ class AnimatedTextWithLinks extends StatelessWidget {
     return spans;
   }
 
-  List<InlineSpan> _buildWordsSpans(
-    String text,
-    TextStyle style,
-    int startWordIndex,
-    BuildContext context,
-  ) {
-    final words = text.split(' ');
-    final spans = <InlineSpan>[];
-
-    for (var i = 0; i < words.length; i++) {
-      final word = words[i];
-      final isLastWord = i == words.length - 1;
-
-      spans.add(
-        _buildAnimatedWordWidget(
-          '$word${isLastWord ? "" : " "}',
-          style,
-          startWordIndex + i,
-          null,
-          context,
-        ),
-      );
-    }
-
-    return spans;
-  }
-
   WidgetSpan _buildAnimatedWordWidget(
     String word,
     TextStyle style,
     int wordIndex,
-    String? linkUrl,
+    bool isClickable,
     BuildContext context,
   ) {
     // Вычисляем "класс" анимации (1-20) аналогично оригинальному AnimatedText
@@ -147,14 +111,15 @@ class AnimatedTextWithLinks extends StatelessWidget {
             ),
           );
 
-          if (linkUrl != null) {
-            return GestureDetector(
-              onTap: () => UrlLauncher.openUrl(linkUrl),
-              child: Text(word, style: animatedStyle),
-            );
-          }
-
-          return Text(word, style: animatedStyle);
+          return Text.rich(
+            TextSpan(
+              text: word,
+              style: animatedStyle,
+              recognizer: isClickable && onTap != null
+                  ? (TapGestureRecognizer()..onTap = onTap)
+                  : null,
+            ),
+          );
         },
       ),
     );

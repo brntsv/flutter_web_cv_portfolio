@@ -371,8 +371,56 @@ abstract class AppLocalizations {
   /// No description provided for @blogFooterDesc.
   ///
   /// In ru, this message translates to:
-  /// **'Эта страница создана на Flutter Web, серверная часть реализована с помощью Firebase. Вы [можете посмотреть код](https://github.com/brntsv/flutter_web_cv_portfolio) на Github'**
+  /// **'Этот сайт создан на Flutter Web, серверная часть на Firebase. [Код можно посмотреть](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.'**
   String get blogFooterDesc;
+
+  /// No description provided for @blogFooterDesc2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Проект вдохновлен [репозиторием](https://github.com/filiph/filiphnet) Filip Hráček'**
+  String get blogFooterDesc2;
+
+  /// No description provided for @flourAndOrder.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мука и порядок'**
+  String get flourAndOrder;
+
+  /// No description provided for @realtOne.
+  ///
+  /// In ru, this message translates to:
+  /// **'Realt.One'**
+  String get realtOne;
+
+  /// No description provided for @novex.
+  ///
+  /// In ru, this message translates to:
+  /// **'Novex'**
+  String get novex;
+
+  /// No description provided for @flourAndOrderDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **' CRM-приложение для кондитеров'**
+  String get flourAndOrderDesc;
+
+  /// No description provided for @realtOneDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **' приложение для риэлторов'**
+  String get realtOneDesc;
+
+  /// No description provided for @novexDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **' E-comm приложение для сети хозяйственных магазинов'**
+  String get novexDesc;
+
+  /// No description provided for @aboutThisPage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Об этой странице'**
+  String get aboutThisPage;
 }
 
 class _AppLocalizationsDelegate

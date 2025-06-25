@@ -40,7 +40,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'I have experience working in teams both in-office and remotely. I am interested in mobile app development best practices and apply them in my work. I love development for its challenges and unusual tasks that encourage continuous growth and learning new things. I have participated in various projects: both in new ones launched from scratch within the team, and in those transferred to us from other teams.';
 
   @override
-  String get projects => 'Проекты';
+  String get projects => 'Projects';
 
   @override
   String get experience => 'Work Experience';
@@ -161,5 +161,30 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get blogFooterDesc =>
-      'This page is built with Flutter Web and the server part is powered by Firebase. You [can view the code](https://github.com/brntsv/flutter_web_cv_portfolio) on Github';
+      'This site is built with Flutter Web and the server part is on Firebase. [Code can be viewed](https://github.com/brntsv/flutter_web_cv_portfolio) on Github.';
+
+  @override
+  String get blogFooterDesc2 =>
+      'Project inspired by [repository](https://github.com/filiph/filiphnet) Filip Hráček';
+
+  @override
+  String get flourAndOrder => 'Flour and Order';
+
+  @override
+  String get realtOne => 'Realt.One';
+
+  @override
+  String get novex => 'Novex';
+
+  @override
+  String get flourAndOrderDesc => ' CRM-app for bakers';
+
+  @override
+  String get realtOneDesc => ' app for realtors';
+
+  @override
+  String get novexDesc => ' app for a network of household stores';
+
+  @override
+  String get aboutThisPage => 'About this page';
 }

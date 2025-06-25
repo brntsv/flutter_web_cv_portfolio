@@ -9,6 +9,7 @@ import 'package:ui_kit/theme/theme.dart';
 import '../../navigation/router.dart';
 import '../cv/widgets/animated_text.dart';
 import '../cv/widgets/animated_text_with_links.dart';
+import 'widgets/animated_clickable_text.dart';
 
 /// {@template blog_page.class}
 /// Страница с блогом, главная страница
@@ -57,24 +58,91 @@ final class BlogPage extends StatelessWidget {
                         appearDuration: 6,
                         appearClass: 2,
                       ),
-                      ElevatedButton(
-                        onPressed: () {
-                          context.push(const CvRoute());
-                        },
-                        child: const Text('sdadsa'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          context.push(const PortfolioRoute());
-                        },
-                        child: const Text('asd'),
+
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: BaseConst.base12,
+                        children: [
+                          AnimatedText(
+                            text: l10n.projects,
+                            style: textStyle.h3,
+                            appearDuration: 6,
+                            appearClass: 2,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: BaseConst.base16,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              spacing: BaseConst.base4,
+                              children: [
+                                AnimatedClickableText(
+                                  text: l10n.flourAndOrder,
+                                  description: l10n.flourAndOrderDesc,
+                                  appearDuration: 6,
+                                  appearClass: 2,
+                                  onTap: () => context.push(
+                                    const PortfolioRoute(),
+                                  ),
+                                ),
+                                AnimatedClickableText(
+                                  text: l10n.realtOne,
+                                  description: l10n.realtOneDesc,
+                                  appearDuration: 6,
+                                  appearClass: 2,
+                                  onTap: () => context.push(
+                                    const PortfolioRoute(),
+                                  ),
+                                ),
+                                AnimatedClickableText(
+                                  text: l10n.novex,
+                                  description: l10n.novexDesc,
+                                  appearDuration: 6,
+                                  appearClass: 2,
+                                  onTap: () => context.push(
+                                    const CvRoute(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
 
-                      /// Ссылка на гитхаб этой страницы
-                      AnimatedTextWithLinks(
-                        text: l10n.blogFooterDesc,
-                        appearDuration: 6,
-                        appearClass: 2,
+                      /// Об этой странице
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: BaseConst.base12,
+                        children: [
+                          AnimatedText(
+                            text: l10n.aboutThisPage,
+                            style: textStyle.h3,
+                            appearDuration: 6,
+                            appearClass: 2,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: BaseConst.base16,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              spacing: BaseConst.base4,
+                              children: [
+                                AnimatedTextWithLinks(
+                                  text: l10n.blogFooterDesc,
+                                  appearDuration: 6,
+                                  appearClass: 2,
+                                ),
+                                AnimatedTextWithLinks(
+                                  text: l10n.blogFooterDesc2,
+                                  appearDuration: 6,
+                                  appearClass: 2,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

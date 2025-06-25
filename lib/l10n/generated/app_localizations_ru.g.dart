@@ -159,5 +159,30 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get blogFooterDesc =>
-      'Эта страница создана на Flutter Web, серверная часть реализована с помощью Firebase. Вы [можете посмотреть код](https://github.com/brntsv/flutter_web_cv_portfolio) на Github';
+      'Этот сайт создан на Flutter Web, серверная часть на Firebase. [Код можно посмотреть](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.';
+
+  @override
+  String get blogFooterDesc2 =>
+      'Проект вдохновлен [репозиторием](https://github.com/filiph/filiphnet) Filip Hráček';
+
+  @override
+  String get flourAndOrder => 'Мука и порядок';
+
+  @override
+  String get realtOne => 'Realt.One';
+
+  @override
+  String get novex => 'Novex';
+
+  @override
+  String get flourAndOrderDesc => ' CRM-приложение для кондитеров';
+
+  @override
+  String get realtOneDesc => ' приложение для риэлторов';
+
+  @override
+  String get novexDesc => ' E-comm приложение для сети хозяйственных магазинов';
+
+  @override
+  String get aboutThisPage => 'Об этой странице';
 }
