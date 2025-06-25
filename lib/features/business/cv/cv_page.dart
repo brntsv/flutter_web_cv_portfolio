@@ -5,7 +5,7 @@ import 'package:flutter_web/features/business/cv/widgets/contact_section.dart';
 import 'package:flutter_web/features/business/cv/widgets/experience_section.dart';
 import 'package:flutter_web/features/business/cv/widgets/skills_section.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
-import 'package:flutter_web/l10n/widgets/language_switcher.dart';
+import 'package:flutter_web/features/locale_mode/widgets/language_switcher.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
 

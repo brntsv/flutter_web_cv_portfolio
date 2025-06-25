@@ -45,7 +45,7 @@
     "increment": "Increment",
     "aboutMeBlog": "Hello! I'm Nikita, a Flutter developer. I work in an outsourcing team in Novosibirsk. I try to apply the best practices of development, follow trends and expand my stack. Currently, besides Flutter, I am interested in Rust and Swift.",
     "cv": "CV",
-    "blogFooterDesc": "This site is built with Flutter Web and the server part is on Firebase. [Code can be viewed](https://github.com/brntsv/flutter_web_cv_portfolio) on Github.",
+    "blogFooterDesc": "This site is built with Flutter Web and the server part is on Firebase. [Code is available](https://github.com/brntsv/flutter_web_cv_portfolio) on Github.",
     "blogFooterDesc2": "Project inspired by [repository](https://github.com/filiph/filiphnet) Filip Hráček",
     "flourAndOrder" : "Flour and Order",
     "realtOne" : "Realt.One",

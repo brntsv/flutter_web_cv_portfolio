@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_web/l10n/bloc/locale_bloc.dart';
+import 'package:flutter_web/features/locale_mode/bloc/locale_bloc.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
 

@@ -161,7 +161,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get blogFooterDesc =>
-      'This site is built with Flutter Web and the server part is on Firebase. [Code can be viewed](https://github.com/brntsv/flutter_web_cv_portfolio) on Github.';
+      'This site is built with Flutter Web and the server part is on Firebase. [Code is available](https://github.com/brntsv/flutter_web_cv_portfolio) on Github.';
 
   @override
   String get blogFooterDesc2 =>

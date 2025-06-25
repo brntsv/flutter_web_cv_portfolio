@@ -1,5 +1,5 @@
-name: utilities
-description: "Utilities package."
+name: utils
+description: "Utils package."
 version: 0.0.1
 publish_to: none
 

@@ -159,7 +159,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get blogFooterDesc =>
-      'Этот сайт создан на Flutter Web, серверная часть на Firebase. [Код можно посмотреть](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.';
+      'Этот сайт создан на Flutter Web, серверная часть на Firebase. [Код доступен](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.';
 
   @override
   String get blogFooterDesc2 =>

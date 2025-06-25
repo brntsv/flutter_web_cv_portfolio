@@ -1,5 +1,5 @@
 # Makefile
-.PHONY: all clean clean-ios packages icons pub pod gen
+.PHONY: all clean packages icons pub gen
 
 # Цвета для вывода
 RED := \033[31m
@@ -12,13 +12,10 @@ all: ## Показать справку по командам
 	@echo "$(BLUE)Доступные команды для разработки$(RESET)"
 	@echo ""
 	@echo "$(YELLOW)📦 Зависимости$(RESET)"
-	@awk 'BEGIN {FS = ":.*?## "} /^(clean|packages|pub|pod):.*?## / {printf "  $(GREEN)%-20s$(RESET) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+	@awk 'BEGIN {FS = ":.*?## "} /^(clean|packages|pub):.*?## / {printf "  $(GREEN)%-20s$(RESET) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@echo ""
 	@echo "$(YELLOW)🎨 Кодогенерация$(RESET)"
 	@awk 'BEGIN {FS = ":.*?## "} /^(icons|gen):.*?## / {printf "  $(GREEN)%-20s$(RESET) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
-	@echo ""
-	@echo "$(YELLOW)🧹 Очистка$(RESET)"
-	@awk 'BEGIN {FS = ":.*?## "} /^clean-ios:.*?## / {printf "  $(GREEN)%-20s$(RESET) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 # =============================================================================
 # ЗАВИСИМОСТИ
@@ -33,13 +30,8 @@ clean: ## Pub get проекта
 packages: ## Pub get для пакетов
 	@echo "$(YELLOW)📦 Устанавливаем зависимости для пакетов...$(RESET)"
 	fvm flutter pub get --directory packages/ui_kit
-	fvm flutter pub get --directory packages/utilities
+	fvm flutter pub get --directory packages/utils
 	@echo "$(GREEN)✅ Зависимости установлены$(RESET)"
-
-pod: ## Pod install для iOS
-	@echo "$(YELLOW)🍎 Устанавливаем pods для iOS...$(RESET)"
-	cd ios && pod install
-	@echo "$(GREEN)✅ Pods установлены$(RESET)"
 
 pub: clean packages ## Pub get проекта + packages
 
@@ -56,21 +48,3 @@ icons: ## Генерация иконок, цветов и шрифтов
 	@echo "$(YELLOW)🎨 Генерируем иконки, цвета и шрифты...$(RESET)"
 	fluttergen -c packages/ui_kit/pubspec.yaml
 	@echo "$(GREEN)✅ Генерация завершена$(RESET)"
-
-# =============================================================================
-# CLEAN КОМАНДЫ
-# =============================================================================
-
-clean-ios: ## Глубокая очистка iOS проекта
-	$(MAKE) clean
-	@echo "$(YELLOW)🧹 Глубокая очистка iOS...$(RESET)"
-	cd ios && \
-		pod cache clean --all && \
-		xcodebuild clean && \
-		rm -rf .symlinks/ && \
-		rm -rf Pods && \
-		rm -rf Podfile.lock
-	# @echo "$(BLUE)🗑️ Очистка DerivedData...$(RESET)"
-	# rm -rf ~/Library/Developer/Xcode/DerivedData
-	@echo "$(GREEN)✅ Очистка iOS завершена$(RESET)"
-

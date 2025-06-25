@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:utilities/url_launcher/url_launcher.dart';
+import 'package:utils/url_launcher/url_launcher.dart';
 
 /// Анимация текста с ссылками
 class AnimatedTextWithLinks extends StatelessWidget {
