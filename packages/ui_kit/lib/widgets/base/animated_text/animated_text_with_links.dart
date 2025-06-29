@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:utils/url_launcher/url_launcher.dart';
 
-/// Анимация текста с ссылками
-class AnimatedTextWithLinks extends StatelessWidget {
+import 'animation_timing_mixin.dart';
+
+/// {@template animated_text_with_links.class}
+/// Анимированный текст с ссылками
+/// {@endtemplate}
+class AnimatedTextWithLinks extends StatelessWidget with AnimationTimingMixin {
   /// {@macro animated_text_with_links.class}
   const AnimatedTextWithLinks({
     required this.text,
@@ -124,8 +128,8 @@ class AnimatedTextWithLinks extends StatelessWidget {
     BuildContext context,
   ) {
     // Вычисляем "класс" анимации (1-20) аналогично оригинальному AnimatedText
-    final animationClass = _getAnimationClass(wordIndex, appearClass);
-    final animationParams = _getAnimationParams(animationClass);
+    final animationClass = getAnimationClass(wordIndex, appearClass);
+    final animationParams = getAnimationParams(animationClass);
 
     final color = colors(context);
 
@@ -159,71 +163,4 @@ class AnimatedTextWithLinks extends StatelessWidget {
       ),
     );
   }
-
-  // Функция для получения класса анимации (1-20) для слова
-  int _getAnimationClass(int wordIndex, int baseClassNum) {
-    // Создаем хеш, который даст распределение слов между классами
-    final hashValue = (wordIndex * 17 + baseClassNum * 13) % 20;
-    return hashValue + 1; // от 1 до 20
-  }
-
-  // Аналог keyframes на filiph.net
-  AnimationTiming _getAnimationParams(int animationClass) {
-    switch (animationClass) {
-      case 1:
-        return AnimationTiming(0.03, 0.31);
-      case 2:
-        return AnimationTiming(0.04, 0.32);
-      case 3:
-        return AnimationTiming(0.05, 0.33);
-      case 4:
-        return AnimationTiming(0.06, 0.34);
-      case 5:
-        return AnimationTiming(0.07, 0.35);
-      case 6:
-        return AnimationTiming(0.08, 0.36);
-      case 7:
-        return AnimationTiming(0.09, 0.37);
-      case 8:
-        return AnimationTiming(0.10, 0.38);
-      case 9:
-        return AnimationTiming(0.11, 0.39);
-      case 10:
-        return AnimationTiming(0.12, 0.40);
-      case 11:
-        return AnimationTiming(0.13, 0.41);
-      case 12:
-        return AnimationTiming(0.14, 0.42);
-      case 13:
-        return AnimationTiming(0.15, 0.43);
-      case 14:
-        return AnimationTiming(0.16, 0.44);
-      case 15:
-        return AnimationTiming(0.17, 0.45);
-      case 16:
-        return AnimationTiming(0.18, 0.46);
-      case 17:
-        return AnimationTiming(0.19, 0.47);
-      case 18:
-        return AnimationTiming(0.20, 0.48);
-      case 19:
-        return AnimationTiming(0.21, 0.49);
-      case 20:
-        return AnimationTiming(0.22, 0.50);
-      default:
-        return AnimationTiming(0.10, 0.40);
-    }
-  }
-}
-
-/// Класс для хранения начального и конечного времени анимации
-class AnimationTiming {
-  /// {@macro animation_timing.class}
-  AnimationTiming(this.startTime, this.endTime);
-
-  /// Начальное время анимации
-  final double startTime;
-
-  /// Конечное время анимации
-  final double endTime;
 }

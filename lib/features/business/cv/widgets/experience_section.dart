@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/features/business/cv/widgets/animated_text.dart';
-import 'package:flutter_web/features/business/cv/widgets/animated_text_with_links.dart';
 import 'package:flutter_web/features/business/cv/widgets/section_title.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
+import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
+import 'package:ui_kit/widgets/base/animated_text/animated_text_with_links.dart';
 
 /// Секция "Опыт работы"
 class ExperienceSection extends StatelessWidget {
@@ -205,6 +205,24 @@ class _AchievementsSection extends StatelessWidget {
         ),
         AnimatedText(
           text: l10n.nanAgencyAchievementItem6,
+          style: textStyle.baseText,
+          appearDuration: 8,
+          appearClass: 2,
+        ),
+        AnimatedText(
+          text: l10n.nanAgencyAchievementItem7,
+          style: textStyle.baseText,
+          appearDuration: 8,
+          appearClass: 2,
+        ),
+        AnimatedText(
+          text: l10n.nanAgencyAchievementItem8,
+          style: textStyle.baseText,
+          appearDuration: 8,
+          appearClass: 2,
+        ),
+        AnimatedText(
+          text: l10n.nanAgencyAchievementItem9,
           style: textStyle.baseText,
           appearDuration: 8,
           appearClass: 2,

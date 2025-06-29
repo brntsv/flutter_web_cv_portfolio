@@ -13,6 +13,8 @@ dependencies:
     sdk: flutter
   # Пакет навигации.
   auto_route: ^10.1.0+1
+  utils:
+    path: ../utils
 
 dev_dependencies:
   # Пакет для поддержки кодогенерации.

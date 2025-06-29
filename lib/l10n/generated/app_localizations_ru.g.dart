@@ -37,7 +37,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get aboutMeDesc =>
-      'Имею опыт работы в команде как в офисе, так и удаленно. Интересуюсь лучшими практиками разработки мобильных приложений и применяю их в работе. Люблю разработку за её вызовы и необычные задачи, которые стимулируют не стоять на месте, постоянно развиваться и узнавать что-то новое. Участвовал в различных проектах: как в новых, запущенных с нуля в команде, так и в тех, что перешли к нам от других команд.';
+      '3+ года создаю мобильные приложения для различных сфер — от e-commerce до недвижимости. Не только пишу код, но и настраиваю процессы: внедрил CI/CD, создал систему автоматизации релизов, стандартизировал подходы к разработке в команде. Постоянно развиваюсь — изучаю Rust и Swift, слежу за трендами в мобильной разработке.';
 
   @override
   String get projects => 'Проекты';
@@ -55,7 +55,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get nanAgencyResponsibilities => 'Обязанности:';
 
   @override
-  String get nanAgencyResponsibilityItem1 => '— Реализация фич по ТЗ;';
+  String get nanAgencyResponsibilityItem1 =>
+      '— Архитектурное планирование и проектирование новых фич;';
 
   @override
   String get nanAgencyResponsibilityItem2 =>
@@ -70,36 +71,49 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get nanAgencyResponsibilityItem5 =>
-      '— Выпуск релизов в Testflight, сборки app bundle и apk;';
+      '— Cборки ipa, appbundle и apk. Выпуск релизов в Testflight, Google Play, App Gallery;';
 
   @override
   String get nanAgencyResponsibilityItem6 =>
-      '— Настройка общих правил линтера для всех проектов.';
+      '— Координация с дизайнерами по вопросам UX/UI реализации.';
 
   @override
   String get nanAgencyAchievements => 'Достижения:';
 
   @override
-  String get nanAgencyAchievementItem1 => '— Настроил CI CD через гитлаб;';
+  String get nanAgencyAchievementItem1 =>
+      '— Настроил CI/CD через GitLab для автоматизации сборок и релизов;';
 
   @override
   String get nanAgencyAchievementItem2 =>
-      '— Интегрировал сервис Searchbooster в приложение;';
+      '— Создал локальную систему автоматизации (Makefile + fastlane) для деплоя в TestFlight, Google Play Console и Firebase App Distribution;';
 
   @override
   String get nanAgencyAchievementItem3 =>
-      '— Интегрировал сервис DaData в приложение;';
+      '— Настроил общие правила analysis_options для всех проектов;';
 
   @override
   String get nanAgencyAchievementItem4 =>
-      '— Повысил производительность работы приложения путем задания размеров кеширования изображений;';
+      '— Интегрировал сервис Searchbooster в приложение;';
 
   @override
   String get nanAgencyAchievementItem5 =>
+      '— Интегрировал сервис DaData в приложение;';
+
+  @override
+  String get nanAgencyAchievementItem6 =>
+      '— Повысил производительность работы приложения путем задания размеров кеширования изображений;';
+
+  @override
+  String get nanAgencyAchievementItem7 =>
       '— Устранил креши приложения, профилировал приложение с помощью инструментов флаттера;';
 
   @override
-  String get nanAgencyAchievementItem6 => '— MVP приложения для риэлторов.';
+  String get nanAgencyAchievementItem8 =>
+      '— Инициировал и внедрил систему стандартизации ТЗ через создание шаблонов и манифеста для клиентов, что улучшило понимание требований;';
+
+  @override
+  String get nanAgencyAchievementItem9 => '— MVP приложения для риэлторов.';
 
   @override
   String get nanAgencyProjects =>
@@ -118,7 +132,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get skillsList =>
-      'Dart Flutter bloc cubit dio retrofit auto_route rxdart Push Notifications AppLinks get_it injectable fastlane Makefile GitLab CI/CD geolocator geodesy fvm git';
+      'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   geolocator   geodesy   fvm   git';
 
   @override
   String get education => 'Образование';
@@ -185,4 +199,19 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get aboutThisPage => 'Об этой странице';
+
+  @override
+  String get socials => 'Соцсети';
+
+  @override
+  String get linkedin => '[Linkedin](https://www.linkedin.com/in/bntsv/)';
+
+  @override
+  String get github => '[Github](https://github.com/brntsv)';
+
+  @override
+  String get telegram => '[Telegram](https://t.me/bntsv)';
+
+  @override
+  String get twitter => '[Twitter](https://x.com/obeyhofer)';
 }

@@ -4,12 +4,12 @@ import 'package:flutter_web/features/business/cv/widgets/about_me_section.dart';
 import 'package:flutter_web/features/business/cv/widgets/contact_section.dart';
 import 'package:flutter_web/features/business/cv/widgets/experience_section.dart';
 import 'package:flutter_web/features/business/cv/widgets/skills_section.dart';
-import 'package:flutter_web/l10n/localization_extension.dart';
 import 'package:flutter_web/features/locale_mode/widgets/language_switcher.dart';
+import 'package:flutter_web/l10n/localization_extension.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
+import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 
-import 'widgets/animated_text.dart';
 import 'widgets/education_language_section.dart';
 
 /// {@template cv_page.class}
@@ -30,43 +30,45 @@ final class CvPage extends StatelessWidget {
       backgroundColor: color.white,
       body: Stack(
         children: [
-          SingleChildScrollView(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: BaseConst.base130,
-                ),
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(
-                    maxWidth: BaseConst.base700,
+          SelectionArea(
+            child: SingleChildScrollView(
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: BaseConst.base130,
                   ),
-                  child: Column(
-                    spacing: BaseConst.base32,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      /// Имя
-                      AnimatedText(
-                        text: '${l10n.yourName}, ${l10n.yourJob}',
-                        style: textStyle.h1,
-                        appearDuration: 6,
-                        appearClass: 2,
-                      ),
-
-                      /// Контактная информация
-                      const ContactSection(),
-
-                      /// О себе
-                      const AboutMeSection(),
-
-                      /// Опыт работы
-                      const ExperienceSection(),
-
-                      /// Навыки
-                      const SkillsSection(),
-
-                      /// Образование и языки
-                      const EducationLanguagesSection(),
-                    ],
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(
+                      maxWidth: BaseConst.base700,
+                    ),
+                    child: Column(
+                      spacing: BaseConst.base32,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        /// Имя
+                        AnimatedText(
+                          text: '${l10n.yourName}, ${l10n.yourJob}',
+                          style: textStyle.h1,
+                          appearDuration: 6,
+                          appearClass: 2,
+                        ),
+            
+                        /// Контактная информация
+                        const ContactSection(),
+            
+                        /// О себе
+                        const AboutMeSection(),
+            
+                        /// Опыт работы
+                        const ExperienceSection(),
+            
+                        /// Навыки
+                        const SkillsSection(),
+            
+                        /// Образование и языки
+                        const EducationLanguagesSection(),
+                      ],
+                    ),
                   ),
                 ),
               ),

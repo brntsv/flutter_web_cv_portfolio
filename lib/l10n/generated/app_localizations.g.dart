@@ -155,7 +155,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutMeDesc.
   ///
   /// In ru, this message translates to:
-  /// **'Имею опыт работы в команде как в офисе, так и удаленно. Интересуюсь лучшими практиками разработки мобильных приложений и применяю их в работе. Люблю разработку за её вызовы и необычные задачи, которые стимулируют не стоять на месте, постоянно развиваться и узнавать что-то новое. Участвовал в различных проектах: как в новых, запущенных с нуля в команде, так и в тех, что перешли к нам от других команд.'**
+  /// **'3+ года создаю мобильные приложения для различных сфер — от e-commerce до недвижимости. Не только пишу код, но и настраиваю процессы: внедрил CI/CD, создал систему автоматизации релизов, стандартизировал подходы к разработке в команде. Постоянно развиваюсь — изучаю Rust и Swift, слежу за трендами в мобильной разработке.'**
   String get aboutMeDesc;
 
   /// No description provided for @projects.
@@ -191,7 +191,7 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyResponsibilityItem1.
   ///
   /// In ru, this message translates to:
-  /// **'— Реализация фич по ТЗ;'**
+  /// **'— Архитектурное планирование и проектирование новых фич;'**
   String get nanAgencyResponsibilityItem1;
 
   /// No description provided for @nanAgencyResponsibilityItem2.
@@ -215,13 +215,13 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyResponsibilityItem5.
   ///
   /// In ru, this message translates to:
-  /// **'— Выпуск релизов в Testflight, сборки app bundle и apk;'**
+  /// **'— Cборки ipa, appbundle и apk. Выпуск релизов в Testflight, Google Play, App Gallery;'**
   String get nanAgencyResponsibilityItem5;
 
   /// No description provided for @nanAgencyResponsibilityItem6.
   ///
   /// In ru, this message translates to:
-  /// **'— Настройка общих правил линтера для всех проектов.'**
+  /// **'— Координация с дизайнерами по вопросам UX/UI реализации.'**
   String get nanAgencyResponsibilityItem6;
 
   /// No description provided for @nanAgencyAchievements.
@@ -233,38 +233,56 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyAchievementItem1.
   ///
   /// In ru, this message translates to:
-  /// **'— Настроил CI CD через гитлаб;'**
+  /// **'— Настроил CI/CD через GitLab для автоматизации сборок и релизов;'**
   String get nanAgencyAchievementItem1;
 
   /// No description provided for @nanAgencyAchievementItem2.
   ///
   /// In ru, this message translates to:
-  /// **'— Интегрировал сервис Searchbooster в приложение;'**
+  /// **'— Создал локальную систему автоматизации (Makefile + fastlane) для деплоя в TestFlight, Google Play Console и Firebase App Distribution;'**
   String get nanAgencyAchievementItem2;
 
   /// No description provided for @nanAgencyAchievementItem3.
   ///
   /// In ru, this message translates to:
-  /// **'— Интегрировал сервис DaData в приложение;'**
+  /// **'— Настроил общие правила analysis_options для всех проектов;'**
   String get nanAgencyAchievementItem3;
 
   /// No description provided for @nanAgencyAchievementItem4.
   ///
   /// In ru, this message translates to:
-  /// **'— Повысил производительность работы приложения путем задания размеров кеширования изображений;'**
+  /// **'— Интегрировал сервис Searchbooster в приложение;'**
   String get nanAgencyAchievementItem4;
 
   /// No description provided for @nanAgencyAchievementItem5.
   ///
   /// In ru, this message translates to:
-  /// **'— Устранил креши приложения, профилировал приложение с помощью инструментов флаттера;'**
+  /// **'— Интегрировал сервис DaData в приложение;'**
   String get nanAgencyAchievementItem5;
 
   /// No description provided for @nanAgencyAchievementItem6.
   ///
   /// In ru, this message translates to:
-  /// **'— MVP приложения для риэлторов.'**
+  /// **'— Повысил производительность работы приложения путем задания размеров кеширования изображений;'**
   String get nanAgencyAchievementItem6;
+
+  /// No description provided for @nanAgencyAchievementItem7.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Устранил креши приложения, профилировал приложение с помощью инструментов флаттера;'**
+  String get nanAgencyAchievementItem7;
+
+  /// No description provided for @nanAgencyAchievementItem8.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Инициировал и внедрил систему стандартизации ТЗ через создание шаблонов и манифеста для клиентов, что улучшило понимание требований;'**
+  String get nanAgencyAchievementItem8;
+
+  /// No description provided for @nanAgencyAchievementItem9.
+  ///
+  /// In ru, this message translates to:
+  /// **'— MVP приложения для риэлторов.'**
+  String get nanAgencyAchievementItem9;
 
   /// No description provided for @nanAgencyProjects.
   ///
@@ -293,7 +311,7 @@ abstract class AppLocalizations {
   /// No description provided for @skillsList.
   ///
   /// In ru, this message translates to:
-  /// **'Dart Flutter bloc cubit dio retrofit auto_route rxdart Push Notifications AppLinks get_it injectable fastlane Makefile GitLab CI/CD geolocator geodesy fvm git'**
+  /// **'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   geolocator   geodesy   fvm   git'**
   String get skillsList;
 
   /// No description provided for @education.
@@ -421,6 +439,36 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Об этой странице'**
   String get aboutThisPage;
+
+  /// No description provided for @socials.
+  ///
+  /// In ru, this message translates to:
+  /// **'Соцсети'**
+  String get socials;
+
+  /// No description provided for @linkedin.
+  ///
+  /// In ru, this message translates to:
+  /// **'[Linkedin](https://www.linkedin.com/in/bntsv/)'**
+  String get linkedin;
+
+  /// No description provided for @github.
+  ///
+  /// In ru, this message translates to:
+  /// **'[Github](https://github.com/brntsv)'**
+  String get github;
+
+  /// No description provided for @telegram.
+  ///
+  /// In ru, this message translates to:
+  /// **'[Telegram](https://t.me/bntsv)'**
+  String get telegram;
+
+  /// No description provided for @twitter.
+  ///
+  /// In ru, this message translates to:
+  /// **'[Twitter](https://x.com/obeyhofer)'**
+  String get twitter;
 }
 
 class _AppLocalizationsDelegate

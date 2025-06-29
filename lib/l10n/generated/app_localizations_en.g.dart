@@ -37,7 +37,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutMeDesc =>
-      'I have experience working in teams both in-office and remotely. I am interested in mobile app development best practices and apply them in my work. I love development for its challenges and unusual tasks that encourage continuous growth and learning new things. I have participated in various projects: both in new ones launched from scratch within the team, and in those transferred to us from other teams.';
+      '3+ years creating mobile applications for various industries — from e-commerce and real estate to CRM systems. Not only do I write code, but I also set up processes: I implemented CI/CD, created a release automation system, standardized development approaches in the team. I am constantly developing — I am studying Rust and Swift, following trends in mobile development.';
 
   @override
   String get projects => 'Projects';
@@ -56,7 +56,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get nanAgencyResponsibilityItem1 =>
-      '— Implementation of features according to specifications;';
+      '— Architectural planning and design of new features;';
 
   @override
   String get nanAgencyResponsibilityItem2 =>
@@ -71,37 +71,50 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get nanAgencyResponsibilityItem5 =>
-      '— Releasing builds to Testflight, building app bundles and APKs;';
+      '— Building ipa, appbundle and APK. Releasing builds to Testflight, Google Play, App Gallery;';
 
   @override
   String get nanAgencyResponsibilityItem6 =>
-      '— Setting up common linter rules for all projects.';
+      '— Coordinating with designers on UX/UI implementation issues.';
 
   @override
   String get nanAgencyAchievements => 'Achievements:';
 
   @override
-  String get nanAgencyAchievementItem1 => '— Set up CI/CD through GitLab;';
+  String get nanAgencyAchievementItem1 =>
+      '— Set up CI/CD through GitLab for automated builds and releases;';
 
   @override
   String get nanAgencyAchievementItem2 =>
-      '— Integrated Searchbooster service into the application;';
+      '— Created a local automation system (Makefile + fastlane) for deploying to TestFlight, Google Play Console and Firebase App Distribution;';
 
   @override
   String get nanAgencyAchievementItem3 =>
-      '— Integrated DaData service into the application;';
+      '— Set up common linter rules for all projects;';
 
   @override
   String get nanAgencyAchievementItem4 =>
-      '— Improved application performance by setting image caching sizes;';
+      '— Integrated Searchbooster service into the application;';
 
   @override
   String get nanAgencyAchievementItem5 =>
-      '— Fixed application crashes, profiled the application using Flutter tools;';
+      '— Integrated DaData service into the application;';
 
   @override
   String get nanAgencyAchievementItem6 =>
-      '— Built MVP for a real estate agent application.';
+      '— Improved application performance by setting image caching sizes;';
+
+  @override
+  String get nanAgencyAchievementItem7 =>
+      '— Fixed application crashes, profiled the application using Flutter tools;';
+
+  @override
+  String get nanAgencyAchievementItem8 =>
+      '— Initiated and implemented a system for standardizing TZ through the creation of templates and manifests for clients, which improved understanding of requirements;';
+
+  @override
+  String get nanAgencyAchievementItem9 =>
+      '— Created an MVP for a real estate agent application, which allowed it to be launched in production;';
 
   @override
   String get nanAgencyProjects =>
@@ -120,7 +133,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get skillsList =>
-      'Dart Flutter bloc cubit dio retrofit auto_route rxdart Push Notifications AppLinks get_it injectable fastlane Makefile GitLab CI/CD geolocator geodesy fvm git';
+      'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   geolocator   geodesy   fvm   git';
 
   @override
   String get education => 'Education';
@@ -187,4 +200,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutThisPage => 'About this page';
+
+  @override
+  String get socials => 'Socials';
+
+  @override
+  String get linkedin => '[Linkedin](https://www.linkedin.com/in/bntsv/)';
+
+  @override
+  String get github => '[Github](https://github.com/brntsv)';
+
+  @override
+  String get telegram => '[Telegram](https://t.me/bntsv)';
+
+  @override
+  String get twitter => '[Twitter](https://x.com/obeyhofer)';
 }
