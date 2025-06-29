@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../assets/colors.gen.dart';
 import '../assets/fonts.gen.dart';
+import '../constants/base_constants.dart';
 import '../extensions/color_theme_extension.dart';
 import '../extensions/text_style_theme_extension.dart';
 import '../styles/text_styles.dart';
@@ -105,7 +106,7 @@ sealed class AppTheme {
 
   static ScrollbarThemeData _createScrollbarTheme() => ScrollbarThemeData(
         thumbColor: WidgetStateProperty.all(UiKitColor.gray),
-        radius: const Radius.circular(8),
+        radius: const Radius.circular(BaseConst.base8),
       );
 
   static OutlinedButtonThemeData _createOutlinedButtonTheme() =>
