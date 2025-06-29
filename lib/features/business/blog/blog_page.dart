@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/features/locale_mode/widgets/language_switcher.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
 import 'package:ui_kit/constants/base_constants.dart';
+import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 
@@ -32,12 +33,17 @@ final class BlogPage extends StatelessWidget {
             child: SingleChildScrollView(
               child: Center(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(
+                  padding: EdgeInsets.symmetric(
                     vertical: BaseConst.base130,
+                    horizontal: context.screenSize.width < BaseConst.base700
+                        ? BaseConst.base28
+                        : 0,
                   ),
                   child: ConstrainedBox(
-                    constraints: const BoxConstraints(
-                      maxWidth: BaseConst.base700,
+                    constraints: BoxConstraints(
+                      maxWidth: context.screenSize.width < BaseConst.base700
+                          ? context.screenSize.width
+                          : BaseConst.base700,
                     ),
                     child: Column(
                       spacing: BaseConst.base32,
