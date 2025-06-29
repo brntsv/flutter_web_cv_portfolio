@@ -99,6 +99,8 @@ sealed class AppTheme {
   static TextSelectionThemeData _createTextSelectionTheme() =>
       const TextSelectionThemeData(
         cursorColor: UiKitColor.darkGray,
+        selectionColor: UiKitColor.lightBlue,
+        selectionHandleColor: UiKitColor.blue,
       );
 
   static ScrollbarThemeData _createScrollbarTheme() => ScrollbarThemeData(
@@ -122,6 +124,7 @@ sealed class AppTheme {
         darkGray: UiKitColor.darkGray,
         lightGray: UiKitColor.lightGray,
         blue: UiKitColor.blue,
+        lightBlue: UiKitColor.lightBlue,
       );
 
   static TextStyleExt _createTextStyleExt() => TextStyleExt(

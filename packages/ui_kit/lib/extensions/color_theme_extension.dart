@@ -15,6 +15,7 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
     required this.darkGray,
     required this.lightGray,
     required this.blue,
+    required this.lightBlue,
   });
 
   final Color white;
@@ -25,6 +26,7 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
   final Color darkGray;
   final Color lightGray;
   final Color blue;
+  final Color lightBlue;
   @override
   ThemeExtension<ColorsExt> copyWith({
     Color? white,
@@ -35,6 +37,7 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
     Color? darkGray,
     Color? lightGray,
     Color? blue,
+    Color? lightBlue,
   }) =>
       ColorsExt(
         white: white ?? this.white,
@@ -45,6 +48,7 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
         darkGray: darkGray ?? this.darkGray,
         lightGray: lightGray ?? this.lightGray,
         blue: blue ?? this.blue,
+        lightBlue: lightBlue ?? this.lightBlue,
       );
 
   @override
@@ -62,6 +66,7 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
       darkGray: Color.lerp(darkGray, other.darkGray, t)!,
       lightGray: Color.lerp(lightGray, other.lightGray, t)!,
       blue: Color.lerp(blue, other.blue, t)!,
+      lightBlue: Color.lerp(lightBlue, other.lightBlue, t)!,
     );
   }
 }
