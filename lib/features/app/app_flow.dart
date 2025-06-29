@@ -12,17 +12,10 @@ final class AppFlow extends StatelessWidget {
   const AppFlow({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    // final initialThemeMode =
-    //     getIt<IThemeModeRepository>().getThemeMode() ?? ThemeMode.light;
-    return Nested(
-      children: [
-        // BlocProvider(
-        //   create: (context) => getIt<ThemeBloc>(param1: initialThemeMode),
-        // ),
-        ChangeNotifierProvider<AppRouter>(create: (_) => AppRouter()),
-      ],
-      child: const App(),
-    );
-  }
+  Widget build(BuildContext context) => Nested(
+        children: [
+          ChangeNotifierProvider<AppRouter>(create: (_) => AppRouter()),
+        ],
+        child: const App(),
+      );
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_web/features/navigation/router.dart';
 import 'package:flutter_web/features/locale_mode/bloc/locale_bloc.dart';
+import 'package:flutter_web/features/navigation/router.dart';
 import 'package:ui_kit/theme/theme.dart';
 
 import '../../l10n/generated/app_localizations.g.dart';

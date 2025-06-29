@@ -66,9 +66,6 @@ extension BuildContextExtension on BuildContext {
   /// Проверка на возможность перейти назад
   bool canPop() => router.canPop();
 
-  /// Перейти назад с результатом
-  void forcePop<T>([T? result]) => router.popForced(result);
-
   /// Перейти на маршрут
   void navigate(PageRouteInfo route) => router.navigate(route);
 
