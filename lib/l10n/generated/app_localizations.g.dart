@@ -182,11 +182,11 @@ abstract class AppLocalizations {
   /// **'Flutter Developer в NaN Agency'**
   String get nanAgencyPosition;
 
-  /// No description provided for @nanAgencyResponsibilities.
+  /// No description provided for @responsibilities.
   ///
   /// In ru, this message translates to:
   /// **'Обязанности:'**
-  String get nanAgencyResponsibilities;
+  String get responsibilities;
 
   /// No description provided for @nanAgencyResponsibilityItem1.
   ///
@@ -224,11 +224,11 @@ abstract class AppLocalizations {
   /// **'— Координация с дизайнерами по вопросам UX/UI реализации.'**
   String get nanAgencyResponsibilityItem6;
 
-  /// No description provided for @nanAgencyAchievements.
+  /// No description provided for @achievements.
   ///
   /// In ru, this message translates to:
   /// **'Достижения:'**
-  String get nanAgencyAchievements;
+  String get achievements;
 
   /// No description provided for @nanAgencyAchievementItem1.
   ///
@@ -290,17 +290,17 @@ abstract class AppLocalizations {
   /// **'Проекты, на которых работал продолжительное время:'**
   String get nanAgencyProjects;
 
-  /// No description provided for @nanAgencyProjectsRealtOne.
+  /// No description provided for @projectsRealtOne.
   ///
   /// In ru, this message translates to:
   /// **'— Realt.One [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU) | [App Store](https://apps.apple.com/us/app/realt-one/id6742776096)'**
-  String get nanAgencyProjectsRealtOne;
+  String get projectsRealtOne;
 
-  /// No description provided for @nanAgencyProjectsNovex.
+  /// No description provided for @projectsNovex.
   ///
   /// In ru, this message translates to:
   /// **'— Novex [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU) | [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837)'**
-  String get nanAgencyProjectsNovex;
+  String get projectsNovex;
 
   /// No description provided for @skills.
   ///
@@ -355,24 +355,6 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Русский - Native'**
   String get languageRussian;
-
-  /// No description provided for @interactivePortfolio.
-  ///
-  /// In ru, this message translates to:
-  /// **'Интерактивное портфолио'**
-  String get interactivePortfolio;
-
-  /// No description provided for @counterText.
-  ///
-  /// In ru, this message translates to:
-  /// **'Вы нажали на кнопку столько раз:'**
-  String get counterText;
-
-  /// No description provided for @increment.
-  ///
-  /// In ru, this message translates to:
-  /// **'Увеличить'**
-  String get increment;
 
   /// No description provided for @aboutMeBlog.
   ///
@@ -469,6 +451,24 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'[Twitter](https://x.com/obeyhofer)'**
   String get twitter;
+
+  /// No description provided for @interactivePortfolio.
+  ///
+  /// In ru, this message translates to:
+  /// **'Интерактивное портфолио'**
+  String get interactivePortfolio;
+
+  /// No description provided for @counterText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вы нажали на кнопку столько раз:'**
+  String get counterText;
+
+  /// No description provided for @increment.
+  ///
+  /// In ru, this message translates to:
+  /// **'Увеличить'**
+  String get increment;
 }
 
 class _AppLocalizationsDelegate

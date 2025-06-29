@@ -106,7 +106,7 @@ class _ResponsibilitiesSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AnimatedText(
-          text: l10n.nanAgencyResponsibilities,
+          text: l10n.responsibilities,
           style: textStyle.baseText.copyWith(
             fontWeight: FontWeight.bold,
           ),
@@ -166,7 +166,7 @@ class _AchievementsSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AnimatedText(
-          text: l10n.nanAgencyAchievements,
+          text: l10n.achievements,
           style: textStyle.baseText.copyWith(
             fontWeight: FontWeight.bold,
           ),
@@ -252,12 +252,12 @@ class _ProjectsSection extends StatelessWidget {
           appearClass: 2,
         ),
         AnimatedTextWithLinks(
-          text: l10n.nanAgencyProjectsRealtOne,
+          text: l10n.projectsRealtOne,
           appearDuration: 8,
           appearClass: 2,
         ),
         AnimatedTextWithLinks(
-          text: l10n.nanAgencyProjectsNovex,
+          text: l10n.projectsNovex,
           appearDuration: 8,
           appearClass: 2,
         ),

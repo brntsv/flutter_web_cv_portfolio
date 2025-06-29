@@ -46,7 +46,7 @@ class ProjectsWidget extends StatelessWidget {
                 appearDuration: 6,
                 appearClass: 2,
                 onTap: () => context.push(
-                  const PortfolioRoute(),
+                  const CvRoute(),
                 ),
               ),
               AnimatedClickableText(
@@ -55,7 +55,7 @@ class ProjectsWidget extends StatelessWidget {
                 appearDuration: 6,
                 appearClass: 2,
                 onTap: () => context.push(
-                  const PortfolioRoute(),
+                  const CvRoute(),
                 ),
               ),
               AnimatedClickableText(

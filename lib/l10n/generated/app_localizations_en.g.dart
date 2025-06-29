@@ -52,7 +52,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get nanAgencyPosition => 'Flutter Developer at NaN Agency';
 
   @override
-  String get nanAgencyResponsibilities => 'Responsibilities:';
+  String get responsibilities => 'Responsibilities:';
 
   @override
   String get nanAgencyResponsibilityItem1 =>
@@ -78,7 +78,7 @@ class AppLocalizationsEn extends AppLocalizations {
       '— Coordinating with designers on UX/UI implementation issues.';
 
   @override
-  String get nanAgencyAchievements => 'Achievements:';
+  String get achievements => 'Achievements:';
 
   @override
   String get nanAgencyAchievementItem1 =>
@@ -121,11 +121,11 @@ class AppLocalizationsEn extends AppLocalizations {
       'Projects I worked on for an extended period:';
 
   @override
-  String get nanAgencyProjectsRealtOne =>
+  String get projectsRealtOne =>
       '— Realt.One [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU) | [App Store](https://apps.apple.com/us/app/realt-one/id6742776096)';
 
   @override
-  String get nanAgencyProjectsNovex =>
+  String get projectsNovex =>
       '— Novex [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU) | [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837)';
 
   @override
@@ -155,15 +155,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get languageRussian => 'Russian - Native';
-
-  @override
-  String get interactivePortfolio => 'Interactive portfolio';
-
-  @override
-  String get counterText => 'You have pushed the button this many times:';
-
-  @override
-  String get increment => 'Increment';
 
   @override
   String get aboutMeBlog =>
@@ -215,4 +206,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get twitter => '[Twitter](https://x.com/obeyhofer)';
+
+  @override
+  String get interactivePortfolio => 'Interactive portfolio';
+
+  @override
+  String get counterText => 'You have pushed the button this many times:';
+
+  @override
+  String get increment => 'Increment';
 }
