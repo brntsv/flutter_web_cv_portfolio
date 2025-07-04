@@ -15,6 +15,8 @@ dependencies:
   auto_route: ^10.1.0+1
   utils:
     path: ../utils
+  flutter_svg: ^2.2.0
+
 
 dev_dependencies:
   # Пакет для поддержки кодогенерации.
@@ -46,8 +48,7 @@ flutter:
     - assets/images/
 
   fonts:
-    - family: SourceSansPro
+    - family: Inter
       fonts:
-        - asset: assets/fonts/SourceSansPro-Regular.ttf
-        - asset: assets/fonts/SourceSansPro-SemiBold.ttf
-          weight: 600
+        - asset: assets/fonts/Inter-VariableFont_opsz,wght.ttf
+

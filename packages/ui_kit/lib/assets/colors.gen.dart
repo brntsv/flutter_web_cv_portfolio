@@ -22,6 +22,9 @@ class UiKitColor {
   /// Color: #2C2D2E
   static const Color darkGray = Color(0xFF2C2D2E);
 
+  /// Color: #393C41
+  static const Color graphiteGray = Color(0xFF393C41);
+
   /// Color: #919399
   static const Color gray = Color(0xFF919399);
 
@@ -33,6 +36,12 @@ class UiKitColor {
 
   /// Color: #F0F1F4
   static const Color skyGray = Color(0xFFF0F1F4);
+
+  /// Color: #1DB954
+  static const Color spotifyGreen = Color(0xFF1DB954);
+
+  /// Color: #3ECF8E
+  static const Color supabaseGreen = Color(0xFF3ECF8E);
 
   /// Color: #00000000
   static const Color transparent = Color(0x00000000);

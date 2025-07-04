@@ -10,6 +10,6 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: SourceSansPro
-  static const String sourceSansPro = 'SourceSansPro';
+  /// Font family: Inter
+  static const String inter = 'Inter';
 }

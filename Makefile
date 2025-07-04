@@ -1,5 +1,5 @@
 # Makefile
-.PHONY: all clean packages icons pub gen
+.PHONY: all clean packages icons pub gen deploy
 
 # Цвета для вывода
 RED := \033[31m
@@ -16,6 +16,9 @@ all: ## Показать справку по командам
 	@echo ""
 	@echo "$(YELLOW)🎨 Кодогенерация$(RESET)"
 	@awk 'BEGIN {FS = ":.*?## "} /^(icons|gen):.*?## / {printf "  $(GREEN)%-20s$(RESET) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+	@echo ""
+	@echo "$(YELLOW)🚀 Деплой$(RESET)"
+	@awk 'BEGIN {FS = ":.*?## "} /^(deploy):.*?## / {printf "  $(GREEN)%-20s$(RESET) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 # =============================================================================
 # ЗАВИСИМОСТИ
@@ -36,7 +39,7 @@ packages: ## Pub get для пакетов
 pub: clean packages ## Pub get проекта + packages
 
 # =============================================================================
-# CODEGEN КОМАНДЫ
+# CODEGEN
 # =============================================================================
 
 gen: ## Build runner
@@ -48,3 +51,13 @@ icons: ## Генерация иконок, цветов и шрифтов
 	@echo "$(YELLOW)🎨 Генерируем иконки, цвета и шрифты...$(RESET)"
 	fluttergen -c packages/ui_kit/pubspec.yaml
 	@echo "$(GREEN)✅ Генерация завершена$(RESET)"
+
+# =============================================================================
+# DEPLOY
+# =============================================================================
+
+deploy: ## Деплой проекта
+	@echo "$(YELLOW)🚀 Деплой проекта...$(RESET)"
+	fvm flutter build web --release
+	firebase deploy --only hosting
+	@echo "$(GREEN)✅ Деплой завершен$(RESET)"

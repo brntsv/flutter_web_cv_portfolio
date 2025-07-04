@@ -311,7 +311,7 @@ abstract class AppLocalizations {
   /// No description provided for @skillsList.
   ///
   /// In ru, this message translates to:
-  /// **'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   geolocator   geodesy   fvm   git'**
+  /// **'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   mason   Firebase   Shorebird   Animations   geolocator   geodesy   fvm   git'**
   String get skillsList;
 
   /// No description provided for @education.
@@ -371,7 +371,7 @@ abstract class AppLocalizations {
   /// No description provided for @blogFooterDesc.
   ///
   /// In ru, this message translates to:
-  /// **'Этот сайт создан на Flutter Web, серверная часть на Firebase. [Код доступен](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.'**
+  /// **'Этот сайт создан на Flutter Web, хостинг на Firebase. [Код доступен](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.'**
   String get blogFooterDesc;
 
   /// No description provided for @blogFooterDesc2.

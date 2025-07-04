@@ -6,10 +6,12 @@ import 'package:flutter_web/features/business/cv/widgets/experience_section.dart
 import 'package:flutter_web/features/business/cv/widgets/skills_section.dart';
 import 'package:flutter_web/features/locale_mode/widgets/language_switcher.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
+import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
+import 'package:ui_kit/widgets/base/buttons/animated_icon_button.dart';
 
 import 'widgets/education_language_section.dart';
 
@@ -80,6 +82,23 @@ final class CvPage extends StatelessWidget {
               ),
             ),
           ),
+
+          // Кнопка назад в левом верхнем углу
+          if (context.canPop()) ...[
+            Positioned(
+              top: BaseConst.base40,
+              left: BaseConst.base60,
+              child: AnimatedIconButton(
+                icon: Assets.images.iconLeftArrow,
+                onPressed: context.safePop,
+                iconColor: color.graphiteGray,
+                size: BaseConst.base40,
+                appearDuration: 6,
+                appearClass: 2,
+              ),
+            ),
+          ],
+
           const Positioned(
             top: BaseConst.base20,
             right: BaseConst.base20,

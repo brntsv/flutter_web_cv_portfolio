@@ -2,80 +2,80 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-/// Расширение для BuildContext
+/// Расширение для [BuildContext]
 extension BuildContextExtension on BuildContext {
-  /// Получить тему
+  /// Получает тему приложения
   ThemeData get theme => Theme.of(this);
 
-  /// Получить размер экрана
+  /// Получает размер экрана
   Size get screenSize => MediaQuery.sizeOf(this);
 
-  /// Получить плотность пикселей
+  /// Получает плотность пикселей устройства
   double get devicePixelRatio => MediaQuery.devicePixelRatioOf(this);
 
-  /// Получить отступы
+  /// Получает отступы экрана
   EdgeInsets get padding => MediaQuery.paddingOf(this);
 
-  /// Получить отступы для view
+  /// Получает отступы вида
   EdgeInsets get viewInsets => MediaQuery.viewInsetsOf(this);
 
-  /// Проверка на планшет
+  /// Проверяет, является ли устройство планшетом
   bool get isTablet => screenSize.width > 600;
 
-  /// Проверка на фокус
+  /// Проверяет, является ли устройство первым фокусом
   bool get onFocus => FocusScope.of(this).isFirstFocus;
 
-  /// Проверка на платформу android
+  /// Проверяет, является ли платформа Android
   bool get isAndroidPlatform => defaultTargetPlatform == TargetPlatform.android;
 
-  /// Покинуть все маршруты до тех пор, пока не будет выполнен предикат
+  /// Удаляет все маршруты, пока не будет достигнут предикат
   void popUntil(
     bool Function(Route<dynamic>) predicate,
   ) =>
       router.popUntil(predicate);
 
-  /// Убрать фокус
+  /// Удаляет фокус
   void unfocus() => FocusScope.of(this).unfocus();
 
-  /// Запросить фокус
+  /// Запрашивает фокус
   void requestFocus([FocusNode? node]) =>
       FocusScope.of(this).requestFocus(node);
 
-  /// Перейти к следующему фокусу
+  /// Переходит к следующему фокусу
   void nextFocus() => FocusScope.of(this).nextFocus();
 
-  /// Перейти к следующему маршруту
+  /// Переходит к следующему маршруту
   void pushNamedAndRemoveUntil(String path) =>
       Navigator.of(this).pushNamedAndRemoveUntil(path, (_) => false);
 
-  /// Перейти к следующему маршруту
+  /// Переходит к следующему маршруту
   void push(PageRouteInfo route) => router.push(route);
 
-  /// Заменить маршрут
+  /// Заменяет маршрут
   void replace(PageRouteInfo route) => router.replace(route);
 
-  /// Заменить все маршруты в стеке
+  /// Заменяет все маршруты
   void replaceAll(List<PageRouteInfo> routes) => router.replaceAll(routes);
 
-  /// Убрать из стека текущий маршрут и добавить новый
+  /// Удаляет последний маршрут и переходит к новому
   void popAndPush(PageRouteInfo route) => router.popAndPush(route);
 
-  /// Перейти назад
-  void pop<T>([T? result]) => router.maybePop(result);
+  /// Удаляет последний маршрут
+  void safePop<T>([T? result]) => router.maybePop(result);
 
-  /// Проверка на возможность перейти назад
+  /// Проверяет, может ли быть удален маршрут
   bool canPop() => router.canPop();
 
-  /// Перейти на маршрут
+  /// Навигация по маршруту
   void navigate(PageRouteInfo route) => router.navigate(route);
 
-  /// Получить ширину по проценту
+  /// Ширина по процентам
   double widthByPercent(double percent) {
     assert(percent >= 0 && percent <= 100);
     return (screenSize.width * percent) / 100;
   }
 
-  /// Получить высоту по проценту
+  /// Высота по процентам
   double heightByPercent(double percent) {
     assert(percent >= 0 && percent <= 100);
     return (screenSize.height * percent) / 100;

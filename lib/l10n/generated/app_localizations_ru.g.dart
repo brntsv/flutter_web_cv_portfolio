@@ -132,7 +132,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get skillsList =>
-      'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   geolocator   geodesy   fvm   git';
+      'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   mason   Firebase   Shorebird   Animations   geolocator   geodesy   fvm   git';
 
   @override
   String get education => 'Образование';
@@ -164,7 +164,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get blogFooterDesc =>
-      'Этот сайт создан на Flutter Web, серверная часть на Firebase. [Код доступен](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.';
+      'Этот сайт создан на Flutter Web, хостинг на Firebase. [Код доступен](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.';
 
   @override
   String get blogFooterDesc2 =>

@@ -9,4 +9,7 @@
     <color name="lightGray">#BFC0C7</color>
     <color name="blue">#007AFF</color>
     <color name="lightBlue">#B3D9FF</color>
+    <color name="graphiteGray">#393C41</color>
+    <color name="spotifyGreen">#1DB954</color>
+    <color name="supabaseGreen">#3ECF8E</color>
 </resources>

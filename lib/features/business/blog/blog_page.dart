@@ -2,11 +2,15 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web/features/locale_mode/widgets/language_switcher.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
+import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
+import 'package:ui_kit/widgets/base/base_icon.dart';
+import 'package:ui_kit/widgets/base/buttons/base_elevated_button.dart';
 
+import '../../navigation/router.dart';
 import 'widgets/about_this_page_widget.dart';
 import 'widgets/projects_widget.dart';
 import 'widgets/socials_widget.dart';
@@ -63,6 +67,21 @@ final class BlogPage extends StatelessWidget {
                           style: textStyle.baseText,
                           appearDuration: 6,
                           appearClass: 2,
+                        ),
+
+                        /// Кнопка
+                        AnimatedElevatedButton(
+                          title: l10n.cv,
+                          backgroundColor: color.graphiteGray,
+                          textColor: color.white,
+                          appearDuration: 6,
+                          appearClass: 2,
+                          iconWidgetRight: BaseIcon(
+                            icon: Assets.images.iconLightning,
+                            color: color.white,
+                            size: BaseConst.base20,
+                          ),
+                          onPressed: () => context.push(const CvRoute()),
                         ),
 
                         /// Проекты

@@ -16,6 +16,9 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
     required this.lightGray,
     required this.blue,
     required this.lightBlue,
+    required this.graphiteGray,
+    required this.spotifyGreen,
+    required this.supabaseGreen,
   });
 
   final Color white;
@@ -27,6 +30,9 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
   final Color lightGray;
   final Color blue;
   final Color lightBlue;
+  final Color graphiteGray;
+  final Color spotifyGreen;
+  final Color supabaseGreen;
   @override
   ThemeExtension<ColorsExt> copyWith({
     Color? white,
@@ -38,6 +44,9 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
     Color? lightGray,
     Color? blue,
     Color? lightBlue,
+    Color? graphiteGray,
+    Color? spotifyGreen,
+    Color? supabaseGreen,
   }) =>
       ColorsExt(
         white: white ?? this.white,
@@ -49,6 +58,9 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
         lightGray: lightGray ?? this.lightGray,
         blue: blue ?? this.blue,
         lightBlue: lightBlue ?? this.lightBlue,
+        graphiteGray: graphiteGray ?? this.graphiteGray,
+        spotifyGreen: spotifyGreen ?? this.spotifyGreen,
+        supabaseGreen: supabaseGreen ?? this.supabaseGreen,
       );
 
   @override
@@ -67,6 +79,9 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
       lightGray: Color.lerp(lightGray, other.lightGray, t)!,
       blue: Color.lerp(blue, other.blue, t)!,
       lightBlue: Color.lerp(lightBlue, other.lightBlue, t)!,
+      graphiteGray: Color.lerp(graphiteGray, other.graphiteGray, t)!,
+      spotifyGreen: Color.lerp(spotifyGreen, other.spotifyGreen, t)!,
+      supabaseGreen: Color.lerp(supabaseGreen, other.supabaseGreen, t)!,
     );
   }
 }

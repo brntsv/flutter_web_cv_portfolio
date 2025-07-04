@@ -39,8 +39,7 @@ sealed class AppTheme {
     required Color textColor,
   }) =>
       ThemeData(
-        useMaterial3: true,
-        fontFamily: FontFamily.sourceSansPro,
+        fontFamily: FontFamily.inter,
         colorSchemeSeed: brightness == Brightness.light
             ? UiKitColor.white
             : UiKitColor.black,
@@ -126,6 +125,9 @@ sealed class AppTheme {
         lightGray: UiKitColor.lightGray,
         blue: UiKitColor.blue,
         lightBlue: UiKitColor.lightBlue,
+        graphiteGray: UiKitColor.graphiteGray,
+        spotifyGreen: UiKitColor.spotifyGreen,
+        supabaseGreen: UiKitColor.supabaseGreen,
       );
 
   static TextStyleExt _createTextStyleExt() => TextStyleExt(

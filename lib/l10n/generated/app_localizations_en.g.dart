@@ -133,7 +133,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get skillsList =>
-      'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   geolocator   geodesy   fvm   git';
+      'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   mason   Firebase   Shorebird   Animations   geolocator   geodesy   fvm   git';
 
   @override
   String get education => 'Education';
@@ -165,7 +165,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get blogFooterDesc =>
-      'This site is built with Flutter Web and the server part is on Firebase. [Code is available](https://github.com/brntsv/flutter_web_cv_portfolio) on Github.';
+      'This site is built with Flutter Web and the hosting is on Firebase. [Code is available](https://github.com/brntsv/flutter_web_cv_portfolio) on Github.';
 
   @override
   String get blogFooterDesc2 =>

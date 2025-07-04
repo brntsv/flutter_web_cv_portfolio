@@ -10,8 +10,16 @@ part 'router.gr.dart';
 final class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: BlogRoute.page, initial: true, path: '/'),
-        AutoRoute(page: CvRoute.page, path: '/cv'),
+        CustomRoute(
+          page: BlogRoute.page,
+          path: '/',
+          transitionsBuilder: TransitionsBuilders.fadeIn,
+        ),
+        CustomRoute(
+          page: CvRoute.page,
+          path: '/cv',
+          transitionsBuilder: TransitionsBuilders.fadeIn,
+        ),
         AutoRoute(page: PortfolioRoute.page, path: '/portfolio'),
       ];
 }
