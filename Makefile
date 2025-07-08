@@ -60,4 +60,5 @@ deploy: ## Деплой проекта
 	@echo "$(YELLOW)🚀 Деплой проекта...$(RESET)"
 	fvm flutter build web --release
 	firebase deploy --only hosting
+	firebase hosting:channel:list
 	@echo "$(GREEN)✅ Деплой завершен$(RESET)"

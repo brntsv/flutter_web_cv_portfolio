@@ -40,11 +40,11 @@ class UiKitColor {
   /// Color: #1DB954
   static const Color spotifyGreen = Color(0xFF1DB954);
 
-  /// Color: #3ECF8E
-  static const Color supabaseGreen = Color(0xFF3ECF8E);
-
   /// Color: #00000000
   static const Color transparent = Color(0x00000000);
+
+  /// Color: #b9a3e3
+  static const Color twitchPurpleLight = Color(0xFFB9A3E3);
 
   /// Color: #FFFFFFFF
   static const Color white = Color(0xFFFFFFFF);

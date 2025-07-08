@@ -7,9 +7,9 @@ import '../base_icon.dart';
 /// {@template animated_icon_button.class}
 /// Анимированная кнопка-иконка с фейд эффектом
 /// {@endtemplate}
-class AnimatedIconButton extends StatelessWidget with AnimationTimingMixin {
+class BaseAnimatedIconButton extends StatelessWidget with AnimationTimingMixin {
   /// {@macro animated_icon_button.class}
-  const AnimatedIconButton({
+  const BaseAnimatedIconButton({
     required this.icon,
     required this.onPressed,
     required this.appearDuration,

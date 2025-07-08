@@ -11,7 +11,7 @@ import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
-import 'package:ui_kit/widgets/base/buttons/animated_icon_button.dart';
+import 'package:ui_kit/widgets/base/buttons/base_animated_icon_button.dart';
 
 import 'widgets/education_language_section.dart';
 
@@ -38,7 +38,7 @@ final class CvPage extends StatelessWidget {
               child: Center(
                 child: Padding(
                   padding: EdgeInsets.symmetric(
-                    vertical: BaseConst.base130,
+                    vertical: BaseConst.base110,
                     horizontal: context.screenSize.width < BaseConst.base700
                         ? BaseConst.base28
                         : 0,
@@ -83,12 +83,13 @@ final class CvPage extends StatelessWidget {
             ),
           ),
 
-          // Кнопка назад в левом верхнем углу
-          if (context.canPop()) ...[
+          // Кнопка назад в левом верхнем углу (только на широких экранах)
+          if (context.canPop() &&
+              context.screenSize.width > BaseConst.base870) ...[
             Positioned(
               top: BaseConst.base40,
               left: BaseConst.base60,
-              child: AnimatedIconButton(
+              child: BaseAnimatedIconButton(
                 icon: Assets.images.iconLeftArrow,
                 onPressed: context.safePop,
                 iconColor: color.graphiteGray,

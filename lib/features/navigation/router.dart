@@ -20,6 +20,10 @@ final class AppRouter extends RootStackRouter {
           path: '/cv',
           transitionsBuilder: TransitionsBuilders.fadeIn,
         ),
-        AutoRoute(page: PortfolioRoute.page, path: '/portfolio'),
+        CustomRoute(
+          page: PortfolioRoute.page,
+          path: '/portfolio',
+          transitionsBuilder: TransitionsBuilders.slideLeft,
+        ),
       ];
 }

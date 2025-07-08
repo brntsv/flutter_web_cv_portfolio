@@ -4,6 +4,7 @@ sealed class BaseConst {
   // -- For all app --
 
   // * double
+  static const double base870 = 870;
   static const double base700 = 700;
   static const double base300 = 300;
   static const double base250 = 250;
@@ -26,6 +27,7 @@ sealed class BaseConst {
   static const double base120 = 120;
   static const double base116 = 116;
   static const double base114 = 114;
+  static const double base110 = 110;
   static const double base100 = 100;
   static const double base96 = 96;
   static const double base92 = 92;

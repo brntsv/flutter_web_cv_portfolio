@@ -127,7 +127,7 @@ sealed class AppTheme {
         lightBlue: UiKitColor.lightBlue,
         graphiteGray: UiKitColor.graphiteGray,
         spotifyGreen: UiKitColor.spotifyGreen,
-        supabaseGreen: UiKitColor.supabaseGreen,
+        twitchPurpleLight: UiKitColor.twitchPurpleLight,
       );
 
   static TextStyleExt _createTextStyleExt() => TextStyleExt(

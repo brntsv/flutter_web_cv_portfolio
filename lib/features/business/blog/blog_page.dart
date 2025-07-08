@@ -8,7 +8,7 @@ import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 import 'package:ui_kit/widgets/base/base_icon.dart';
-import 'package:ui_kit/widgets/base/buttons/base_elevated_button.dart';
+import 'package:ui_kit/widgets/base/buttons/base_animated_elevated_button.dart';
 
 import '../../navigation/router.dart';
 import 'widgets/about_this_page_widget.dart';
@@ -38,7 +38,7 @@ final class BlogPage extends StatelessWidget {
               child: Center(
                 child: Padding(
                   padding: EdgeInsets.symmetric(
-                    vertical: BaseConst.base130,
+                    vertical: BaseConst.base110,
                     horizontal: context.screenSize.width < BaseConst.base700
                         ? BaseConst.base28
                         : 0,
@@ -69,19 +69,41 @@ final class BlogPage extends StatelessWidget {
                           appearClass: 2,
                         ),
 
-                        /// Кнопка
-                        AnimatedElevatedButton(
-                          title: l10n.cv,
-                          backgroundColor: color.graphiteGray,
-                          textColor: color.white,
-                          appearDuration: 6,
-                          appearClass: 2,
-                          iconWidgetRight: BaseIcon(
-                            icon: Assets.images.iconLightning,
-                            color: color.white,
-                            size: BaseConst.base20,
-                          ),
-                          onPressed: () => context.push(const CvRoute()),
+                        Row(
+                          spacing: BaseConst.base16,
+                          children: [
+                            /// Кнопка CV
+                            AnimatedElevatedButton(
+                              title: l10n.cv,
+                              backgroundColor: color.graphiteGray,
+                              textColor: color.white,
+                              appearDuration: 6,
+                              appearClass: 3,
+                              iconWidgetRight: BaseIcon(
+                                icon: Assets.images.iconLightning,
+                                color: color.spotifyGreen,
+                                size: BaseConst.base20,
+                              ),
+                              onPressed: () => context.push(const CvRoute()),
+                            ),
+
+                            /// Кнопка Портфолио
+                            AnimatedElevatedButton(
+                              title: l10n.portfolio,
+                              backgroundColor: color.graphiteGray,
+                              textColor: color.white,
+                              appearDuration: 6,
+                              appearClass: 2,
+                              iconWidgetRight: BaseIcon(
+                                icon: Assets.images.iconLightning,
+                                color: color.twitchPurpleLight,
+                                size: BaseConst.base20,
+                              ),
+                              onPressed: () => context.push(
+                                const PortfolioRoute(),
+                              ),
+                            ),
+                          ],
                         ),
 
                         /// Проекты
