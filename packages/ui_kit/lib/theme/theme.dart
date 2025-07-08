@@ -21,14 +21,14 @@ sealed class AppTheme {
     brightness: Brightness.light,
     scaffoldBackgroundColor: UiKitColor.white,
     appBarColor: UiKitColor.white,
-    textColor: UiKitColor.black,
+    textColor: UiKitColor.darkGray,
   );
 
   /// Темная тема
   static final ThemeData darkTheme = _createTheme(
     brightness: Brightness.dark,
-    scaffoldBackgroundColor: UiKitColor.black,
-    appBarColor: UiKitColor.black,
+    scaffoldBackgroundColor: UiKitColor.darkGray,
+    appBarColor: UiKitColor.darkGray,
     textColor: UiKitColor.white,
   );
 
@@ -40,9 +40,13 @@ sealed class AppTheme {
   }) =>
       ThemeData(
         fontFamily: FontFamily.inter,
-        colorSchemeSeed: brightness == Brightness.light
-            ? UiKitColor.white
-            : UiKitColor.black,
+        colorScheme: brightness == Brightness.light
+            ? const ColorScheme.light(
+                primary: UiKitColor.white,
+              )
+            : const ColorScheme.dark(
+                primary: UiKitColor.white,
+              ),
         brightness: brightness,
         scaffoldBackgroundColor: scaffoldBackgroundColor,
         appBarTheme: _createAppBarTheme(appBarColor, textColor),
