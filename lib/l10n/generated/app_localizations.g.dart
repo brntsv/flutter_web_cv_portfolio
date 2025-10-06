@@ -359,7 +359,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutMeBlog.
   ///
   /// In ru, this message translates to:
-  /// **'Привет! Я Никита, Flutter разработчик. Работаю в аутсорс команде в Новосибирске. Стараюсь применять лучшие практики разработки, слежу за трендами и расширяю свой стек. Сейчас кроме Flutter интересуюсь Rust.'**
+  /// **'Привет! Я Никита, Flutter разработчик. Здесь делюсь проектами и заметками о том, что меня вдохновляет. Помимо Flutter интересуюсь Rust.'**
   String get aboutMeBlog;
 
   /// No description provided for @cv.

@@ -43,7 +43,7 @@
     "languages": "Языки",
     "languageEnglish": "Английский - Intermediate / B1",
     "languageRussian": "Русский - Native",
-    "aboutMeBlog": "Привет! Я Никита, Flutter разработчик. Работаю в аутсорс команде в Новосибирске. Стараюсь применять лучшие практики разработки, слежу за трендами и расширяю свой стек. Сейчас кроме Flutter интересуюсь Rust.",
+    "aboutMeBlog": "Привет! Я Никита, Flutter разработчик. Здесь делюсь проектами и заметками о том, что меня вдохновляет. Помимо Flutter интересуюсь Rust.",
     "cv": "Резюме",
     "blogFooterDesc": "Этот сайт создан на Flutter Web, хостинг на Firebase. [Код доступен](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.",
     "blogFooterDesc2": "Проект вдохновлен [репозиторием](https://github.com/filiph/filiphnet) Filip Hráček",

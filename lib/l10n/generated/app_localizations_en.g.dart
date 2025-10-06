@@ -158,7 +158,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutMeBlog =>
-      'Hello! I\'m Nikita, a Flutter developer. I work in an outsourcing team in Novosibirsk. I try to apply the best practices of development, follow trends and expand my stack. Currently, besides Flutter, I am interested in Rust.';
+      'Hi! I\'m Nikita, a Flutter developer. Here I share projects and notes on what inspires me. Besides Flutter, I\'m into Rust.';
 
   @override
   String get cv => 'CV';
