@@ -1,14 +1,13 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:utils/url_launcher/url_launcher.dart';
 
-import 'animation_timing_mixin.dart';
+import 'animated_word.dart';
 
 /// {@template animated_text_with_links.class}
 /// Анимированный текст с Markdown ссылками
 /// {@endtemplate}
-class AnimatedTextWithLinks extends StatelessWidget with AnimationTimingMixin {
+class AnimatedTextWithLinks extends StatelessWidget {
   /// {@macro animated_text_with_links.class}
   const AnimatedTextWithLinks({
     required this.text,
@@ -46,13 +45,13 @@ class AnimatedTextWithLinks extends StatelessWidget with AnimationTimingMixin {
             final isLastWord = i == words.length - 1;
             spans.add(
               WidgetSpan(
-                child: AnimatedWord(
+          child: AnimatedWord(
                   word: '$word${isLastWord ? '' : ' '}',
                   style: textStyle.baseText,
                   wordIndex: wordIndex + i,
                   appearClass: appearClass,
                   appearDuration: appearDuration,
-                ),
+          ),
               ),
             );
           }
@@ -70,7 +69,7 @@ class AnimatedTextWithLinks extends StatelessWidget with AnimationTimingMixin {
             wordIndex: wordIndex,
             appearClass: appearClass,
             appearDuration: appearDuration,
-            linkUrl: linkUrl,
+            onTap: () => UrlLauncher.openUrl(linkUrl),
           ),
         ),
       );
@@ -87,13 +86,13 @@ class AnimatedTextWithLinks extends StatelessWidget with AnimationTimingMixin {
           final isLastWord = i == words.length - 1;
           spans.add(
             WidgetSpan(
-              child: AnimatedWord(
+          child: AnimatedWord(
                 word: '$word${isLastWord ? '' : ' '}',
                 style: textStyle.baseText,
                 wordIndex: wordIndex + i,
                 appearClass: appearClass,
                 appearDuration: appearDuration,
-              ),
+          ),
             ),
           );
         }
@@ -102,81 +101,5 @@ class AnimatedTextWithLinks extends StatelessWidget with AnimationTimingMixin {
     }
 
     return Text.rich(TextSpan(children: spans));
-  }
-}
-
-/// {@template animated_word.class}
-/// Анимированное слово
-/// {@endtemplate}
-class AnimatedWord extends StatelessWidget with AnimationTimingMixin {
-  /// {@macro animated_word.class}
-  const AnimatedWord({
-    required this.word,
-    required this.style,
-    required this.wordIndex,
-    required this.appearClass,
-    required this.appearDuration,
-    this.linkUrl,
-    super.key,
-  });
-
-  /// Слово
-  final String word;
-
-  /// Стиль текста
-  final TextStyle style;
-
-  /// Индекс слова
-  final int wordIndex;
-
-  /// Класс анимации
-  final int appearClass;
-
-  /// Длительность анимации
-  final double appearDuration;
-
-  /// URL ссылки
-  final String? linkUrl;
-
-  @override
-  Widget build(BuildContext context) {
-    final animationClass = getAnimationClass(wordIndex, appearClass);
-    final animationParams = getAnimationParams(animationClass);
-    final color = colors(context);
-
-    return TweenAnimationBuilder<double>(
-      tween: Tween<double>(begin: 0, end: 1),
-      duration: Duration(milliseconds: (appearDuration * 1000).toInt()),
-      curve: Interval(
-        animationParams.startTime,
-        animationParams.endTime,
-        curve: Curves.easeOut,
-      ),
-      builder: (context, value, child) {
-        final animatedStyle = style.copyWith(
-          color: Color.lerp(
-            color.white,
-            style.color ?? color.black,
-            value,
-          ),
-        );
-
-        if (linkUrl != null) {
-          return MouseRegion(
-            cursor: SystemMouseCursors.click,
-            child: Text.rich(
-              TextSpan(
-                text: word,
-                style: animatedStyle,
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () => UrlLauncher.openUrl(linkUrl!),
-              ),
-            ),
-          );
-        }
-
-        return Text(word, style: animatedStyle);
-      },
-    );
   }
 }

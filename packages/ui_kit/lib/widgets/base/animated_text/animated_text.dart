@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
 
-import 'animation_timing_mixin.dart';
+import 'animated_word.dart';
 
 /// {@template animated_text.class}
 /// Анимированный текст
 /// {@endtemplate}
-class AnimatedText extends StatelessWidget with AnimationTimingMixin {
+class AnimatedText extends StatelessWidget {
   /// {@macro animated_text.class}
   const AnimatedText({
     required this.text,
@@ -37,38 +36,21 @@ class AnimatedText extends StatelessWidget with AnimationTimingMixin {
     // Общая продолжительность анимации
     final totalDuration = appearDuration;
 
-    final color = colors(context);
-
-    return Wrap(
-      spacing: BaseConst.base4,
-      runSpacing: BaseConst.base4,
-      children: List.generate(words.length, (index) {
-        // Вычисляем "класс" анимации (1-20) аналогично filiph.net
-        final animationClass = getAnimationClass(index, appearClass);
-
-        // Определяем параметры анимации для каждого класса
-        final animationParams = getAnimationParams(animationClass);
-
-        return TweenAnimationBuilder<double>(
-          tween: Tween<double>(begin: 0, end: 1),
-          duration: Duration(milliseconds: (totalDuration * 1000).toInt()),
-          curve: Interval(
-            animationParams.startTime,
-            animationParams.endTime,
-            curve: Curves.easeOut,
-          ),
-          builder: (context, value, child) => Text(
-            '${words[index]}${index == words.length - 1 ? "" : " "}',
-            style: style?.copyWith(
-              color: Color.lerp(
-                color.white,
-                style?.color ?? color.black,
-                value,
-              ),
+    return Text.rich(
+      TextSpan(
+        children: List.generate(words.length, (index) {
+          final isLast = index == words.length - 1;
+          return WidgetSpan(
+            child: AnimatedWord(
+              word: '${words[index]}${isLast ? '' : ' '}',
+              style: style ?? textStyles(context).baseText,
+              wordIndex: index,
+              appearClass: appearClass,
+              appearDuration: totalDuration,
             ),
-          ),
-        );
-      }),
+          );
+        }),
+      ),
     );
   }
 }

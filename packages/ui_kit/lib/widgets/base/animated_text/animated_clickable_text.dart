@@ -1,13 +1,14 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
 
-import 'animation_timing_mixin.dart';
+// Removed mixin usage; logic handled in AnimatedWord
+import 'animated_word.dart';
 
 /// {@template animated_clickable_text.class}
-/// Анимированный кликабельный текст (Гиперссылки)
+/// Анимированный кликабельный текст с коллбэком при нажатии
+/// Используется для навигации в пределах приложения
 /// {@endtemplate}
-class AnimatedClickableText extends StatelessWidget with AnimationTimingMixin {
+class AnimatedClickableText extends StatelessWidget {
   /// {@macro animated_clickable_text.class}
   const AnimatedClickableText({
     required this.text,
@@ -34,98 +35,50 @@ class AnimatedClickableText extends StatelessWidget with AnimationTimingMixin {
   final VoidCallback? onTap;
 
   @override
-  Widget build(BuildContext context) => Text.rich(
-        TextSpan(children: _buildAnimatedTextSpans(context)),
-      );
-
-  List<InlineSpan> _buildAnimatedTextSpans(BuildContext context) {
+  Widget build(BuildContext context) {
     final textStyle = textStyles(context);
     final color = colors(context);
     final spans = <InlineSpan>[];
 
-    // Разбиваем основной текст на слова
     final words = text.split(' ');
     for (var i = 0; i < words.length; i++) {
       final word = words[i];
       final isLastWord = i == words.length - 1;
-
       spans.add(
-        _buildAnimatedWordWidget(
-          '$word${isLastWord && description.isEmpty ? "" : " "}',
-          textStyle.baseText.copyWith(
-            color: onTap != null ? color.blue : color.black,
+        WidgetSpan(
+          child: AnimatedWord(
+            word: '$word${isLastWord && description.isEmpty ? '' : ' '}',
+            style: textStyle.baseText.copyWith(
+              color: onTap != null ? color.blue : color.black,
+            ),
+            wordIndex: i,
+            appearClass: appearClass,
+            appearDuration: appearDuration,
+            onTap: onTap,
           ),
-          i,
-          true, // это кликабельная часть
-          context,
         ),
       );
     }
 
-    // Добавляем описание, если есть
     if (description.isNotEmpty) {
       final descWords = description.split(' ');
       for (var i = 0; i < descWords.length; i++) {
         final word = descWords[i];
         final isLastWord = i == descWords.length - 1;
-
         spans.add(
-          _buildAnimatedWordWidget(
-            '$word${isLastWord ? '' : ' '}',
-            textStyle.baseText,
-            words.length + i, // продолжаем индексацию
-            false, // описание не кликабельное
-            context,
+          WidgetSpan(
+            child: AnimatedWord(
+              word: '$word${isLastWord ? '' : ' '}',
+              style: textStyle.baseText,
+              wordIndex: words.length + i,
+              appearClass: appearClass,
+              appearDuration: appearDuration,
+            ),
           ),
         );
       }
     }
 
-    return spans;
-  }
-
-  WidgetSpan _buildAnimatedWordWidget(
-    String word,
-    TextStyle style,
-    int wordIndex,
-    bool isClickable,
-    BuildContext context,
-  ) {
-    // Вычисляем "класс" анимации (1-20) аналогично оригинальному AnimatedText
-    final animationClass = getAnimationClass(wordIndex, appearClass);
-    final animationParams = getAnimationParams(animationClass);
-
-    final color = colors(context);
-
-    return WidgetSpan(
-      child: TweenAnimationBuilder<double>(
-        tween: Tween<double>(begin: 0, end: 1),
-        duration: Duration(milliseconds: (appearDuration * 1000).toInt()),
-        curve: Interval(
-          animationParams.startTime,
-          animationParams.endTime,
-          curve: Curves.easeOut,
-        ),
-        builder: (context, value, child) {
-          final animatedStyle = style.copyWith(
-            color: Color.lerp(
-              color.white,
-              style.color ?? color.black,
-              value,
-            ),
-          );
-
-          return Text.rich(
-            TextSpan(
-              text: word,
-              style: animatedStyle,
-              recognizer: isClickable && onTap != null
-                  ? (TapGestureRecognizer()..onTap = onTap)
-                  : null,
-            ),
-          );
-        },
-      ),
-    );
+    return Text.rich(TextSpan(children: spans));
   }
 }
