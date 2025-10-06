@@ -37,7 +37,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutMeDesc =>
-      '3+ years creating mobile applications for various industries — from e-commerce and real estate to CRM systems. Not only do I write code, but I also set up processes: I implemented CI/CD, created a release automation system, standardized development approaches in the team. I am constantly developing — I am studying Rust and Swift, following trends in mobile development.';
+      '3+ years creating mobile applications for various industries — from e-commerce and real estate to CRM systems. Not only do I write code, but I also set up processes: I implemented CI/CD, created a release automation system, standardized development approaches in the team.';
 
   @override
   String get projects => 'Projects';
@@ -158,7 +158,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutMeBlog =>
-      'Hello! I\'m Nikita, a Flutter developer. I work in an outsourcing team in Novosibirsk. I try to apply the best practices of development, follow trends and expand my stack. Currently, besides Flutter, I am interested in Rust and Swift.';
+      'Hello! I\'m Nikita, a Flutter developer. I work in an outsourcing team in Novosibirsk. I try to apply the best practices of development, follow trends and expand my stack. Currently, besides Flutter, I am interested in Rust.';
 
   @override
   String get cv => 'CV';

@@ -45,27 +45,21 @@ class ProjectsWidget extends StatelessWidget {
                 description: l10n.flourAndOrderDesc,
                 appearDuration: 6,
                 appearClass: 2,
-                onTap: () => context.push(
-                  const CvRoute(),
-                ),
+                onTap: () => context.push(const PortfolioRoute()),
               ),
               AnimatedClickableText(
                 text: l10n.realtOne,
                 description: l10n.realtOneDesc,
                 appearDuration: 6,
                 appearClass: 2,
-                onTap: () => context.push(
-                  const CvRoute(),
-                ),
+                onTap: () => context.push(const PortfolioRoute()),
               ),
               AnimatedClickableText(
                 text: l10n.novex,
                 description: l10n.novexDesc,
                 appearDuration: 6,
                 appearClass: 2,
-                onTap: () => context.push(
-                  const CvRoute(),
-                ),
+                onTap: () => context.push(const PortfolioRoute()),
               ),
             ],
           ),

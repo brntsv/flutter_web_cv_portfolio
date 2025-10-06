@@ -12,4 +12,9 @@
     <color name="graphiteGray">#393C41</color>
     <color name="spotifyGreen">#1DB954</color>
     <color name="twitchPurpleLight">#b9a3e3</color>
+    <color name="flourAndOrderRed">#E35B6F</color>
+    <color name="flourAndOrderBeige">#F6EEE3</color>
+    <color name="realtOneBlue">#0286FF</color>
+    <color name="realtOneGreen">#0DC226</color>
+    <color name="novexBlue">#0276C3</color>
 </resources>

@@ -19,6 +19,11 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
     required this.graphiteGray,
     required this.spotifyGreen,
     required this.twitchPurpleLight,
+    required this.flourAndOrderRed,
+    required this.flourAndOrderBeige,
+    required this.realtOneBlue,
+    required this.realtOneGreen,
+    required this.novexBlue,
   });
 
   final Color white;
@@ -33,6 +38,11 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
   final Color graphiteGray;
   final Color spotifyGreen;
   final Color twitchPurpleLight;
+  final Color flourAndOrderRed;
+  final Color flourAndOrderBeige;
+  final Color realtOneBlue;
+  final Color realtOneGreen;
+  final Color novexBlue;
   @override
   ThemeExtension<ColorsExt> copyWith({
     Color? white,
@@ -47,6 +57,11 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
     Color? graphiteGray,
     Color? spotifyGreen,
     Color? twitchPurpleLight,
+    Color? flourAndOrderRed,
+    Color? flourAndOrderBeige,
+    Color? realtOneBlue,
+    Color? realtOneGreen,
+    Color? novexBlue,
   }) =>
       ColorsExt(
         white: white ?? this.white,
@@ -61,6 +76,11 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
         graphiteGray: graphiteGray ?? this.graphiteGray,
         spotifyGreen: spotifyGreen ?? this.spotifyGreen,
         twitchPurpleLight: twitchPurpleLight ?? this.twitchPurpleLight,
+        flourAndOrderRed: flourAndOrderRed ?? this.flourAndOrderRed,
+        flourAndOrderBeige: flourAndOrderBeige ?? this.flourAndOrderBeige,
+        realtOneBlue: realtOneBlue ?? this.realtOneBlue,
+        realtOneGreen: realtOneGreen ?? this.realtOneGreen,
+        novexBlue: novexBlue ?? this.novexBlue,
       );
 
   @override
@@ -82,6 +102,11 @@ class ColorsExt extends ThemeExtension<ColorsExt> {
       graphiteGray: Color.lerp(graphiteGray, other.graphiteGray, t)!,
       spotifyGreen: Color.lerp(spotifyGreen, other.spotifyGreen, t)!,
       twitchPurpleLight: Color.lerp(twitchPurpleLight, other.twitchPurpleLight, t)!,
+      flourAndOrderRed: Color.lerp(flourAndOrderRed, other.flourAndOrderRed, t)!,
+      flourAndOrderBeige: Color.lerp(flourAndOrderBeige, other.flourAndOrderBeige, t)!,
+      realtOneBlue: Color.lerp(realtOneBlue, other.realtOneBlue, t)!,
+      realtOneGreen: Color.lerp(realtOneGreen, other.realtOneGreen, t)!,
+      novexBlue: Color.lerp(novexBlue, other.novexBlue, t)!,
     );
   }
 }

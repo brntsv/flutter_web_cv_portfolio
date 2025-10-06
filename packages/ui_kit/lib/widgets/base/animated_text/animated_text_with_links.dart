@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:utils/url_launcher/url_launcher.dart';
@@ -5,7 +6,7 @@ import 'package:utils/url_launcher/url_launcher.dart';
 import 'animation_timing_mixin.dart';
 
 /// {@template animated_text_with_links.class}
-/// Анимированный текст с ссылками
+/// Анимированный текст с Markdown ссылками
 /// {@endtemplate}
 class AnimatedTextWithLinks extends StatelessWidget with AnimationTimingMixin {
   /// {@macro animated_text_with_links.class}
@@ -152,9 +153,13 @@ class AnimatedTextWithLinks extends StatelessWidget with AnimationTimingMixin {
           );
 
           if (linkUrl != null) {
-            return GestureDetector(
-              onTap: () => UrlLauncher.openUrl(linkUrl),
-              child: Text(word, style: animatedStyle),
+            return Text.rich(
+              TextSpan(
+                text: word,
+                style: animatedStyle,
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () => UrlLauncher.openUrl(linkUrl),
+              ),
             );
           }
 

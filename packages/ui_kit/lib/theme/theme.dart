@@ -132,6 +132,11 @@ sealed class AppTheme {
         graphiteGray: UiKitColor.graphiteGray,
         spotifyGreen: UiKitColor.spotifyGreen,
         twitchPurpleLight: UiKitColor.twitchPurpleLight,
+        flourAndOrderRed: UiKitColor.flourAndOrderRed,
+        flourAndOrderBeige: UiKitColor.flourAndOrderBeige,
+        realtOneBlue: UiKitColor.realtOneBlue,
+        realtOneGreen: UiKitColor.realtOneGreen,
+        novexBlue: UiKitColor.novexBlue,
       );
 
   static TextStyleExt _createTextStyleExt() => TextStyleExt(

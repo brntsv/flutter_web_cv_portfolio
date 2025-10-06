@@ -22,6 +22,12 @@ class UiKitColor {
   /// Color: #2C2D2E
   static const Color darkGray = Color(0xFF2C2D2E);
 
+  /// Color: #F6EEE3
+  static const Color flourAndOrderBeige = Color(0xFFF6EEE3);
+
+  /// Color: #E35B6F
+  static const Color flourAndOrderRed = Color(0xFFE35B6F);
+
   /// Color: #393C41
   static const Color graphiteGray = Color(0xFF393C41);
 
@@ -33,6 +39,15 @@ class UiKitColor {
 
   /// Color: #BFC0C7
   static const Color lightGray = Color(0xFFBFC0C7);
+
+  /// Color: #0276C3
+  static const Color novexBlue = Color(0xFF0276C3);
+
+  /// Color: #0286FF
+  static const Color realtOneBlue = Color(0xFF0286FF);
+
+  /// Color: #0DC226
+  static const Color realtOneGreen = Color(0xFF0DC226);
 
   /// Color: #F0F1F4
   static const Color skyGray = Color(0xFFF0F1F4);

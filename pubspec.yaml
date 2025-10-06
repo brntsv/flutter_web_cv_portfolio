@@ -24,6 +24,7 @@ dependencies:
   utils:
     path: packages/utils
   web: ^1.1.1
+  card_swiper: ^3.0.1
 
 dev_dependencies:
   flutter_test:
