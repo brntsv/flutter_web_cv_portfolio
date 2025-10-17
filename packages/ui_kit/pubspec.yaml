@@ -15,7 +15,16 @@ dependencies:
   auto_route: ^10.1.0+1
   utils:
     path: ../utils
+  # Пакет для отображения SVG изображений.
   flutter_svg: ^2.2.0
+  # Пакет для отображения изображений.
+  extended_image: ^10.0.1
+  # Плагин для работы с путями
+  path: ^1.9.1
+  # Пакет предоставляет простой способ добавить эффект мерцания в проект Flutter
+  shimmer: ^3.0.0
+  # Пакет для работы с Swiper
+  card_swiper: ^3.0.1
 
 
 dev_dependencies:
@@ -46,6 +55,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/images/store_badges/
 
   fonts:
     - family: Inter

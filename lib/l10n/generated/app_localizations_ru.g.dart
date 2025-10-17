@@ -174,7 +174,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get flourAndOrder => 'Мука и порядок';
 
   @override
-  String get realtOne => 'Realt.One';
+  String get realtOne => 'Realt One';
 
   @override
   String get novex => 'Novex';
@@ -207,11 +207,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get twitter => '[Twitter](https://x.com/obeyhofer)';
 
   @override
-  String get interactivePortfolio => 'Интерактивное портфолио';
+  String get flourAndOrderDescription => 'CRM для кондитеров и пекарей';
 
   @override
-  String get counterText => 'Вы нажали на кнопку столько раз:';
+  String get realtOneDescription => 'Приложение для риэлторов';
 
   @override
-  String get increment => 'Увеличить';
+  String get novexDescription =>
+      'E-comm приложение для сети хозяйственных магазинов';
 }

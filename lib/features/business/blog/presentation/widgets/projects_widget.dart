@@ -5,8 +5,8 @@ import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_clickable_text.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 
-import '../../../../l10n/localization_extension.dart';
-import '../../../navigation/router.dart';
+import '../../../../../l10n/localization_extension.dart';
+import '../../../../navigation/router.dart';
 
 /// {@template projects_widget.class}
 /// Виджет для отображения проектов

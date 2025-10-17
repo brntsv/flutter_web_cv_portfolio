@@ -10,6 +10,9 @@ final class LocaleState extends Equatable {
   /// Язык
   final Locale locale;
 
+  /// Является ли язык русским
+  bool get isRu => locale.languageCode == 'ru';
+
   @override
   List<Object> get props => [locale];
 }

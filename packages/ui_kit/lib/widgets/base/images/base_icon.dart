@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+
 /// {@template base_icon.class}
 /// Базовый компонент для отображения иконки.
 /// {@endtemplate}

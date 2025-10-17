@@ -48,7 +48,7 @@
     "blogFooterDesc": "Этот сайт создан на Flutter Web, хостинг на Firebase. [Код доступен](https://github.com/brntsv/flutter_web_cv_portfolio) на Github.",
     "blogFooterDesc2": "Проект вдохновлен [репозиторием](https://github.com/filiph/filiphnet) Filip Hráček",
     "flourAndOrder": "Мука и порядок",
-    "realtOne": "Realt.One",
+    "realtOne": "Realt One",
     "novex": "Novex",
     "flourAndOrderDesc": " CRM-приложение для кондитеров",
     "realtOneDesc": " приложение для риэлторов",
@@ -59,7 +59,7 @@
     "github": "[Github](https://github.com/brntsv)",
     "telegram": "[Telegram](https://t.me/bntsv)",
     "twitter": "[Twitter](https://x.com/obeyhofer)",
-    "interactivePortfolio": "Интерактивное портфолио",
-    "counterText": "Вы нажали на кнопку столько раз:",
-    "increment": "Увеличить"
+    "flourAndOrderDescription": "CRM для кондитеров и пекарей",
+    "realtOneDescription": "Приложение для риэлторов",
+    "novexDescription": "E-comm приложение для сети хозяйственных магазинов"
 }

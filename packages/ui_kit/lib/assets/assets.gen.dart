@@ -18,8 +18,65 @@ class $AssetsImagesGen {
   String get iconLightning =>
       'packages/ui_kit/assets/images/icon-lightning.svg';
 
+  /// Directory path: assets/images/store_badges
+  $AssetsImagesStoreBadgesGen get storeBadges =>
+      const $AssetsImagesStoreBadgesGen();
+
   /// List of all assets
   List<String> get values => [iconLeftArrow, iconLightning];
+}
+
+class $AssetsImagesStoreBadgesGen {
+  const $AssetsImagesStoreBadgesGen();
+
+  /// File path: assets/images/store_badges/appgallery_en.svg
+  String get appgalleryEn =>
+      'packages/ui_kit/assets/images/store_badges/appgallery_en.svg';
+
+  /// File path: assets/images/store_badges/appgallery_ru.svg
+  String get appgalleryRu =>
+      'packages/ui_kit/assets/images/store_badges/appgallery_ru.svg';
+
+  /// File path: assets/images/store_badges/appstore_en.svg
+  String get appstoreEn =>
+      'packages/ui_kit/assets/images/store_badges/appstore_en.svg';
+
+  /// File path: assets/images/store_badges/appstore_ru.svg
+  String get appstoreRu =>
+      'packages/ui_kit/assets/images/store_badges/appstore_ru.svg';
+
+  /// File path: assets/images/store_badges/gplay_black_en.svg
+  String get gplayBlackEn =>
+      'packages/ui_kit/assets/images/store_badges/gplay_black_en.svg';
+
+  /// File path: assets/images/store_badges/gplay_black_ru.svg
+  String get gplayBlackRu =>
+      'packages/ui_kit/assets/images/store_badges/gplay_black_ru.svg';
+
+  /// File path: assets/images/store_badges/gplay_en.svg
+  String get gplayEn =>
+      'packages/ui_kit/assets/images/store_badges/gplay_en.svg';
+
+  /// File path: assets/images/store_badges/gplay_ru.svg
+  String get gplayRu =>
+      'packages/ui_kit/assets/images/store_badges/gplay_ru.svg';
+
+  /// File path: assets/images/store_badges/rustore_ru.svg
+  String get rustoreRu =>
+      'packages/ui_kit/assets/images/store_badges/rustore_ru.svg';
+
+  /// List of all assets
+  List<String> get values => [
+        appgalleryEn,
+        appgalleryRu,
+        appstoreEn,
+        appstoreRu,
+        gplayBlackEn,
+        gplayBlackRu,
+        gplayEn,
+        gplayRu,
+        rustoreRu
+      ];
 }
 
 class Assets {

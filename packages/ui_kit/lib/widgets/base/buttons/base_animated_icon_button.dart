@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../constants/base_constants.dart';
 import '../../../theme/theme.dart';
 import '../animated_text/animation_timing_mixin.dart';
-import '../base_icon.dart';
+import '../images/base_icon.dart';
 
 /// {@template animated_icon_button.class}
 /// Анимированная кнопка-иконка с фейд эффектом

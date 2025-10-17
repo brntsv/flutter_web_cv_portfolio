@@ -172,10 +172,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'Project inspired by [repository](https://github.com/filiph/filiphnet) Filip Hráček';
 
   @override
-  String get flourAndOrder => 'Flour and Order';
+  String get flourAndOrder => 'Мука и Порядок';
 
   @override
-  String get realtOne => 'Realt.One';
+  String get realtOne => 'Realt One';
 
   @override
   String get novex => 'Novex';
@@ -208,11 +208,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get twitter => '[Twitter](https://x.com/obeyhofer)';
 
   @override
-  String get interactivePortfolio => 'Interactive portfolio';
+  String get flourAndOrderDescription => 'CRM for bakers and bakers';
 
   @override
-  String get counterText => 'You have pushed the button this many times:';
+  String get realtOneDescription => 'app for realtors';
 
   @override
-  String get increment => 'Increment';
+  String get novexDescription => 'app for a network of household stores';
 }

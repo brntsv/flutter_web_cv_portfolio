@@ -389,7 +389,7 @@ abstract class AppLocalizations {
   /// No description provided for @realtOne.
   ///
   /// In ru, this message translates to:
-  /// **'Realt.One'**
+  /// **'Realt One'**
   String get realtOne;
 
   /// No description provided for @novex.
@@ -452,23 +452,23 @@ abstract class AppLocalizations {
   /// **'[Twitter](https://x.com/obeyhofer)'**
   String get twitter;
 
-  /// No description provided for @interactivePortfolio.
+  /// No description provided for @flourAndOrderDescription.
   ///
   /// In ru, this message translates to:
-  /// **'Интерактивное портфолио'**
-  String get interactivePortfolio;
+  /// **'CRM для кондитеров и пекарей'**
+  String get flourAndOrderDescription;
 
-  /// No description provided for @counterText.
+  /// No description provided for @realtOneDescription.
   ///
   /// In ru, this message translates to:
-  /// **'Вы нажали на кнопку столько раз:'**
-  String get counterText;
+  /// **'Приложение для риэлторов'**
+  String get realtOneDescription;
 
-  /// No description provided for @increment.
+  /// No description provided for @novexDescription.
   ///
   /// In ru, this message translates to:
-  /// **'Увеличить'**
-  String get increment;
+  /// **'E-comm приложение для сети хозяйственных магазинов'**
+  String get novexDescription;
 }
 
 class _AppLocalizationsDelegate

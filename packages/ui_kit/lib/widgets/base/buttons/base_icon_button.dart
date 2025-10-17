@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../constants/base_constants.dart';
 import '../../../theme/theme.dart';
-import '../base_icon.dart';
+import '../images/base_icon.dart';
 
 /// {@template base_icon_button.class}
 /// Базовая кнопка - иконка

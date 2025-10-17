@@ -70,6 +70,8 @@ sealed class BaseConst {
 
   static const String httpsPrefix = 'https://';
 
+  static const String svgFormat = '.svg';
+
   // * Duration
 
   static const Duration duration600 = Duration(milliseconds: 600);

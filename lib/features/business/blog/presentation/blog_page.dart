@@ -7,10 +7,10 @@ import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
-import 'package:ui_kit/widgets/base/base_icon.dart';
 import 'package:ui_kit/widgets/base/buttons/base_animated_elevated_button.dart';
+import 'package:ui_kit/widgets/base/images/base_icon.dart';
 
-import '../../navigation/router.dart';
+import '../../../navigation/router.dart';
 import 'widgets/about_this_page_widget.dart';
 import 'widgets/projects_widget.dart';
 import 'widgets/socials_widget.dart';

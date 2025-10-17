@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web/features/business/cv/widgets/about_me_section.dart';
-import 'package:flutter_web/features/business/cv/widgets/contact_section.dart';
-import 'package:flutter_web/features/business/cv/widgets/experience_section.dart';
-import 'package:flutter_web/features/business/cv/widgets/skills_section.dart';
+import 'package:flutter_web/features/business/cv/presentation/widgets/about_me_section.dart';
+import 'package:flutter_web/features/business/cv/presentation/widgets/contact_section.dart';
+import 'package:flutter_web/features/business/cv/presentation/widgets/experience_section.dart';
+import 'package:flutter_web/features/business/cv/presentation/widgets/skills_section.dart';
 import 'package:flutter_web/features/locale_mode/widgets/language_switcher.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
 import 'package:ui_kit/assets/assets.gen.dart';
