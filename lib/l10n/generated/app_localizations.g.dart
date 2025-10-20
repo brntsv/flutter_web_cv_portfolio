@@ -383,7 +383,7 @@ abstract class AppLocalizations {
   /// No description provided for @flourAndOrder.
   ///
   /// In ru, this message translates to:
-  /// **'Мука и порядок'**
+  /// **'Мука и Порядок'**
   String get flourAndOrder;
 
   /// No description provided for @realtOne.

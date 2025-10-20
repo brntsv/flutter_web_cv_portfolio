@@ -4,6 +4,7 @@ import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/gradients/base_sinusoidal_gradient_container.dart';
+import 'package:ui_kit/widgets/base/images/base_image.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 import '../../../../locale_mode/bloc/locale_bloc.dart';
@@ -49,11 +50,25 @@ class ProjectSection extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   spacing: BaseConst.base20,
                   children: [
-                    Text(
-                      project.appType.projectTitle(l10n),
-                      style: textStyle.h1.copyWith(
-                        color: project.appType.projectTextColor(color),
-                      ),
+                    Row(
+                      spacing: BaseConst.base16,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(BaseConst.base14),
+                          child: SizedBox.square(
+                            dimension: BaseConst.base72,
+                            child: BaseImage.asset(
+                              assetPath: project.appType.iconPath,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          project.appType.projectTitle(l10n),
+                          style: textStyle.h1.copyWith(
+                            color: project.appType.projectTextColor(color),
+                          ),
+                        ),
+                      ],
                     ),
                     Text(
                       project.appType.projectDescription(l10n),

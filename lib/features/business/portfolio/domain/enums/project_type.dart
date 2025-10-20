@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/extensions/color_theme_extension.dart';
 
 import '../../../../../l10n/generated/app_localizations.g.dart';
@@ -18,6 +19,13 @@ enum ProjectType {
 
   /// Novex
   novex;
+
+  /// Путь к иконке проекта
+  String get iconPath => switch (this) {
+        flourAndOrder => Assets.images.projectIcons.iconFlourOrder.keyName,
+        realtOne => Assets.images.projectIcons.iconRealtOne.keyName,
+        novex => Assets.images.projectIcons.iconNovex.keyName,
+      };
 
   /// Название проекта
   String projectTitle(AppLocalizations l10n) => switch (this) {

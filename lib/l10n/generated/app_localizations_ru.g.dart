@@ -171,7 +171,7 @@ class AppLocalizationsRu extends AppLocalizations {
       'Проект вдохновлен [репозиторием](https://github.com/filiph/filiphnet) Filip Hráček';
 
   @override
-  String get flourAndOrder => 'Мука и порядок';
+  String get flourAndOrder => 'Мука и Порядок';
 
   @override
   String get realtOne => 'Realt One';
