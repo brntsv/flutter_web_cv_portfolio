@@ -12,4 +12,10 @@ class FontFamily {
 
   /// Font family: Inter
   static const String inter = 'Inter';
+
+  /// Font family: Mabry Pro
+  static const String mabryPro = 'Mabry Pro';
+
+  /// Font family: Onder
+  static const String onder = 'Onder';
 }

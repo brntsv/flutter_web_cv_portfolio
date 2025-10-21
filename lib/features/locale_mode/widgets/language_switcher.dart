@@ -42,7 +42,7 @@ class LanguageSwitcher extends StatelessWidget {
               ),
               child: Text(
                 isRussian ? _en.toUpperCase() : _ru.toUpperCase(),
-                style: textStyle.captionBold,
+                style: textStyle.baseTextBold,
               ),
             ),
           ),

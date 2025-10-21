@@ -54,7 +54,7 @@ sealed class AppTheme {
         textButtonTheme: _createTextButtonTheme(textColor),
         bottomSheetTheme: _createBottomSheetTheme(appBarColor),
         textSelectionTheme: _createTextSelectionTheme(),
-        primaryTextTheme: TextTheme(titleMedium: UiKitTextStyles.h1),
+        primaryTextTheme: TextTheme(titleMedium: UiKitTextStyles.baseText),
         scrollbarTheme: _createScrollbarTheme(),
         outlinedButtonTheme: _createOutlinedButtonTheme(),
         splashColor: UiKitColor.transparent,
@@ -70,7 +70,7 @@ sealed class AppTheme {
     Color textColor,
   ) =>
       AppBarTheme(
-        color: backgroundColor,
+        backgroundColor: backgroundColor,
         elevation: 0,
         surfaceTintColor: backgroundColor,
         centerTitle: true,
@@ -144,17 +144,11 @@ sealed class AppTheme {
         h2: UiKitTextStyles.h2,
         h3: UiKitTextStyles.h3,
         h4: UiKitTextStyles.h4,
-        h5: UiKitTextStyles.h5,
-        h6: UiKitTextStyles.h6,
-        inputHeadline: UiKitTextStyles.inputHeadline,
-        inputPlaceholder: UiKitTextStyles.inputPlaceholder,
-        inputTitle: UiKitTextStyles.inputTitle,
+        baseTextDesc: UiKitTextStyles.baseTextDesc,
+
+        ///
         baseText: UiKitTextStyles.baseText,
-        smallText: UiKitTextStyles.smallText,
         baseTextBold: UiKitTextStyles.baseTextBold,
-        caption: UiKitTextStyles.baseCaption,
-        smallCaption: UiKitTextStyles.smallCaption,
-        captionBold: UiKitTextStyles.captionBold,
         buttonTitle: UiKitTextStyles.buttonTitle,
       );
 }

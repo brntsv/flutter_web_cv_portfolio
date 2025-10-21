@@ -62,4 +62,10 @@ flutter:
     - family: Inter
       fonts:
         - asset: assets/fonts/Inter-VariableFont_opsz,wght.ttf
+    - family: Mabry Pro
+      fonts:
+        - asset: assets/fonts/MabryPro-Regular.ttf
+    - family: Onder
+      fonts:
+        - asset: assets/fonts/Onder-Regular.ttf
 

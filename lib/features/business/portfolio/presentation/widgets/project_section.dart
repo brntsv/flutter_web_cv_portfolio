@@ -64,7 +64,7 @@ class ProjectSection extends StatelessWidget {
                         ),
                         Text(
                           project.appType.projectTitle(l10n),
-                          style: textStyle.h1.copyWith(
+                          style: textStyle.h4.copyWith(
                             color: project.appType.projectTextColor(color),
                           ),
                         ),
@@ -72,7 +72,7 @@ class ProjectSection extends StatelessWidget {
                     ),
                     Text(
                       project.appType.projectDescription(l10n),
-                      style: textStyle.h2.copyWith(
+                      style: textStyle.baseTextDesc.copyWith(
                         color: project.appType.projectTextColor(color),
                       ),
                     ),
