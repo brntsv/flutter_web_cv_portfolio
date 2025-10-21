@@ -37,8 +37,8 @@ class UiKitColor {
   /// Color: #B3D9FF
   static const Color lightBlue = Color(0xFFB3D9FF);
 
-  /// Color: #BFC0C7
-  static const Color lightGray = Color(0xFFBFC0C7);
+  /// Color: #F7F7F7
+  static const Color lightGray = Color(0xFFF7F7F7);
 
   /// Color: #0276C3
   static const Color novexBlue = Color(0xFF0276C3);

@@ -17,10 +17,17 @@ import 'store_badges_widget.dart';
 /// {@endtemplate}
 class ProjectSection extends StatelessWidget {
   /// {@macro project_section}
-  const ProjectSection({required this.project, super.key});
+  const ProjectSection({
+    required this.project,
+    required this.index,
+    super.key,
+  });
 
   /// Данные проекта для отображения.
   final ProjectEntity project;
+
+  /// Порядковый индекс секции в списке (для чередования колонок).
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -31,82 +38,91 @@ class ProjectSection extends StatelessWidget {
     final isRu = context.select<LocaleBloc, bool>((bloc) => bloc.state.isRu);
     final badges = project.appType.badges(isRu: isRu);
 
-    final content = Stack(
-      alignment: Alignment.bottomCenter,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: BaseConst.base40,
-            vertical: BaseConst.base110,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Spacer(),
-              Expanded(
-                flex: 5,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  spacing: BaseConst.base20,
-                  children: [
-                    Row(
-                      spacing: BaseConst.base16,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(BaseConst.base14),
-                          child: SizedBox.square(
-                            dimension: BaseConst.base72,
-                            child: BaseImage.asset(
-                              assetPath: project.appType.iconPath,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          project.appType.projectTitle(l10n),
-                          style: textStyle.h4.copyWith(
-                            color: project.appType.projectTextColor(color),
-                          ),
-                        ),
-                      ],
+    // Левый/правый контейнеры (будут чередоваться по индексу)
+    final textContainer = Expanded(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(BaseConst.base40),
+          color: color.lightGray,
+        ),
+        padding: const EdgeInsets.all(BaseConst.base40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: BaseConst.base20,
+          children: [
+            Row(
+              spacing: BaseConst.base16,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(BaseConst.base14),
+                  child: SizedBox.square(
+                    dimension: BaseConst.base72,
+                    child: BaseImage.asset(
+                      assetPath: project.appType.iconPath,
                     ),
-                    Text(
-                      project.appType.projectDescription(l10n),
-                      style: textStyle.baseTextDesc.copyWith(
-                        color: project.appType.projectTextColor(color),
-                      ),
-                    ),
-                    if (badges.isNotEmpty) ...[
-                      StoreBadgesWidget(badges: badges),
-                    ],
-                  ],
+                  ),
                 ),
-              ),
-              const SizedBox(width: BaseConst.base50),
-              Expanded(
-                flex: 2,
-                child: Center(
+                Text(
+                  project.appType.projectTitle(l10n),
+                  style: textStyle.h4,
+                ),
+              ],
+            ),
+            Text(
+              project.appType.projectDescription(l10n),
+              style: textStyle.baseTextDesc,
+            ),
+            if (badges.isNotEmpty) ...[
+              StoreBadgesWidget(badges: badges),
+            ],
+          ],
+        ),
+      ),
+    );
+
+    final mockupContainer = Expanded(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(BaseConst.base40),
+        child: SizedBox.expand(
+          child: project.appType.useSinusoidalGradient &&
+                  project.appType.gradientColors(color).length >= 2
+              ? BaseSinusoidalGradientContainer(
+                  startColor: project.appType.gradientColors(color).first,
+                  endColor: project.appType.gradientColors(color).last,
+                  child: Center(
+                    child: IphoneMockup(screenshots: project.screenshots),
+                  ),
+                )
+              : Center(
                   child: IphoneMockup(screenshots: project.screenshots),
                 ),
-              ),
-              const Spacer(),
-            ],
-          ),
         ),
-      ],
+      ),
     );
+
+    final children = index.isEven
+        ? <Widget>[
+            textContainer,
+            const SizedBox(width: BaseConst.base24),
+            mockupContainer,
+          ]
+        : <Widget>[
+            mockupContainer,
+            const SizedBox(width: BaseConst.base24),
+            textContainer,
+          ];
 
     return SliverToBoxAdapter(
       child: SizedBox(
         height: context.screenSize.height,
-        child: project.appType.useSinusoidalGradient &&
-                project.appType.gradientColors(color).length >= 2
-            ? BaseSinusoidalGradientContainer(
-                startColor: project.appType.gradientColors(color).first,
-                endColor: project.appType.gradientColors(color).last,
-                child: content,
-              )
-            : content,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: BaseConst.base24,
+            vertical: BaseConst.base24,
+          ),
+          child: Row(children: children),
+        ),
       ),
     );
   }

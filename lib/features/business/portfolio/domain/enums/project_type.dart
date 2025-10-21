@@ -54,13 +54,6 @@ enum ProjectType {
         _ => []
       };
 
-  /// Цвет текста (может зависеть от темы)
-  Color projectTextColor(ColorsExt color) => switch (this) {
-        flourAndOrder => color.graphiteGray,
-        realtOne => color.graphiteGray,
-        novex => color.white,
-      };
-
   /// Использовать ли синусоидальный градиент
   bool get useSinusoidalGradient => switch (this) {
         flourAndOrder => true,

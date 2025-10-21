@@ -56,11 +56,12 @@ final class PortfolioPage extends StatelessWidget {
         children: [
           CustomScrollView(
             slivers: [
-              ...projects.map(
-                (project) => ProjectSection(
-                  project: project,
-                ),
-              ),
+              ...projects.asMap().entries.map(
+                    (entry) => ProjectSection(
+                      project: entry.value,
+                      index: entry.key,
+                    ),
+                  ),
             ],
           ),
 
