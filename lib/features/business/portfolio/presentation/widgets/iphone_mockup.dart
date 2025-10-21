@@ -21,12 +21,17 @@ class IphoneMockup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Размеры для макета телефона
+    // Базовые размеры макета телефона
     const phoneWidth = 280.0;
     const phoneHeight = 560.0;
-    const screenBorder = 12.0;
 
     final color = colors(context);
+
+    // Радиусы/рамки: экранный радиус = радиус корпуса − толщина рамки
+    const frameRadius = BaseConst.base60;
+    const borderWidth = BaseConst.base6;
+    const screenInset = borderWidth;
+    const screenRadius = frameRadius - screenInset;
 
     final isSingleScreenshot = screenshots.length <= 1;
 
@@ -61,32 +66,19 @@ class IphoneMockup extends StatelessWidget {
       child: SizedBox(
         width: phoneWidth,
         height: phoneHeight,
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            // Корпус телефона
-            Container(
-              width: phoneWidth,
-              height: phoneHeight,
-              decoration: BoxDecoration(
-                color: color.black,
-                borderRadius: BorderRadius.circular(BaseConst.base40),
-                border:
-                    Border.all(color: color.darkGray, width: BaseConst.base4),
-              ),
+        child: Container(
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(frameRadius),
+            border: Border.all(
+              color: color.gray,
+              width: borderWidth,
             ),
-            // Экран
-            Positioned.fill(
-              top: screenBorder,
-              bottom: screenBorder,
-              left: screenBorder,
-              right: screenBorder,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(BaseConst.base28),
-                child: swiper,
-              ),
-            ),
-          ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(screenRadius),
+            child: swiper,
+          ),
         ),
       ),
     );

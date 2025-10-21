@@ -31,8 +31,8 @@ class UiKitColor {
   /// Color: #393C41
   static const Color graphiteGray = Color(0xFF393C41);
 
-  /// Color: #919399
-  static const Color gray = Color(0xFF919399);
+  /// Color: #4F4F4F
+  static const Color gray = Color(0xFF4F4F4F);
 
   /// Color: #B3D9FF
   static const Color lightBlue = Color(0xFFB3D9FF);

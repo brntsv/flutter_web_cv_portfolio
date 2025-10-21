@@ -4,10 +4,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00000000</color>
     <color name="darkGray">#232325</color>
+    <color name="gray">#4F4F4F</color>
     <color name="spotifyGreen">#1DB954</color>
     <color name="twitchPurpleLight">#b9a3e3</color>
     <!--  -->
-    <color name="gray">#919399</color>
     <color name="skyGray">#F0F1F4</color>
     <color name="lightGray">#BFC0C7</color>
     <color name="blue">#007AFF</color>
