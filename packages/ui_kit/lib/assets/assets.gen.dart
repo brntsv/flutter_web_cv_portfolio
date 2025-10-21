@@ -70,14 +70,6 @@ class $AssetsImagesStoreBadgesGen {
   String get appstoreRu =>
       'packages/ui_kit/assets/images/store_badges/appstore_ru.svg';
 
-  /// File path: assets/images/store_badges/gplay_black_en.svg
-  String get gplayBlackEn =>
-      'packages/ui_kit/assets/images/store_badges/gplay_black_en.svg';
-
-  /// File path: assets/images/store_badges/gplay_black_ru.svg
-  String get gplayBlackRu =>
-      'packages/ui_kit/assets/images/store_badges/gplay_black_ru.svg';
-
   /// File path: assets/images/store_badges/gplay_en.svg
   String get gplayEn =>
       'packages/ui_kit/assets/images/store_badges/gplay_en.svg';
@@ -85,6 +77,10 @@ class $AssetsImagesStoreBadgesGen {
   /// File path: assets/images/store_badges/gplay_ru.svg
   String get gplayRu =>
       'packages/ui_kit/assets/images/store_badges/gplay_ru.svg';
+
+  /// File path: assets/images/store_badges/rustore_en.svg
+  String get rustoreEn =>
+      'packages/ui_kit/assets/images/store_badges/rustore_en.svg';
 
   /// File path: assets/images/store_badges/rustore_ru.svg
   String get rustoreRu =>
@@ -96,10 +92,9 @@ class $AssetsImagesStoreBadgesGen {
         appgalleryRu,
         appstoreEn,
         appstoreRu,
-        gplayBlackEn,
-        gplayBlackRu,
         gplayEn,
         gplayRu,
+        rustoreEn,
         rustoreRu
       ];
 }

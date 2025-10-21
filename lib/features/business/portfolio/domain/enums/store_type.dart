@@ -26,23 +26,22 @@ enum StoreType {
     bool hasAppGallery = false,
   }) =>
       switch (this) {
-        // App Store — обычный выбор по локали
+        // App Store
         appStore => isRu
             ? Assets.images.storeBadges.appstoreRu
             : Assets.images.storeBadges.appstoreEn,
 
-        // Google Play — правило выбора чёрного/белого бейджа по контексту
-        googlePlay when hasAppStore && !hasRustore && !hasAppGallery => isRu
-            ? Assets.images.storeBadges.gplayBlackRu
-            : Assets.images.storeBadges.gplayBlackEn,
+        // Google Play
         googlePlay => isRu
             ? Assets.images.storeBadges.gplayRu
             : Assets.images.storeBadges.gplayEn,
 
-        // RuStore — один вариант
-        rustore => Assets.images.storeBadges.rustoreRu,
+        // RuStore
+        rustore => isRu
+            ? Assets.images.storeBadges.rustoreRu
+            : Assets.images.storeBadges.rustoreEn,
 
-        // AppGallery — выбор по локали
+        // AppGallery
         appGallery => isRu
             ? Assets.images.storeBadges.appgalleryRu
             : Assets.images.storeBadges.appgalleryEn,
