@@ -45,7 +45,7 @@ class ProjectSection extends StatelessWidget {
           borderRadius: BorderRadius.circular(BaseConst.base40),
           color: color.lightGray,
         ),
-        padding: const EdgeInsets.all(BaseConst.base40),
+        padding: const EdgeInsets.all(BaseConst.base60),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,18 +85,23 @@ class ProjectSection extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(BaseConst.base40),
         child: SizedBox.expand(
-          child: project.appType.useSinusoidalGradient &&
-                  project.appType.gradientColors(color).length >= 2
-              ? BaseSinusoidalGradientContainer(
-                  startColor: project.appType.gradientColors(color).first,
-                  endColor: project.appType.gradientColors(color).last,
-                  child: Center(
-                    child: IphoneMockup(screenshots: project.screenshots),
-                  ),
-                )
-              : Center(
+          child: switch (project.appType.gradientColors(color).length >= 2) {
+            true => BaseSinusoidalGradientContainer(
+                startColor: project.appType.gradientColors(color).first,
+                endColor: project.appType.gradientColors(color).last,
+                child: Center(
                   child: IphoneMockup(screenshots: project.screenshots),
                 ),
+              ),
+            false => DecoratedBox(
+                decoration: BoxDecoration(
+                  color: project.appType.backgroundColor(color),
+                ),
+                child: Center(
+                  child: IphoneMockup(screenshots: project.screenshots),
+                ),
+              ),
+          },
         ),
       ),
     );

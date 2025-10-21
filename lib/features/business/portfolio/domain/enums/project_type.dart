@@ -43,10 +43,10 @@ enum ProjectType {
 
   /// Цвета градиента (зависят от темы → нужен BuildContext)
   List<Color> gradientColors(ColorsExt color) => switch (this) {
-        flourAndOrder => [
-            color.flourAndOrderBeige,
-            color.flourAndOrderRed.withValues(alpha: .2),
-          ],
+        // flourAndOrder => [
+        //     color.flourAndOrderBeige,
+        //     color.flourAndOrderRed.withValues(alpha: .2),
+        //   ],
         novex => [
             color.novexBlue.withValues(alpha: .6),
             color.novexBlue,
@@ -54,11 +54,11 @@ enum ProjectType {
         _ => []
       };
 
-  /// Использовать ли синусоидальный градиент
-  bool get useSinusoidalGradient => switch (this) {
-        flourAndOrder => true,
-        realtOne => false,
-        novex => true,
+  /// Обычный цвет фона, если градиент не используется/не задан
+  Color backgroundColor(ColorsExt color) => switch (this) {
+        flourAndOrder => color.flourAndOrderBeige,
+        realtOne => color.spotifyGreen.withValues(alpha: .3),
+        novex => color.novexBlue,
       };
 
   /// Получить бейджи магазинов
