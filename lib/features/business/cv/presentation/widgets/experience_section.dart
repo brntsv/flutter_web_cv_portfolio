@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/features/business/cv/presentation/widgets/section_title.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
 import 'package:ui_kit/constants/base_constants.dart';
+import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
+import 'package:ui_kit/widgets/base/animated_text/animated_clickable_text.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_text_with_links.dart';
+
+import '../../../../navigation/router.dart';
 
 /// Секция "Опыт работы"
 class ExperienceSection extends StatelessWidget {
@@ -251,15 +254,19 @@ class _ProjectsSection extends StatelessWidget {
           appearDuration: 8,
           appearClass: 2,
         ),
-        AnimatedTextWithLinks(
-          text: l10n.projectsRealtOne,
-          appearDuration: 8,
+        AnimatedClickableText(
+          text: l10n.realtOne,
+          description: l10n.realtOneDesc,
+          appearDuration: 6,
           appearClass: 2,
+          onTap: () => context.push(const PortfolioRoute()),
         ),
-        AnimatedTextWithLinks(
-          text: l10n.projectsNovex,
-          appearDuration: 8,
+        AnimatedClickableText(
+          text: l10n.novex,
+          description: l10n.novexDesc,
+          appearDuration: 6,
           appearClass: 2,
+          onTap: () => context.push(const PortfolioRoute()),
         ),
       ],
     );
