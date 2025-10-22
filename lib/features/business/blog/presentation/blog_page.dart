@@ -99,9 +99,7 @@ final class BlogPage extends StatelessWidget {
                                 color: color.twitchPurpleLight,
                                 size: BaseConst.base20,
                               ),
-                              onPressed: () => context.push(
-                                const PortfolioRoute(),
-                              ),
+                              onPressed: () => context.push(PortfolioRoute()),
                             ),
                           ],
                         ),

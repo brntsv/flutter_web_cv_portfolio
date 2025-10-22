@@ -7,6 +7,7 @@ import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 import '../../../../navigation/router.dart';
+import '../../../portfolio/domain/enums/project_type.dart';
 
 /// {@template projects_widget.class}
 /// Виджет для отображения проектов
@@ -45,21 +46,29 @@ class ProjectsWidget extends StatelessWidget {
                 description: l10n.flourAndOrderDesc,
                 appearDuration: 6,
                 appearClass: 2,
-                onTap: () => context.push(const PortfolioRoute()),
+                onTap: () => context.push(PortfolioRoute()),
               ),
               AnimatedClickableText(
                 text: l10n.realtOne,
                 description: l10n.realtOneDesc,
                 appearDuration: 6,
                 appearClass: 2,
-                onTap: () => context.push(const PortfolioRoute()),
+                onTap: () => context.push(
+                  PortfolioRoute(
+                    initialProject: ProjectType.realtOne,
+                  ),
+                ),
               ),
               AnimatedClickableText(
                 text: l10n.novex,
                 description: l10n.novexDesc,
                 appearDuration: 6,
                 appearClass: 2,
-                onTap: () => context.push(const PortfolioRoute()),
+                onTap: () => context.push(
+                  PortfolioRoute(
+                    initialProject: ProjectType.novex,
+                  ),
+                ),
               ),
             ],
           ),

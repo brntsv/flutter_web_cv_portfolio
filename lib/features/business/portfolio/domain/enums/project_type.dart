@@ -94,19 +94,20 @@ enum ProjectType {
         ),
       );
     }
-    if (appGalleryLink != null) {
-      items.add(
-        StoreBadgeEntity(
-          imageUrl: StoreType.appGallery.badgeUrl(isRu: isRu),
-          linkUrl: appGalleryLink,
-        ),
-      );
-    }
+
     if (rustoreLink != null) {
       items.add(
         StoreBadgeEntity(
           imageUrl: StoreType.rustore.badgeUrl(isRu: isRu),
           linkUrl: rustoreLink,
+        ),
+      );
+    }
+    if (appGalleryLink != null) {
+      items.add(
+        StoreBadgeEntity(
+          imageUrl: StoreType.appGallery.badgeUrl(isRu: isRu),
+          linkUrl: appGalleryLink,
         ),
       );
     }

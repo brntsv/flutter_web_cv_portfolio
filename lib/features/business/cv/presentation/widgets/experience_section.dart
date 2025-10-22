@@ -8,6 +8,7 @@ import 'package:ui_kit/widgets/base/animated_text/animated_clickable_text.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 
 import '../../../../navigation/router.dart';
+import '../../../portfolio/domain/enums/project_type.dart';
 
 /// Секция "Опыт работы"
 class ExperienceSection extends StatelessWidget {
@@ -259,14 +260,22 @@ class _ProjectsSection extends StatelessWidget {
           description: l10n.realtOneDesc,
           appearDuration: 6,
           appearClass: 2,
-          onTap: () => context.push(const PortfolioRoute()),
+          onTap: () => context.push(
+            PortfolioRoute(
+              initialProject: ProjectType.realtOne,
+            ),
+          ),
         ),
         AnimatedClickableText(
           text: l10n.novex,
           description: l10n.novexDesc,
           appearDuration: 6,
           appearClass: 2,
-          onTap: () => context.push(const PortfolioRoute()),
+          onTap: () => context.push(
+            PortfolioRoute(
+              initialProject: ProjectType.novex,
+            ),
+          ),
         ),
       ],
     );
