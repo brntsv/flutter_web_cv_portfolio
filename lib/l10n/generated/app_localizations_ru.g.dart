@@ -132,7 +132,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get skillsList =>
-      'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   mason   Firebase   Shorebird   Animations   geolocator   geodesy   fvm   git';
+      'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   EventBus   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   mason   Firebase   Supabase   Shorebird   Animations   geolocator   geodesy   fvm   git';
 
   @override
   String get education => 'Образование';

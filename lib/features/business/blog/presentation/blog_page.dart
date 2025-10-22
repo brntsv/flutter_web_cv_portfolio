@@ -120,8 +120,8 @@ final class BlogPage extends StatelessWidget {
             ),
           ),
           const Positioned(
-            top: BaseConst.base20,
-            right: BaseConst.base20,
+            top: BaseConst.base48,
+            right: BaseConst.base48,
             child: LanguageSwitcher(),
           ),
         ],

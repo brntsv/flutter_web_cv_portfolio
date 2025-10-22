@@ -87,8 +87,8 @@ final class CvPage extends StatelessWidget {
           if (context.canPop() &&
               context.screenSize.width > BaseConst.base870) ...[
             Positioned(
-              top: BaseConst.base40,
-              left: BaseConst.base60,
+              top: BaseConst.base48,
+              left: BaseConst.base48,
               child: BaseAnimatedIconButton(
                 icon: Assets.images.iconLeftArrow,
                 onPressed: context.safePop,
@@ -101,8 +101,8 @@ final class CvPage extends StatelessWidget {
           ],
 
           const Positioned(
-            top: BaseConst.base20,
-            right: BaseConst.base20,
+            top: BaseConst.base48,
+            right: BaseConst.base48,
             child: LanguageSwitcher(),
           ),
         ],

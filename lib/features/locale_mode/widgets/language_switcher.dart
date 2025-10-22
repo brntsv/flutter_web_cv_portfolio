@@ -25,24 +25,45 @@ class LanguageSwitcher extends StatelessWidget {
         final isRussian = locale.languageCode == _ru;
 
         return Material(
-          elevation: BaseConst.base4,
-          borderRadius: BorderRadius.circular(BaseConst.base4),
-          color: color.white,
-          child: InkWell(
-            onTap: () {
-              final newLocale = Locale(isRussian ? _en : _ru);
-
-              localeBloc.add(ChangeLocale(newLocale));
-            },
-            borderRadius: BorderRadius.circular(BaseConst.base4),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: BaseConst.base10,
-                vertical: BaseConst.base8,
+          type: MaterialType.transparency,
+          child: Ink(
+            decoration: BoxDecoration(
+              color: color.transparent,
+              borderRadius: BorderRadius.circular(BaseConst.base8),
+              border: Border(
+                top: BorderSide(
+                  color: color.darkGray,
+                  width: BaseConst.base1_5,
+                ),
+                left: BorderSide(
+                  color: color.darkGray,
+                  width: BaseConst.base1_5,
+                ),
+                right: BorderSide(
+                  color: color.darkGray,
+                  width: BaseConst.base1_5,
+                ),
+                bottom: BorderSide(
+                  color: color.darkGray,
+                  width: BaseConst.base4,
+                ),
               ),
-              child: Text(
-                isRussian ? _en.toUpperCase() : _ru.toUpperCase(),
-                style: textStyle.baseTextBold,
+            ),
+            child: InkWell(
+              onTap: () {
+                final newLocale = Locale(isRussian ? _en : _ru);
+                localeBloc.add(ChangeLocale(newLocale));
+              },
+              borderRadius: BorderRadius.circular(BaseConst.base4),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: BaseConst.base8,
+                  vertical: BaseConst.base8,
+                ),
+                child: Text(
+                  isRussian ? _en.toUpperCase() : _ru.toUpperCase(),
+                  style: textStyle.baseTextBold,
+                ),
               ),
             ),
           ),

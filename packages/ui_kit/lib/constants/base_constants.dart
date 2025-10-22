@@ -64,6 +64,7 @@ sealed class BaseConst {
   static const double base4 = 4;
   static const double base3 = 3;
   static const double base2 = 2;
+  static const double base1_5 = 1.5;
   static const double base1 = 1;
 
   // * String
