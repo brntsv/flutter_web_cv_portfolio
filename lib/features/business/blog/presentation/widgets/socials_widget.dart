@@ -50,11 +50,11 @@ class SocialsWidget extends StatelessWidget {
                 appearDuration: 6,
                 appearClass: 2,
               ),
-              AnimatedTextWithLinks(
-                text: l10n.twitter,
-                appearDuration: 6,
-                appearClass: 2,
-              ),
+              // AnimatedTextWithLinks(
+              //   text: l10n.twitter,
+              //   appearDuration: 6,
+              //   appearClass: 2,
+              // ),
             ],
           ),
         ),
