@@ -7,6 +7,7 @@ import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/buttons/base_elevated_button.dart';
 import 'package:ui_kit/widgets/base/images/base_icon.dart';
 import 'package:ui_kit/widgets/base/images/base_image.dart';
+import 'package:ui_kit/widgets/base/text/base_auto_shrink_text.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 import '../../../../locale_mode/bloc/locale_bloc.dart';
@@ -59,14 +60,14 @@ class DescriptionSection extends StatelessWidget {
                 BaseImage.asset(
                   assetPath: project.appType.iconPath,
                   borderRadius: BorderRadius.circular(BaseConst.base14),
-                  size: const Size.square(BaseConst.base72),
+                  size: Size.square(
+                    context.isMobile ? BaseConst.base56 : BaseConst.base72,
+                  ),
                 ),
-                Flexible(
-                  child: Text(
+                Expanded(
+                  child: BaseAutoShrinkText(
                     project.appType.projectTitle(l10n),
                     style: textStyle.h4,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],

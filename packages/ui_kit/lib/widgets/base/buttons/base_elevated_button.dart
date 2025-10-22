@@ -17,7 +17,7 @@ class BaseElevatedButton extends StatelessWidget {
     this.backgroundColor,
     this.margin,
     this.contentPadding = const EdgeInsets.symmetric(
-      vertical: BaseConst.base18,
+      vertical: BaseConst.base6,
       horizontal: BaseConst.base12,
     ),
     this.iconWidgetLeft,
