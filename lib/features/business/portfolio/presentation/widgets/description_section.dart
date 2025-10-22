@@ -76,17 +76,20 @@ class DescriptionSection extends StatelessWidget {
               style: textStyle.baseTextDesc,
             ),
             if (context.isMobile) ...[
-              BaseElevatedButton(
-                title: l10n.viewScreenshots,
-                backgroundColor: color.white,
-                textColor: color.graphiteGray,
-                borderRadius: BorderRadius.circular(BaseConst.base10),
-                iconWidgetRight: BaseIcon(
-                  icon: Assets.images.iconLightning,
-                  color: color.graphiteGray,
-                  size: BaseConst.base20,
+              SizedBox(
+                height: BaseConst.base44,
+                child: BaseElevatedButton(
+                  title: l10n.viewScreenshots,
+                  backgroundColor: color.white,
+                  textColor: color.darkGray,
+                  borderRadius: BorderRadius.circular(BaseConst.base10),
+                  iconWidgetRight: BaseIcon(
+                    icon: Assets.images.iconLightning,
+                    color: color.darkGray,
+                    size: BaseConst.base20,
+                  ),
+                  onPressed: () => context.push(MockupRoute(project: project)),
                 ),
-                onPressed: () => context.push(MockupRoute(project: project)),
               ),
             ],
             if (badges.isNotEmpty) ...[

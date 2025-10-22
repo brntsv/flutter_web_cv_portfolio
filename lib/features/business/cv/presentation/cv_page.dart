@@ -19,9 +19,38 @@ import 'widgets/education_language_section.dart';
 /// Страница с резюме
 /// {@endtemplate}
 @RoutePage()
-final class CvPage extends StatelessWidget {
+final class CvPage extends StatefulWidget {
   /// {@macro cv_page.class}
   const CvPage({super.key});
+
+  @override
+  State<CvPage> createState() => _CvPageState();
+}
+
+class _CvPageState extends State<CvPage> {
+  late final ScrollController _scrollController;
+  bool _showSwitcher = true;
+
+  static const double _threshold = BaseConst.base24;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController()
+      ..addListener(() {
+        final visible = !_scrollController.hasClients ||
+            _scrollController.offset <= _threshold;
+        if (visible != _showSwitcher) {
+          setState(() => _showSwitcher = visible);
+        }
+      });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +64,7 @@ final class CvPage extends StatelessWidget {
         children: [
           SelectionArea(
             child: SingleChildScrollView(
+              controller: _scrollController,
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
@@ -97,10 +127,17 @@ final class CvPage extends StatelessWidget {
             ),
           ],
 
-          const Positioned(
+          Positioned(
             top: BaseConst.base48,
             right: BaseConst.base48,
-            child: LanguageSwitcher(),
+            child: AnimatedOpacity(
+              duration: BaseConst.duration200,
+              opacity: _showSwitcher ? 1 : 0,
+              child: IgnorePointer(
+                ignoring: !_showSwitcher,
+                child: const LanguageSwitcher(),
+              ),
+            ),
           ),
         ],
       ),

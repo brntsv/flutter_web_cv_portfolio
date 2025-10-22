@@ -19,9 +19,38 @@ import 'widgets/socials_widget.dart';
 /// Страница с блогом, главная страница
 /// {@endtemplate}
 @RoutePage()
-final class BlogPage extends StatelessWidget {
+final class BlogPage extends StatefulWidget {
   /// {@macro blog_page.class}
   const BlogPage({super.key});
+
+  @override
+  State<BlogPage> createState() => _BlogPageState();
+}
+
+class _BlogPageState extends State<BlogPage> {
+  late final ScrollController _scrollController;
+  bool _showSwitcher = true;
+
+  static const double _threshold = BaseConst.base24;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController()
+      ..addListener(() {
+        final visible = !_scrollController.hasClients ||
+            _scrollController.offset <= _threshold;
+        if (visible != _showSwitcher) {
+          setState(() => _showSwitcher = visible);
+        }
+      });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +64,7 @@ final class BlogPage extends StatelessWidget {
         children: [
           SelectionArea(
             child: SingleChildScrollView(
+              controller: _scrollController,
               child: Center(
                 child: Padding(
                   padding: EdgeInsets.symmetric(
@@ -117,10 +147,17 @@ final class BlogPage extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             top: BaseConst.base48,
             right: BaseConst.base48,
-            child: LanguageSwitcher(),
+            child: AnimatedOpacity(
+              duration: BaseConst.duration200,
+              opacity: _showSwitcher ? 1 : 0,
+              child: IgnorePointer(
+                ignoring: !_showSwitcher,
+                child: const LanguageSwitcher(),
+              ),
+            ),
           ),
         ],
       ),
