@@ -7,9 +7,9 @@ import '../images/base_icon.dart';
 /// {@template animated_elevated_button.class}
 /// Анимированная базовая кнопка.
 /// {@endtemplate}
-class AnimatedElevatedButton extends StatelessWidget with AnimationTimingMixin {
+class BaseAnimatedElevatedButton extends StatelessWidget with AnimationTimingMixin {
   /// {@macro animated_elevated_button.class}
-  const AnimatedElevatedButton({
+  const BaseAnimatedElevatedButton({
     required this.title,
     required this.onPressed,
     required this.appearDuration,

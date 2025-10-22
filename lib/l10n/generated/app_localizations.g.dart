@@ -469,6 +469,12 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'E-comm приложение для сети хозяйственных магазинов'**
   String get novexDescription;
+
+  /// No description provided for @viewScreenshots.
+  ///
+  /// In ru, this message translates to:
+  /// **'Смотреть скриншоты'**
+  String get viewScreenshots;
 }
 
 class _AppLocalizationsDelegate

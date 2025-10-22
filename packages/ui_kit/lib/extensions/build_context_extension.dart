@@ -19,8 +19,8 @@ extension BuildContextExtension on BuildContext {
   /// Получает отступы вида
   EdgeInsets get viewInsets => MediaQuery.viewInsetsOf(this);
 
-  /// Проверяет, является ли устройство планшетом
-  bool get isTablet => screenSize.width > 600;
+  /// Проверяет, является ли устройство мобильным
+  bool get isMobile => screenSize.width < screenSize.height;
 
   /// Проверяет, является ли устройство первым фокусом
   bool get onFocus => FocusScope.of(this).isFirstFocus;

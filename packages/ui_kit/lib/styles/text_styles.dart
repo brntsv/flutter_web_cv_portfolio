@@ -82,4 +82,12 @@ sealed class UiKitTextStyles {
         letterSpacing: 0.1,
         color: UiKitColor.darkGray,
       );
+
+  /// Typography: Title Portfolio
+  static TextStyle get buttonTitlePortfolio => const TextStyle(
+        fontFamily: FontFamily.inter,
+        fontWeight: FontWeight.w600,
+        fontSize: 16,
+        color: UiKitColor.darkGray,
+      );
 }

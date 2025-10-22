@@ -215,4 +215,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get novexDescription => 'app for a network of household stores';
+
+  @override
+  String get viewScreenshots => 'View screenshots';
 }

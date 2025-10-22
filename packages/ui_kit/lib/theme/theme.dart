@@ -145,6 +145,7 @@ sealed class AppTheme {
         h3: UiKitTextStyles.h3,
         h4: UiKitTextStyles.h4,
         baseTextDesc: UiKitTextStyles.baseTextDesc,
+        buttonTitlePortfolio: UiKitTextStyles.buttonTitlePortfolio,
 
         ///
         baseText: UiKitTextStyles.baseText,

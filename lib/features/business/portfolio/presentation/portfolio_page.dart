@@ -105,8 +105,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
           ),
 
           // Кнопка назад в левом верхнем углу (только на широких экранах)
-          if (context.canPop() &&
-              context.screenSize.width > BaseConst.base870) ...[
+          if (context.canPop() && !context.isMobile) ...[
             Positioned(
               top: BaseConst.base48,
               left: BaseConst.base48,

@@ -78,4 +78,4 @@ class BaseAnimatedIconButton extends StatelessWidget with AnimationTimingMixin {
       ),
     );
   }
-} 
+}

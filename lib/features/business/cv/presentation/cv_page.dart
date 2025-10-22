@@ -37,15 +37,13 @@ final class CvPage extends StatelessWidget {
             child: SingleChildScrollView(
               child: Center(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: BaseConst.base110,
-                    horizontal: context.screenSize.width < BaseConst.base700
-                        ? BaseConst.base28
-                        : 0,
+                    horizontal: BaseConst.base22,
                   ),
                   child: ConstrainedBox(
                     constraints: BoxConstraints(
-                      maxWidth: context.screenSize.width < BaseConst.base700
+                      maxWidth: context.isMobile
                           ? context.screenSize.width
                           : BaseConst.base700,
                     ),
@@ -84,8 +82,7 @@ final class CvPage extends StatelessWidget {
           ),
 
           // Кнопка назад в левом верхнем углу (только на широких экранах)
-          if (context.canPop() &&
-              context.screenSize.width > BaseConst.base870) ...[
+          if (context.canPop() && !context.isMobile) ...[
             Positioned(
               top: BaseConst.base48,
               left: BaseConst.base48,

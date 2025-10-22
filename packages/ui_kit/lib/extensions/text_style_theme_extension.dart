@@ -13,6 +13,7 @@ class TextStyleExt extends ThemeExtension<TextStyleExt> {
     required this.baseText,
     required this.baseTextBold,
     required this.buttonTitle,
+    required this.buttonTitlePortfolio,
   });
 
   /// Onder, w500, 18
@@ -39,6 +40,9 @@ class TextStyleExt extends ThemeExtension<TextStyleExt> {
   /// Inter, w400, 16, 1.25
   final TextStyle buttonTitle;
 
+  /// Mabry Pro, w400, 14, 1.2
+  final TextStyle buttonTitlePortfolio;
+
   @override
   ThemeExtension<TextStyleExt> copyWith({
     TextStyle? h1,
@@ -49,6 +53,7 @@ class TextStyleExt extends ThemeExtension<TextStyleExt> {
     TextStyle? baseText,
     TextStyle? baseTextBold,
     TextStyle? buttonTitle,
+    TextStyle? buttonTitlePortfolio,
   }) =>
       TextStyleExt(
         h1: h1 ?? this.h1,
@@ -59,6 +64,7 @@ class TextStyleExt extends ThemeExtension<TextStyleExt> {
         baseText: baseText ?? this.baseText,
         baseTextBold: baseTextBold ?? this.baseTextBold,
         buttonTitle: buttonTitle ?? this.buttonTitle,
+        buttonTitlePortfolio: buttonTitlePortfolio ?? this.buttonTitlePortfolio,
       );
 
   @override
@@ -76,6 +82,7 @@ class TextStyleExt extends ThemeExtension<TextStyleExt> {
       baseText: TextStyle.lerp(baseText, other.baseText, t)!,
       baseTextBold: TextStyle.lerp(baseTextBold, other.baseTextBold, t)!,
       buttonTitle: TextStyle.lerp(buttonTitle, other.buttonTitle, t)!,
+      buttonTitlePortfolio: TextStyle.lerp(buttonTitlePortfolio, other.buttonTitlePortfolio, t)!,
     );
   }
 }

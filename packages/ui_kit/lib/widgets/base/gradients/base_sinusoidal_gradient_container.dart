@@ -13,6 +13,7 @@ class BaseSinusoidalGradientContainer extends StatelessWidget {
     required this.endColor,
     this.child,
     this.curvePoints = 30, // Больше точек = более плавная кривая
+    this.borderRadius,
     super.key,
   });
 
@@ -27,6 +28,9 @@ class BaseSinusoidalGradientContainer extends StatelessWidget {
 
   /// Количество точек для аппроксимации кривой.
   final int curvePoints;
+
+  /// Радиусы углов для контейнера.
+  final BorderRadius? borderRadius;
 
   /// Создает градиент, имитирующий синусоидальную кривую.
   Gradient _createSinusoidalGradient() {
@@ -58,6 +62,7 @@ class BaseSinusoidalGradientContainer extends StatelessWidget {
   Widget build(BuildContext context) => DecoratedBox(
         decoration: BoxDecoration(
           gradient: _createSinusoidalGradient(),
+          borderRadius: borderRadius,
         ),
         child: child,
       );

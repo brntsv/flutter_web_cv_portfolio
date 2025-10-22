@@ -39,13 +39,11 @@ final class BlogPage extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.symmetric(
                     vertical: BaseConst.base110,
-                    horizontal: context.screenSize.width < BaseConst.base700
-                        ? BaseConst.base28
-                        : 0,
+                    horizontal: context.isMobile ? BaseConst.base28 : 0,
                   ),
                   child: ConstrainedBox(
                     constraints: BoxConstraints(
-                      maxWidth: context.screenSize.width < BaseConst.base700
+                      maxWidth: context.isMobile
                           ? context.screenSize.width
                           : BaseConst.base700,
                     ),
@@ -73,7 +71,7 @@ final class BlogPage extends StatelessWidget {
                           spacing: BaseConst.base16,
                           children: [
                             /// Кнопка CV
-                            AnimatedElevatedButton(
+                            BaseAnimatedElevatedButton(
                               title: l10n.cv,
                               backgroundColor: color.graphiteGray,
                               textColor: color.white,
@@ -88,7 +86,7 @@ final class BlogPage extends StatelessWidget {
                             ),
 
                             /// Кнопка Портфолио
-                            AnimatedElevatedButton(
+                            BaseAnimatedElevatedButton(
                               title: l10n.portfolio,
                               backgroundColor: color.graphiteGray,
                               textColor: color.white,

@@ -215,4 +215,7 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get novexDescription =>
       'E-comm приложение для сети хозяйственных магазинов';
+
+  @override
+  String get viewScreenshots => 'Смотреть скриншоты';
 }
