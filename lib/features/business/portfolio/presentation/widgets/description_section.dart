@@ -43,9 +43,6 @@ class DescriptionSection extends StatelessWidget {
           borderRadius: BorderRadius.circular(BaseConst.base40),
           color: color.lightGray,
         ),
-        constraints: BoxConstraints(
-          minHeight: context.screenSize.height,
-        ),
         padding: context.isMobile
             ? const EdgeInsets.all(BaseConst.base24)
             : const EdgeInsets.all(BaseConst.base60),
@@ -73,6 +70,7 @@ class DescriptionSection extends StatelessWidget {
               ],
             ),
             Text(
+              // 'asfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj a',
               project.appType.projectDescription(l10n),
               style: textStyle.baseTextDesc,
             ),

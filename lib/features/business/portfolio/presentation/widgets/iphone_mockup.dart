@@ -58,26 +58,27 @@ class IphoneMockup extends StatelessWidget {
       ),
     );
 
-    return OverflowBox(
-      minWidth: phoneWidth,
-      maxWidth: phoneWidth,
-      minHeight: phoneHeight,
-      maxHeight: phoneHeight,
-      child: SizedBox(
-        width: phoneWidth,
-        height: phoneHeight,
-        child: Container(
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(frameRadius),
-            border: Border.all(
-              color: color.gray,
-              width: borderWidth,
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: BaseConst.base16),
+        child: FittedBox(
+          child: SizedBox(
+            width: phoneWidth,
+            height: phoneHeight,
+            child: Container(
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(frameRadius),
+                border: Border.all(
+                  color: color.gray,
+                  width: borderWidth,
+                ),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(screenRadius),
+                child: swiper,
+              ),
             ),
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(screenRadius),
-            child: swiper,
           ),
         ),
       ),
