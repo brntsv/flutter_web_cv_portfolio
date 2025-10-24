@@ -7,6 +7,7 @@ import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/buttons/base_icon_button.dart';
 
 import '../../../locale_mode/widgets/language_switcher.dart';
+import '../../../telegram/telegram_pull_to_dismiss_guard.dart';
 import '../domain/entities/project_entity.dart';
 import '../domain/enums/project_type.dart';
 import 'widgets/project_section.dart';
@@ -29,7 +30,8 @@ class PortfolioPage extends StatefulWidget {
   State<PortfolioPage> createState() => _PortfolioPageState();
 }
 
-class _PortfolioPageState extends State<PortfolioPage> {
+class _PortfolioPageState extends State<PortfolioPage>
+    with TelegramPullToDismissGuard {
   late final ScrollController _scrollController;
   late final List<ProjectEntity> _projects;
 
@@ -37,6 +39,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
   void initState() {
     super.initState();
     _scrollController = ScrollController();
+    attachPullToDismissGuard(_scrollController);
     _projects = [
       ProjectEntity(
         appType: ProjectType.flourAndOrder,
@@ -80,13 +83,35 @@ class _PortfolioPageState extends State<PortfolioPage> {
   }
 
   void _scrollToIndex(int index) {
-    final height = MediaQuery.of(context).size.height;
-    final offset = index * height;
-    _scrollController.jumpTo(offset);
+    final itemHeight = _sectionHeight(context);
+    _scrollController.jumpTo(index * itemHeight);
+  }
+
+  double _sectionHeight(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
+    // Десктоп/таблет: секция = 1 экран (как и было)
+    if (!context.isMobile) return size.height;
+
+    // Мобилка: экран + gap между блоками +
+    // высота макета + верхний паддинг секции
+    const topPadding = BaseConst.base24;
+    const gap = BaseConst.base12;
+
+    // Ширина макета = ширина экрана минус горизонтальные паддинги секции
+    final availableWidth =
+        (size.width - BaseConst.base24 * 2).clamp(0.0, double.infinity);
+
+    // Высота макета по заданному аспекту (width/height)
+    const aspect = BaseConst.iphoneMockupWidth / BaseConst.iphoneMockupHeight;
+    final mockupHeight = availableWidth / aspect;
+
+    return topPadding + size.height + gap + mockupHeight;
   }
 
   @override
   void dispose() {
+    detachPullToDismissGuard(_scrollController);
     _scrollController.dispose();
     super.dispose();
   }

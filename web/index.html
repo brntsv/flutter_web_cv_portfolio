@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -32,7 +33,58 @@
   <title>Никита Баранцев</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
+  <script>
+    (function () {
+      if (window.__tpd_bound) return;
+      window.__tpd_bound = true;
+
+      var ua = navigator.userAgent || '';
+      var isTelegram = /Telegram/i.test(ua);
+      if (!isTelegram) return;
+
+      var startY = 0;
+
+      // По умолчанию считаем, что на верху (разрешаем dismiss)
+      document.documentElement.setAttribute('data-tpd-at-top', '1');
+
+      function onTouchStart(e) {
+        if (!isTelegram) return;
+        if (!e.touches || e.touches.length !== 1) return;
+        startY = e.touches[0].clientY;
+      }
+
+      function onTouchMove(e) {
+        if (!isTelegram) return;
+        if (!e.touches || e.touches.length !== 1) return;
+        var dy = e.touches[0].clientY - startY;
+
+        var atTopFlag = document.documentElement.getAttribute('data-tpd-at-top') === '1';
+
+        if (dy > 3 && !atTopFlag) {
+          e.preventDefault();
+        }
+      }
+
+      var opts = { capture: true, passive: false };
+      window.addEventListener('touchstart', onTouchStart, opts);
+      window.addEventListener('touchmove', onTouchMove, opts);
+      document.addEventListener('touchstart', onTouchStart, opts);
+      document.addEventListener('touchmove', onTouchMove, opts);
+
+      if (document.body) {
+        document.body.addEventListener('touchstart', onTouchStart, opts);
+        document.body.addEventListener('touchmove', onTouchMove, opts);
+      } else {
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.addEventListener('touchstart', onTouchStart, opts);
+          document.body.addEventListener('touchmove', onTouchMove, opts);
+        });
+      }
+    })();
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
+
 </html>
