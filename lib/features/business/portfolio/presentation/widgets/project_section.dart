@@ -40,8 +40,9 @@ class ProjectSection extends StatelessWidget {
                     height: context.screenSize.height,
                     child: DescriptionSection(project: project),
                   ),
-                  SizedBox(
-                    height: BaseConst.iphoneMockupHeight,
+                  AspectRatio(
+                    aspectRatio: BaseConst.iphoneMockupWidth /
+                        BaseConst.iphoneMockupHeight,
                     child: IphoneMockup(screenshots: project.screenshots),
                   ),
                 ],

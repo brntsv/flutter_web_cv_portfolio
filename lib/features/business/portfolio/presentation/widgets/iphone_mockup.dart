@@ -57,21 +57,23 @@ class IphoneMockup extends StatelessWidget {
     return Center(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: BaseConst.base16),
-        child: FittedBox(
-          child: Container(
-            width: BaseConst.iphoneMockupWidth,
-            height: BaseConst.iphoneMockupHeight,
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(frameRadius),
-              border: Border.all(
-                color: color.gray,
-                width: borderWidth,
+        child: SizedBox.expand(
+          child: FittedBox(
+            child: Container(
+              width: BaseConst.iphoneMockupWidth,
+              height: BaseConst.iphoneMockupHeight,
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(frameRadius),
+                border: Border.all(
+                  color: color.gray,
+                  width: borderWidth,
+                ),
               ),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(screenRadius),
-              child: swiper,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(screenRadius),
+                child: swiper,
+              ),
             ),
           ),
         ),

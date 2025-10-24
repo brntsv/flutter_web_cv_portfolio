@@ -86,6 +86,12 @@ class _PortfolioPageState extends State<PortfolioPage> {
   }
 
   @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final color = colors(context);
 

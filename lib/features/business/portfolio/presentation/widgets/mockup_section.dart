@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/gradients/base_sinusoidal_gradient_container.dart';
 
@@ -35,7 +36,8 @@ class MockupSection extends StatelessWidget {
             screenshots: project.screenshots,
           ),
         ),
-      false => DecoratedBox(
+      false => Container(
+          padding: const EdgeInsets.all(BaseConst.base72),
           decoration: BoxDecoration(
             color: project.appType.backgroundColor(color),
             borderRadius: borderRadius,
