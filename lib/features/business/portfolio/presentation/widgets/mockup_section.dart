@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/constants/base_constants.dart';
+import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/gradients/base_sinusoidal_gradient_container.dart';
 
@@ -37,7 +38,9 @@ class MockupSection extends StatelessWidget {
           ),
         ),
       false => Container(
-          padding: const EdgeInsets.all(BaseConst.base72),
+          padding: context.screenSize.height > BaseConst.base700
+              ? const EdgeInsets.all(BaseConst.base72)
+              : EdgeInsets.zero,
           decoration: BoxDecoration(
             color: project.appType.backgroundColor(color),
             borderRadius: borderRadius,

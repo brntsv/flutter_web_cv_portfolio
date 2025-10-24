@@ -2,6 +2,9 @@ import 'dart:math' show pi, sin;
 
 import 'package:flutter/material.dart';
 
+import '../../../constants/base_constants.dart';
+import '../../../extensions/build_context_extension.dart';
+
 /// {@template sinusoidal_gradient_container}
 /// Контейнер, который применяет нелинейный (синусоидальный) градиент
 /// от [startColor] до [endColor].
@@ -59,11 +62,14 @@ class BaseSinusoidalGradientContainer extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) => DecoratedBox(
+  Widget build(BuildContext context) => Container(
         decoration: BoxDecoration(
           gradient: _createSinusoidalGradient(),
           borderRadius: borderRadius,
         ),
+        padding: context.screenSize.height > BaseConst.base700
+            ? const EdgeInsets.all(BaseConst.base72)
+            : EdgeInsets.zero,
         child: child,
       );
 }
