@@ -25,10 +25,5 @@ final class AppRouter extends RootStackRouter {
           path: '/portfolio',
           transitionsBuilder: TransitionsBuilders.slideLeft,
         ),
-        CustomRoute(
-          page: MockupRoute.page,
-          path: '/portfolio/mockup',
-          transitionsBuilder: TransitionsBuilders.slideLeft,
-        ),
       ];
 }

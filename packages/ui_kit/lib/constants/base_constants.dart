@@ -73,8 +73,11 @@ sealed class BaseConst {
 
   static const String svgFormat = '.svg';
 
-  // * Duration
+  // * Dimensions
+  static const double iphoneMockupWidth = 280;
+  static const double iphoneMockupHeight = 560;
 
+  // * Duration
   static const Duration duration600 = Duration(milliseconds: 600);
   static const Duration duration500 = Duration(milliseconds: 500);
   static const Duration duration300 = Duration(milliseconds: 300);

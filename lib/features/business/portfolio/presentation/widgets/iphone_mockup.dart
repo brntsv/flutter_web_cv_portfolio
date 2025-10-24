@@ -21,10 +21,6 @@ class IphoneMockup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Базовые размеры макета телефона
-    const phoneWidth = 280.0;
-    const phoneHeight = 560.0;
-
     final color = colors(context);
 
     // Радиусы/рамки: экранный радиус = радиус корпуса − толщина рамки
@@ -62,22 +58,20 @@ class IphoneMockup extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: BaseConst.base16),
         child: FittedBox(
-          child: SizedBox(
-            width: phoneWidth,
-            height: phoneHeight,
-            child: Container(
-              clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(frameRadius),
-                border: Border.all(
-                  color: color.gray,
-                  width: borderWidth,
-                ),
+          child: Container(
+            width: BaseConst.iphoneMockupWidth,
+            height: BaseConst.iphoneMockupHeight,
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(frameRadius),
+              border: Border.all(
+                color: color.gray,
+                width: borderWidth,
               ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(screenRadius),
-                child: swiper,
-              ),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(screenRadius),
+              child: swiper,
             ),
           ),
         ),

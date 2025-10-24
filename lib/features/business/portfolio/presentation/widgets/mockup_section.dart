@@ -1,19 +1,17 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/gradients/base_sinusoidal_gradient_container.dart';
 
-import '../domain/entities/project_entity.dart';
-import 'widgets/iphone_mockup.dart';
+import '../../domain/entities/project_entity.dart';
+import 'iphone_mockup.dart';
 
 /// {@template mockup_section}
 /// Секция для отображения макета приложения.
 /// Также может быть экраном при открытии на мобильном устройстве.
 /// {@endtemplate}
-@RoutePage()
-class MockupPage extends StatelessWidget {
+class MockupSection extends StatelessWidget {
   /// {@macro mockup_section}
-  const MockupPage({
+  const MockupSection({
     required this.project,
     this.borderRadius,
     super.key,

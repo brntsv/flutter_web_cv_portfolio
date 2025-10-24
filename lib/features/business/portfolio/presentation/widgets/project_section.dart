@@ -3,8 +3,9 @@ import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 
 import '../../domain/entities/project_entity.dart';
-import '../mockup_page.dart';
 import 'description_section.dart';
+import 'iphone_mockup.dart';
+import 'mockup_section.dart';
 
 /// {@template project_section}
 /// Секция (сливер) для одного проекта в портфолио.
@@ -25,44 +26,65 @@ class ProjectSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => SliverToBoxAdapter(
-        child: SizedBox(
-          height: context.screenSize.height,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: BaseConst.base24,
-              vertical: BaseConst.base24,
-            ),
-            child: Row(
-              children: switch (context.isMobile) {
-                true => <Widget>[DescriptionSection(project: project)],
-                false => index.isEven
-                    ? <Widget>[
-                        DescriptionSection(project: project),
-                        const SizedBox(width: BaseConst.base24),
-                        Expanded(
-                          child: MockupPage(
-                            project: project,
-                            borderRadius: BorderRadius.circular(
-                              BaseConst.base40,
-                            ),
-                          ),
-                        ),
-                      ]
-                    : <Widget>[
-                        Expanded(
-                          child: MockupPage(
-                            project: project,
-                            borderRadius: BorderRadius.circular(
-                              BaseConst.base40,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: BaseConst.base24),
-                        DescriptionSection(project: project),
-                      ],
-              },
-            ),
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: BaseConst.base24,
+            right: BaseConst.base24,
+            top: BaseConst.base24,
           ),
+          child: switch (context.isMobile) {
+            true => Column(
+                spacing: BaseConst.base12,
+                children: [
+                  SizedBox(
+                    height: context.screenSize.height,
+                    child: DescriptionSection(project: project),
+                  ),
+                  SizedBox(
+                    height: BaseConst.iphoneMockupHeight,
+                    child: IphoneMockup(screenshots: project.screenshots),
+                  ),
+                ],
+              ),
+            false => SizedBox(
+                height: context.screenSize.height,
+                child: Row(
+                  spacing: BaseConst.base24,
+                  children: switch (index.isEven) {
+                    true => [
+                        Expanded(
+                          child: DescriptionSection(
+                            project: project,
+                          ),
+                        ),
+                        Expanded(
+                          child: MockupSection(
+                            project: project,
+                            borderRadius: BorderRadius.circular(
+                              BaseConst.base40,
+                            ),
+                          ),
+                        ),
+                      ],
+                    false => [
+                        Expanded(
+                          child: MockupSection(
+                            project: project,
+                            borderRadius: BorderRadius.circular(
+                              BaseConst.base40,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: DescriptionSection(
+                            project: project,
+                          ),
+                        ),
+                      ],
+                  },
+                ),
+              ),
+          },
         ),
       );
 }
