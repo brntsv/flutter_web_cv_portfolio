@@ -50,3 +50,6 @@ packages/**/pubspec.lock
 *.g.dart
 *.gr.dart
 *.config.dart
+
+# Firebase
+.firebase/
