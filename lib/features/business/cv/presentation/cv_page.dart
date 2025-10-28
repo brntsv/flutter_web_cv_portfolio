@@ -29,29 +29,9 @@ final class CvPage extends StatefulWidget {
 }
 
 class _CvPageState extends State<CvPage> {
-  late final ScrollController _scrollController;
   bool _showSwitcher = true;
 
   static const double _threshold = BaseConst.base24;
-
-  @override
-  void initState() {
-    super.initState();
-    _scrollController = ScrollController()
-      ..addListener(() {
-        final visible = !_scrollController.hasClients ||
-            _scrollController.offset <= _threshold;
-        if (visible != _showSwitcher) {
-          setState(() => _showSwitcher = visible);
-        }
-      });
-  }
-
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,47 +45,58 @@ class _CvPageState extends State<CvPage> {
         children: [
           SelectionArea(
             child: NativeScrollBuilder(
-              builder: (context, scrollController) => SingleChildScrollView(
-                controller: scrollController,
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: BaseConst.base110,
-                      horizontal: BaseConst.base22,
-                    ),
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        maxWidth: context.isMobile
-                            ? context.screenSize.width
-                            : BaseConst.base700,
+              builder: (context, scrollController) =>
+                  NotificationListener<ScrollNotification>(
+                onNotification: (n) {
+                  if (!context.isMobile) return true;
+                  final visible = n.metrics.pixels <= _threshold;
+                  if (visible != _showSwitcher) {
+                    setState(() => _showSwitcher = visible);
+                  }
+                  return false;
+                },
+                child: SingleChildScrollView(
+                  controller: scrollController,
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: BaseConst.base110,
+                        horizontal: BaseConst.base22,
                       ),
-                      child: Column(
-                        spacing: BaseConst.base32,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          /// Имя
-                          AnimatedText(
-                            text: '${l10n.yourName}, ${l10n.yourJob}',
-                            style: textStyle.h1,
-                            appearDuration: 6,
-                            appearClass: 2,
-                          ),
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          maxWidth: context.isMobile
+                              ? context.screenSize.width
+                              : BaseConst.base700,
+                        ),
+                        child: Column(
+                          spacing: BaseConst.base32,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            /// Имя
+                            AnimatedText(
+                              text: '${l10n.yourName}, ${l10n.yourJob}',
+                              style: textStyle.h1,
+                              appearDuration: 6,
+                              appearClass: 2,
+                            ),
 
-                          /// Контактная информация
-                          const ContactSection(),
+                            /// Контактная информация
+                            const ContactSection(),
 
-                          /// О себе
-                          const AboutMeSection(),
+                            /// О себе
+                            const AboutMeSection(),
 
-                          /// Опыт работы
-                          const ExperienceSection(),
+                            /// Опыт работы
+                            const ExperienceSection(),
 
-                          /// Навыки
-                          const SkillsSection(),
+                            /// Навыки
+                            const SkillsSection(),
 
-                          /// Образование и языки
-                          const EducationLanguagesSection(),
-                        ],
+                            /// Образование и языки
+                            const EducationLanguagesSection(),
+                          ],
+                        ),
                       ),
                     ),
                   ),

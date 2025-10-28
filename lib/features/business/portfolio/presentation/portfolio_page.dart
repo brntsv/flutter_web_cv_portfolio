@@ -31,13 +31,14 @@ class PortfolioPage extends StatefulWidget {
 }
 
 class _PortfolioPageState extends State<PortfolioPage> {
-  late final ScrollController _scrollController;
+  // late final ScrollController _scrollController;
   late final List<ProjectEntity> _projects;
+  late final List<GlobalKey> _sectionKeys;
 
   @override
   void initState() {
     super.initState();
-    _scrollController = ScrollController();
+    // _scrollController = ScrollController();
     _projects = [
       ProjectEntity(
         appType: ProjectType.flourAndOrder,
@@ -64,6 +65,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
         ],
       ),
     ];
+    _sectionKeys = List.generate(_projects.length, (_) => GlobalKey());
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final idx = _resolveInitialIndex();
@@ -81,37 +83,44 @@ class _PortfolioPageState extends State<PortfolioPage> {
   }
 
   void _scrollToIndex(int index) {
-    final itemHeight = _sectionHeight(context);
-    _scrollController.jumpTo(index * itemHeight);
+    final ctx = _sectionKeys[index].currentContext;
+    if (ctx == null) return;
+
+    Scrollable.ensureVisible(ctx);
   }
 
-  double _sectionHeight(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+  // void _scrollToIndex(int index) {
+  //   final itemHeight = _sectionHeight(context);
+  //   _scrollController.jumpTo(index * itemHeight);
+  // }
 
-    // Десктоп/таблет: секция = 1 экран (как и было)
-    if (!context.isMobile) return size.height;
+  // double _sectionHeight(BuildContext context) {
+  //   final size = MediaQuery.of(context).size;
 
-    // Мобилка: экран + gap между блоками +
-    // высота макета + верхний паддинг секции
-    const topPadding = BaseConst.base24;
-    const gap = BaseConst.base12;
+  //   // Десктоп/таблет: секция = 1 экран (как и было)
+  //   if (!context.isMobile) return size.height;
 
-    // Ширина макета = ширина экрана минус горизонтальные паддинги секции
-    final availableWidth =
-        (size.width - BaseConst.base24 * 2).clamp(0.0, double.infinity);
+  //   // Мобилка: экран + gap между блоками +
+  //   // высота макета + верхний паддинг секции
+  //   const topPadding = BaseConst.base24;
+  //   const gap = BaseConst.base12;
 
-    // Высота макета по заданному аспекту (width/height)
-    const aspect = BaseConst.iphoneMockupWidth / BaseConst.iphoneMockupHeight;
-    final mockupHeight = availableWidth / aspect;
+  //   // Ширина макета = ширина экрана минус горизонтальные паддинги секции
+  //   final availableWidth =
+  //       (size.width - BaseConst.base24 * 2).clamp(0.0, double.infinity);
 
-    return topPadding + size.height + gap + mockupHeight;
-  }
+  //   // Высота макета по заданному аспекту (width/height)
+  //   const aspect = BaseConst.iphoneMockupWidth / BaseConst.iphoneMockupHeight;
+  //   final mockupHeight = availableWidth / aspect;
 
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
-  }
+  //   return topPadding + size.height + gap + mockupHeight;
+  // }
+
+  // @override
+  // void dispose() {
+  //   _scrollController.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -126,6 +135,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
               slivers: [
                 ..._projects.asMap().entries.map(
                       (entry) => ProjectSection(
+                        key: _sectionKeys[entry.key],
                         project: entry.value,
                         index: entry.key,
                       ),
