@@ -26,14 +26,14 @@ class ProjectSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => SliverToBoxAdapter(
-        child: Padding(
-          padding: const EdgeInsets.only(
-            left: BaseConst.base24,
-            right: BaseConst.base24,
-            top: BaseConst.base24,
-          ),
-          child: switch (context.isMobile) {
-            true => Column(
+        child: switch (context.isMobile) {
+          true => Padding(
+              padding: const EdgeInsets.only(
+                left: BaseConst.base24,
+                right: BaseConst.base24,
+                top: BaseConst.base24,
+              ),
+              child: Column(
                 spacing: BaseConst.base12,
                 children: [
                   SizedBox(
@@ -47,8 +47,11 @@ class ProjectSection extends StatelessWidget {
                   ),
                 ],
               ),
-            false => SizedBox(
-                height: context.screenSize.height,
+            ),
+          false => SizedBox(
+              height: context.screenSize.height,
+              child: Padding(
+                padding: const EdgeInsets.all(BaseConst.base24),
                 child: Row(
                   spacing: BaseConst.base24,
                   children: switch (index.isEven) {
@@ -85,7 +88,7 @@ class ProjectSection extends StatelessWidget {
                   },
                 ),
               ),
-          },
-        ),
+            ),
+        },
       );
 }
