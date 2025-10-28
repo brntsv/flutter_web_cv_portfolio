@@ -25,6 +25,10 @@ dependencies:
     path: packages/utils
   web: ^1.1.1
   card_swiper: ^3.0.1
+  native_scroll:
+      git:
+        url: https://github.com/Shakle/native_scroll.git
+        ref: c7a879bc8525282c260e74f21da9b336ce3a5bfa
 
 dev_dependencies:
   flutter_test:

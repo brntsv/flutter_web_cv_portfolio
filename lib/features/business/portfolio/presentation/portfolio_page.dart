@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:native_scroll/native_scroll.dart';
 import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
@@ -119,16 +120,18 @@ class _PortfolioPageState extends State<PortfolioPage> {
     return Scaffold(
       body: Stack(
         children: [
-          CustomScrollView(
-            controller: _scrollController,
-            slivers: [
-              ..._projects.asMap().entries.map(
-                    (entry) => ProjectSection(
-                      project: entry.value,
-                      index: entry.key,
+          NativeScrollBuilder(
+            builder: (context, scrollController) => CustomScrollView(
+              controller: scrollController,
+              slivers: [
+                ..._projects.asMap().entries.map(
+                      (entry) => ProjectSection(
+                        project: entry.value,
+                        index: entry.key,
+                      ),
                     ),
-                  ),
-            ],
+              ],
+            ),
           ),
 
           // Кнопка назад в левом верхнем углу (только на широких экранах)

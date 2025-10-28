@@ -6,6 +6,7 @@ import 'package:flutter_web/features/business/cv/presentation/widgets/experience
 import 'package:flutter_web/features/business/cv/presentation/widgets/skills_section.dart';
 import 'package:flutter_web/features/locale_mode/widgets/language_switcher.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
+import 'package:native_scroll/native_scroll.dart';
 import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
@@ -63,47 +64,49 @@ class _CvPageState extends State<CvPage> {
       body: Stack(
         children: [
           SelectionArea(
-            child: SingleChildScrollView(
-              controller: _scrollController,
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: BaseConst.base110,
-                    horizontal: BaseConst.base22,
-                  ),
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      maxWidth: context.isMobile
-                          ? context.screenSize.width
-                          : BaseConst.base700,
+            child: NativeScrollBuilder(
+              builder: (context, scrollController) => SingleChildScrollView(
+                controller: scrollController,
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: BaseConst.base110,
+                      horizontal: BaseConst.base22,
                     ),
-                    child: Column(
-                      spacing: BaseConst.base32,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        /// Имя
-                        AnimatedText(
-                          text: '${l10n.yourName}, ${l10n.yourJob}',
-                          style: textStyle.h1,
-                          appearDuration: 6,
-                          appearClass: 2,
-                        ),
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxWidth: context.isMobile
+                            ? context.screenSize.width
+                            : BaseConst.base700,
+                      ),
+                      child: Column(
+                        spacing: BaseConst.base32,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          /// Имя
+                          AnimatedText(
+                            text: '${l10n.yourName}, ${l10n.yourJob}',
+                            style: textStyle.h1,
+                            appearDuration: 6,
+                            appearClass: 2,
+                          ),
 
-                        /// Контактная информация
-                        const ContactSection(),
+                          /// Контактная информация
+                          const ContactSection(),
 
-                        /// О себе
-                        const AboutMeSection(),
+                          /// О себе
+                          const AboutMeSection(),
 
-                        /// Опыт работы
-                        const ExperienceSection(),
+                          /// Опыт работы
+                          const ExperienceSection(),
 
-                        /// Навыки
-                        const SkillsSection(),
+                          /// Навыки
+                          const SkillsSection(),
 
-                        /// Образование и языки
-                        const EducationLanguagesSection(),
-                      ],
+                          /// Образование и языки
+                          const EducationLanguagesSection(),
+                        ],
+                      ),
                     ),
                   ),
                 ),
