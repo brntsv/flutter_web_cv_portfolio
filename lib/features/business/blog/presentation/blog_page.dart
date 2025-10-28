@@ -11,7 +11,6 @@ import 'package:ui_kit/widgets/base/buttons/base_animated_elevated_button.dart';
 import 'package:ui_kit/widgets/base/images/base_icon.dart';
 
 import '../../../navigation/router.dart';
-import '../../../telegram/telegram_pull_to_dismiss_guard.dart';
 import 'widgets/about_this_page_widget.dart';
 import 'widgets/projects_widget.dart';
 import 'widgets/socials_widget.dart';
@@ -28,7 +27,7 @@ final class BlogPage extends StatefulWidget {
   State<BlogPage> createState() => _BlogPageState();
 }
 
-class _BlogPageState extends State<BlogPage> with TelegramPullToDismissGuard {
+class _BlogPageState extends State<BlogPage> {
   late final ScrollController _scrollController;
   bool _showSwitcher = true;
 
@@ -45,12 +44,10 @@ class _BlogPageState extends State<BlogPage> with TelegramPullToDismissGuard {
           setState(() => _showSwitcher = visible);
         }
       });
-    attachPullToDismissGuard(_scrollController);
   }
 
   @override
   void dispose() {
-    detachPullToDismissGuard(_scrollController);
     _scrollController.dispose();
     super.dispose();
   }

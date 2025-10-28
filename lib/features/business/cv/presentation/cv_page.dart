@@ -13,7 +13,6 @@ import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 import 'package:ui_kit/widgets/base/buttons/base_animated_icon_button.dart';
 
-import '../../../telegram/telegram_pull_to_dismiss_guard.dart';
 import 'widgets/education_language_section.dart';
 
 /// {@template cv_page.class}
@@ -28,7 +27,7 @@ final class CvPage extends StatefulWidget {
   State<CvPage> createState() => _CvPageState();
 }
 
-class _CvPageState extends State<CvPage> with TelegramPullToDismissGuard {
+class _CvPageState extends State<CvPage> {
   late final ScrollController _scrollController;
   bool _showSwitcher = true;
 
@@ -45,12 +44,10 @@ class _CvPageState extends State<CvPage> with TelegramPullToDismissGuard {
           setState(() => _showSwitcher = visible);
         }
       });
-    attachPullToDismissGuard(_scrollController);
   }
 
   @override
   void dispose() {
-    detachPullToDismissGuard(_scrollController);
     _scrollController.dispose();
     super.dispose();
   }

@@ -7,7 +7,6 @@ import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/buttons/base_icon_button.dart';
 
 import '../../../locale_mode/widgets/language_switcher.dart';
-import '../../../telegram/telegram_pull_to_dismiss_guard.dart';
 import '../domain/entities/project_entity.dart';
 import '../domain/enums/project_type.dart';
 import 'widgets/project_section.dart';
@@ -30,8 +29,7 @@ class PortfolioPage extends StatefulWidget {
   State<PortfolioPage> createState() => _PortfolioPageState();
 }
 
-class _PortfolioPageState extends State<PortfolioPage>
-    with TelegramPullToDismissGuard {
+class _PortfolioPageState extends State<PortfolioPage> {
   late final ScrollController _scrollController;
   late final List<ProjectEntity> _projects;
 
@@ -39,7 +37,6 @@ class _PortfolioPageState extends State<PortfolioPage>
   void initState() {
     super.initState();
     _scrollController = ScrollController();
-    attachPullToDismissGuard(_scrollController);
     _projects = [
       ProjectEntity(
         appType: ProjectType.flourAndOrder,
@@ -111,7 +108,6 @@ class _PortfolioPageState extends State<PortfolioPage>
 
   @override
   void dispose() {
-    detachPullToDismissGuard(_scrollController);
     _scrollController.dispose();
     super.dispose();
   }
