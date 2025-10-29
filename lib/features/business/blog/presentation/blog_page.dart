@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web/features/locale_mode/widgets/language_switcher.dart';
 import 'package:flutter_web/l10n/localization_extension.dart';
-import 'package:native_scroll/native_scroll.dart';
+import 'package:native_web_scroll/native_web_scroll.dart';
 import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';

@@ -1,4 +1,4 @@
-name: flutter_web
+name: flutter_web_cv_portfolio
 description: "Wild Ea$t"
 publish_to: 'none'
 
@@ -25,10 +25,7 @@ dependencies:
     path: packages/utils
   web: ^1.1.1
   card_swiper: ^3.0.1
-  native_scroll:
-      git:
-        url: https://github.com/Shakle/native_scroll.git
-        ref: c7a879bc8525282c260e74f21da9b336ce3a5bfa
+  native_web_scroll: ^1.0.1
 
 dev_dependencies:
   flutter_test:

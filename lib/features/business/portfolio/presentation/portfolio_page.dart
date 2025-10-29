@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:native_scroll/native_scroll.dart';
+import 'package:native_web_scroll/native_web_scroll.dart';
 import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
@@ -31,14 +31,13 @@ class PortfolioPage extends StatefulWidget {
 }
 
 class _PortfolioPageState extends State<PortfolioPage> {
-  // late final ScrollController _scrollController;
+  late final ScrollController _scrollController;
   late final List<ProjectEntity> _projects;
-  late final List<GlobalKey> _sectionKeys;
 
   @override
   void initState() {
     super.initState();
-    // _scrollController = ScrollController();
+    _scrollController = ScrollController();
     _projects = [
       ProjectEntity(
         appType: ProjectType.flourAndOrder,
@@ -65,7 +64,6 @@ class _PortfolioPageState extends State<PortfolioPage> {
         ],
       ),
     ];
-    _sectionKeys = List.generate(_projects.length, (_) => GlobalKey());
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final idx = _resolveInitialIndex();
@@ -83,44 +81,37 @@ class _PortfolioPageState extends State<PortfolioPage> {
   }
 
   void _scrollToIndex(int index) {
-    final ctx = _sectionKeys[index].currentContext;
-    if (ctx == null) return;
-
-    Scrollable.ensureVisible(ctx);
+    final itemHeight = _sectionHeight(context);
+    _scrollController.jumpTo(index * itemHeight);
   }
 
-  // void _scrollToIndex(int index) {
-  //   final itemHeight = _sectionHeight(context);
-  //   _scrollController.jumpTo(index * itemHeight);
-  // }
+  double _sectionHeight(BuildContext context) {
+    final size = MediaQuery.of(context).size;
 
-  // double _sectionHeight(BuildContext context) {
-  //   final size = MediaQuery.of(context).size;
+    // Десктоп/таблет: секция = 1 экран
+    if (!context.isMobile) return size.height;
 
-  //   // Десктоп/таблет: секция = 1 экран (как и было)
-  //   if (!context.isMobile) return size.height;
+    // Мобилка: экран + gap между блоками +
+    // высота макета + верхний паддинг секции
+    const topPadding = BaseConst.base24;
+    const gap = BaseConst.base12;
 
-  //   // Мобилка: экран + gap между блоками +
-  //   // высота макета + верхний паддинг секции
-  //   const topPadding = BaseConst.base24;
-  //   const gap = BaseConst.base12;
+    // Ширина макета = ширина экрана минус горизонтальные паддинги секции
+    final availableWidth =
+        (size.width - BaseConst.base24 * 2).clamp(0.0, double.infinity);
 
-  //   // Ширина макета = ширина экрана минус горизонтальные паддинги секции
-  //   final availableWidth =
-  //       (size.width - BaseConst.base24 * 2).clamp(0.0, double.infinity);
+    // Высота макета по заданному аспекту (width/height)
+    const aspect = BaseConst.iphoneMockupWidth / BaseConst.iphoneMockupHeight;
+    final mockupHeight = availableWidth / aspect;
 
-  //   // Высота макета по заданному аспекту (width/height)
-  //   const aspect = BaseConst.iphoneMockupWidth / BaseConst.iphoneMockupHeight;
-  //   final mockupHeight = availableWidth / aspect;
+    return topPadding + size.height + gap + mockupHeight;
+  }
 
-  //   return topPadding + size.height + gap + mockupHeight;
-  // }
-
-  // @override
-  // void dispose() {
-  //   _scrollController.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -130,12 +121,12 @@ class _PortfolioPageState extends State<PortfolioPage> {
       body: Stack(
         children: [
           NativeScrollBuilder(
+            controller: _scrollController,
             builder: (context, scrollController) => CustomScrollView(
               controller: scrollController,
               slivers: [
                 ..._projects.asMap().entries.map(
                       (entry) => ProjectSection(
-                        key: _sectionKeys[entry.key],
                         project: entry.value,
                         index: entry.key,
                       ),

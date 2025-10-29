@@ -11,7 +11,6 @@ analyzer:
       "**/*.swagger.dart",
       "**/*.chopper.dart",
       "lib/generated",
-      "lib/data/lib/handlers/request_handler.dart",
     ]
   language:
     strict-casts: true # Обязательные строгие приведения типов
