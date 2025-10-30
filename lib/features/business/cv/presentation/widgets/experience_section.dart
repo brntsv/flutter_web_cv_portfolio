@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/features/business/cv/presentation/widgets/section_title.dart';
-import 'package:flutter_web/l10n/localization_extension.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_clickable_text.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 
+import '../../../../../l10n/localization_extension.dart';
 import '../../../../navigation/router.dart';
 import '../../../portfolio/domain/enums/project_type.dart';
+import 'section_title.dart';
 
 /// Секция "Опыт работы"
 class ExperienceSection extends StatelessWidget {

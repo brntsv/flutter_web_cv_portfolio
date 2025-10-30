@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_web/features/navigation/export_pages.dart';
+import 'export_pages.dart';
 
 part 'router.gr.dart';
 

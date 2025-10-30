@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_web/features/locale_mode/bloc/locale_bloc.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
+
+import '../bloc/locale_bloc.dart';
 
 /// {@template language_switcher.class}
 /// Переключатель языка

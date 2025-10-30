@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/features/app/app.dart';
-import 'package:flutter_web/features/navigation/router.dart';
 import 'package:nested/nested.dart';
 import 'package:provider/provider.dart';
+
+import '../navigation/router.dart';
+import 'app.dart';
 
 /// {@template app_flow.class}
 /// Точка входа в Application.

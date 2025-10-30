@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/features/business/cv/presentation/widgets/section_title.dart';
-import 'package:flutter_web/l10n/localization_extension.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
+
+import '../../../../../l10n/localization_extension.dart';
+import 'section_title.dart';
 
 /// Секция "Образование и языки"
 class EducationLanguagesSection extends StatelessWidget {
