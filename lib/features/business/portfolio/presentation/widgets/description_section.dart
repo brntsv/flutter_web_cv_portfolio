@@ -39,12 +39,17 @@ class DescriptionSection extends StatelessWidget {
         color: color.lightGray,
       ),
       padding: context.isMobile
-          ? const EdgeInsets.all(BaseConst.base24)
+          ? const EdgeInsets.only(
+              left: BaseConst.base24,
+              right: BaseConst.base24,
+              top: BaseConst.base48,
+              bottom: BaseConst.base32,
+            )
           : const EdgeInsets.all(BaseConst.base60),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        spacing: BaseConst.base10,
+        spacing: BaseConst.base32,
         children: [
           Row(
             spacing: BaseConst.base16,
