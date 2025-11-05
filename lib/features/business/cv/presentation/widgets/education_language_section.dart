@@ -6,20 +6,22 @@ import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 import '../../../../../l10n/localization_extension.dart';
 import 'section_title.dart';
 
+/// {@template education_languages_section.class}
 /// Секция "Образование и языки"
+/// {@endtemplate}
 class EducationLanguagesSection extends StatelessWidget {
   /// {@macro education_languages_section.class}
   const EducationLanguagesSection({super.key});
 
   @override
   Widget build(BuildContext context) => const Row(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    spacing: BaseConst.base24,
-    children: [
-      Expanded(child: _EducationSection()),
-      Expanded(child: _LanguagesSection()),
-    ],
-  );
+        crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: BaseConst.base24,
+        children: [
+          Expanded(child: _EducationSection()),
+          Expanded(child: _LanguagesSection()),
+        ],
+      );
 }
 
 class _EducationSection extends StatelessWidget {

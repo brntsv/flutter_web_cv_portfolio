@@ -37,7 +37,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutMeDesc =>
-      '3+ years creating mobile applications for various industries — from e-commerce and real estate to CRM systems. Not only do I write code, but I also set up processes: I implemented CI/CD, created a release automation system, standardized development approaches in the team.';
+      'Create fast, stable, and user-friendly mobile applications. Love architecture and release automation. Work from goals and UX, not from formal Technical Specifications.';
 
   @override
   String get projects => 'Projects';
@@ -46,7 +46,60 @@ class AppLocalizationsEn extends AppLocalizations {
   String get experience => 'Work Experience';
 
   @override
-  String get nanAgencyPeriod => 'May 2023 — present';
+  String get mukaPeriod => 'march 2025 — october 2025';
+
+  @override
+  String get mukaPosition => 'Flutter Developer в Muka Team';
+
+  @override
+  String get mukaResponsibilityItem1 =>
+      '— Architectural planning and decomposition of features, planning and estimation (positive/realistic/pessimistic);';
+
+  @override
+  String get mukaResponsibilityItem2 =>
+      '— Support: updating Flutter/SDK/packages, migrations, refactoring and reducing technical debt;';
+
+  @override
+  String get mukaResponsibilityItem3 =>
+      '— Performance: profiling with DevTools (CPU/memory), optimization;';
+
+  @override
+  String get mukaResponsibilityItem4 =>
+      '— Builds and releases: configurations and environments, automation (Makefile, fastlane, GitLab CI);';
+
+  @override
+  String get mukaResponsibilityItem5 =>
+      '— Communication: coordinating UX/UI, code review, documentation of solutions.';
+
+  @override
+  String get mukaAchievementItem1 =>
+      '— Launched MVP from scratch and brought it to publication in all stores (App Store, Google Play, RuStore, AppGallery);';
+
+  @override
+  String get mukaAchievementItem2 =>
+      '— Automated releases (Makefile + fastlane), speeding up the release and reducing risks of errors;';
+
+  @override
+  String get mukaAchievementItem3 =>
+      '— Designed a scalable architecture with clear module boundaries;';
+
+  @override
+  String get mukaAchievementItem4 =>
+      '— Added native scroll-to-top by active tab and introduced skeletons (shimmer) for pages (initiative outside the technical specification) → improvement of engagement and perception of speed;';
+
+  @override
+  String get mukaAchievementItem5 =>
+      '— Introduced proxy/mocking for API → faster hypothesis testing and debugging.';
+
+  @override
+  String get app => 'Application:';
+
+  @override
+  String get projectsMuka =>
+      '— Flour and Order [RuStore](https://www.rustore.ru/catalog/app/com.flour.order)';
+
+  @override
+  String get nanAgencyPeriod => 'may 2023 — present';
 
   @override
   String get nanAgencyPosition => 'Flutter Developer at NaN Agency';
@@ -56,65 +109,50 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get nanAgencyResponsibilityItem1 =>
-      '— Architectural planning and design of new features;';
+      '— Architectural planning and decomposition of features, planning and estimation (positive/realistic/pessimistic);';
 
   @override
   String get nanAgencyResponsibilityItem2 =>
-      '— Project support - bug fixing, updating framework versions and packages;';
+      '— Support: updating Flutter/SDK/packages, migrations, refactoring and reducing technical debt;';
 
   @override
   String get nanAgencyResponsibilityItem3 =>
-      '— Estimating tasks using Positive - Realistic - Pessimistic system;';
+      '— Performance: profiling with DevTools (CPU/memory), optimization;';
 
   @override
-  String get nanAgencyResponsibilityItem4 => '— Project refactoring;';
+  String get nanAgencyResponsibilityItem4 =>
+      '— Builds and releases: configurations and environments, automation (Makefile, fastlane, GitLab CI);';
 
   @override
   String get nanAgencyResponsibilityItem5 =>
-      '— Building ipa, appbundle and APK. Releasing builds to Testflight, Google Play, App Gallery;';
-
-  @override
-  String get nanAgencyResponsibilityItem6 =>
-      '— Coordinating with designers on UX/UI implementation issues.';
+      '— Communication: coordinating UX/UI, code review, documentation of solutions.';
 
   @override
   String get achievements => 'Achievements:';
 
   @override
   String get nanAgencyAchievementItem1 =>
-      '— Set up CI/CD through GitLab for automated builds and releases;';
+      '— Crash-free grew from 59% to 99% (AppMetrica);';
 
   @override
   String get nanAgencyAchievementItem2 =>
-      '— Created a local automation system (Makefile + fastlane) for deploying to TestFlight, Google Play Console and Firebase App Distribution;';
+      '— Integrated CI/CD in GitLab and local automation of releases (Makefile + fastlane);';
 
   @override
   String get nanAgencyAchievementItem3 =>
-      '— Set up common linter rules for all projects;';
+      '— Unified analysis rules (analysis_options) in all projects;';
 
   @override
   String get nanAgencyAchievementItem4 =>
-      '— Integrated Searchbooster service into the application;';
+      '— Accelerated the product by optimizing image loading/caching and stabilizing the network;';
 
   @override
   String get nanAgencyAchievementItem5 =>
-      '— Integrated DaData service into the application;';
+      '— Integrated SearchBooster and DaData, expanding the functionality of search and forms;';
 
   @override
   String get nanAgencyAchievementItem6 =>
-      '— Improved application performance by setting image caching sizes;';
-
-  @override
-  String get nanAgencyAchievementItem7 =>
-      '— Fixed application crashes, profiled the application using Flutter tools;';
-
-  @override
-  String get nanAgencyAchievementItem8 =>
-      '— Initiated and implemented a system for standardizing TZ through the creation of templates and manifests for clients, which improved understanding of requirements;';
-
-  @override
-  String get nanAgencyAchievementItem9 =>
-      '— Created an MVP for a real estate agent application, which allowed it to be launched in production;';
+      '— Brought a separate product to MVP; standardized TZ through templates/manifest.';
 
   @override
   String get nanAgencyProjects =>
@@ -122,11 +160,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get projectsRealtOne =>
-      '— Realt.One [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU) | [App Store](https://apps.apple.com/us/app/realt-one/id6742776096)';
+      '— Realt One [App Store](https://apps.apple.com/us/app/realt-one/id6742776096) | [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU)';
 
   @override
   String get projectsNovex =>
-      '— Novex [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU) | [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837)';
+      '— Novex [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837) | [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU)';
 
   @override
   String get skills => 'Skills';
@@ -203,9 +241,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get telegram => '[Telegram](https://t.me/bntsv)';
-
-  @override
-  String get twitter => '[Twitter](https://x.com/obeyhofer)';
 
   @override
   String get flourAndOrderDescription => 'CRM for bakers and bakers';

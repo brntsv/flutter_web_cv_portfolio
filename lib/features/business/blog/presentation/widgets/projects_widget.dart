@@ -44,7 +44,7 @@ class ProjectsWidget extends StatelessWidget {
               AnimatedClickableText(
                 text: l10n.flourAndOrder,
                 description: l10n.flourAndOrderDesc,
-                appearDuration: 6,
+                appearDuration: 1,
                 appearClass: 2,
                 onTap: () => context.push(PortfolioRoute()),
               ),
@@ -52,7 +52,7 @@ class ProjectsWidget extends StatelessWidget {
                 text: l10n.realtOne,
                 description: l10n.realtOneDesc,
                 appearDuration: 6,
-                appearClass: 2,
+                appearClass: 3,
                 onTap: () => context.push(
                   PortfolioRoute(
                     initialProject: ProjectType.realtOne,
@@ -62,7 +62,7 @@ class ProjectsWidget extends StatelessWidget {
               AnimatedClickableText(
                 text: l10n.novex,
                 description: l10n.novexDesc,
-                appearDuration: 6,
+                appearDuration: 1,
                 appearClass: 2,
                 onTap: () => context.push(
                   PortfolioRoute(

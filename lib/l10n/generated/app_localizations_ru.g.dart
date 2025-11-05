@@ -37,7 +37,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get aboutMeDesc =>
-      '3+ года создаю мобильные приложения для различных сфер — от e-commerce до недвижимости. Не только пишу код, но и настраиваю процессы: внедрил CI/CD, создал систему автоматизации релизов, стандартизировал подходы к разработке в команде.';
+      'Делаю мобильные приложения быстрыми, устойчивыми и удобными. Люблю архитектуру и автоматизацию релизов. Работаю от целей и UX, а не от формального ТЗ.';
 
   @override
   String get projects => 'Проекты';
@@ -46,7 +46,60 @@ class AppLocalizationsRu extends AppLocalizations {
   String get experience => 'Опыт работы';
 
   @override
-  String get nanAgencyPeriod => 'май. 2023 — наст. вр.';
+  String get mukaPeriod => 'март 2025 — октябрь 2025';
+
+  @override
+  String get mukaPosition => 'Flutter Developer в Muka Team';
+
+  @override
+  String get mukaResponsibilityItem1 =>
+      '— Архитектура модульного приложения: слои data/domain/presentation, DI (get_it/injectable), навигация, кодогенерация;';
+
+  @override
+  String get mukaResponsibilityItem2 =>
+      '— Полный цикл: оценка/планирование, реализация, код‑ревью, релизы;';
+
+  @override
+  String get mukaResponsibilityItem3 =>
+      '— Инфраструктура: флейворы/окружения, автоматизация сборок и публикаций (Makefile, fastlane);';
+
+  @override
+  String get mukaResponsibilityItem4 =>
+      '— Ключевые фичи: OTP-авторизация, i18n/l10n, проксирование/моки, устойчивые ретраи и обработка ошибок;';
+
+  @override
+  String get mukaResponsibilityItem5 =>
+      '— Качество и безопасность: линтинг/статанализ, документация, обфускация (ProGuard/R8).';
+
+  @override
+  String get mukaAchievementItem1 =>
+      '— Запустил MVP с нуля и довёл до публикации во все магазины (App Store, Google Play, RuStore, AppGallery);';
+
+  @override
+  String get mukaAchievementItem2 =>
+      '— Автоматизировал релизы (Makefile + fastlane), ускорив выпуск и снизив риски ошибок;';
+
+  @override
+  String get mukaAchievementItem3 =>
+      '— Спроектировал масштабируемую архитектуру с чёткими границами модулей;';
+
+  @override
+  String get mukaAchievementItem4 =>
+      '— Добавил нативное scroll-to-top по активному табу и ввёл скелетоны (shimmer) для страниц (инициатива вне ТЗ) → улучшение вовлечённости и восприятия скорости;';
+
+  @override
+  String get mukaAchievementItem5 =>
+      '— Ввёл проксирование/моки для API → быстрее проверка гипотез и отладка.';
+
+  @override
+  String get app => 'Приложение:';
+
+  @override
+  String get projectsMuka =>
+      '— Мука и Порядок [RuStore](https://www.rustore.ru/catalog/app/com.flour.order)';
+
+  @override
+  String get nanAgencyPeriod => 'май 2023 — наст. вр.';
 
   @override
   String get nanAgencyPosition => 'Flutter Developer в NaN Agency';
@@ -56,64 +109,50 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get nanAgencyResponsibilityItem1 =>
-      '— Архитектурное планирование и проектирование новых фич;';
+      '— Архитектура и декомпозиция фич, планирование и оценка (позитив/реалист/пессимист);';
 
   @override
   String get nanAgencyResponsibilityItem2 =>
-      '— Поддержка проектов - фикс багов, обновление версий фреймворка и пакетов;';
+      '— Сопровождение: обновления Flutter/SDK/пакетов, миграции, рефакторинг и снижение техдолга;';
 
   @override
   String get nanAgencyResponsibilityItem3 =>
-      '— Оценка задач по системе Позитивная - Реалистичная - Пессимистичная;';
+      '— Производительность: профилирование с DevTools (CPU/memory), оптимизация;';
 
   @override
-  String get nanAgencyResponsibilityItem4 => '— Рефакторинг проектов;';
+  String get nanAgencyResponsibilityItem4 =>
+      '— Сборки и релизы: конфигурации и окружения, автоматизация (Makefile, fastlane, GitLab CI);';
 
   @override
   String get nanAgencyResponsibilityItem5 =>
-      '— Cборки ipa, appbundle и apk. Выпуск релизов в Testflight, Google Play, App Gallery;';
-
-  @override
-  String get nanAgencyResponsibilityItem6 =>
-      '— Координация с дизайнерами по вопросам UX/UI реализации.';
+      '— Коммуникации: согласование UX/UI, код‑ревью, документация решений.';
 
   @override
   String get achievements => 'Достижения:';
 
   @override
   String get nanAgencyAchievementItem1 =>
-      '— Настроил CI/CD через GitLab для автоматизации сборок и релизов;';
+      '— Crash-free вырос с 59% до 99% (AppMetrica);';
 
   @override
   String get nanAgencyAchievementItem2 =>
-      '— Создал локальную систему автоматизации (Makefile + fastlane) для деплоя в TestFlight, Google Play Console и Firebase App Distribution;';
+      '— Внедрил CI/CD в GitLab и локальную автоматизацию релизов (Makefile + fastlane);';
 
   @override
   String get nanAgencyAchievementItem3 =>
-      '— Настроил общие правила analysis_options для всех проектов;';
+      '— Унифицировал правила статанализа (analysis_options) во всех проектах;';
 
   @override
   String get nanAgencyAchievementItem4 =>
-      '— Интегрировал сервис Searchbooster в приложение;';
+      '— Ускорил продукт за счёт оптимизации загрузки/кеширования изображений и стабилизации сети;';
 
   @override
   String get nanAgencyAchievementItem5 =>
-      '— Интегрировал сервис DaData в приложение;';
+      '— Интегрировал SearchBooster и DaData, расширив функциональность поиска и форм;';
 
   @override
   String get nanAgencyAchievementItem6 =>
-      '— Повысил производительность работы приложения путем задания размеров кеширования изображений;';
-
-  @override
-  String get nanAgencyAchievementItem7 =>
-      '— Устранил креши приложения, профилировал приложение с помощью инструментов флаттера;';
-
-  @override
-  String get nanAgencyAchievementItem8 =>
-      '— Инициировал и внедрил систему стандартизации ТЗ через создание шаблонов и манифеста для клиентов, что улучшило понимание требований;';
-
-  @override
-  String get nanAgencyAchievementItem9 => '— MVP приложения для риэлторов.';
+      '— Довёл отдельный продукт до MVP; стандартизировал ТЗ через шаблоны/манифест.';
 
   @override
   String get nanAgencyProjects =>
@@ -121,11 +160,11 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get projectsRealtOne =>
-      '— Realt.One [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU) | [App Store](https://apps.apple.com/us/app/realt-one/id6742776096)';
+      '— Realt One [App Store](https://apps.apple.com/us/app/realt-one/id6742776096) | [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU)';
 
   @override
   String get projectsNovex =>
-      '— Novex [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU) | [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837)';
+      '— Novex [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837) | [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU)';
 
   @override
   String get skills => 'Навыки';
@@ -202,9 +241,6 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get telegram => '[Telegram](https://t.me/bntsv)';
-
-  @override
-  String get twitter => '[Twitter](https://x.com/obeyhofer)';
 
   @override
   String get flourAndOrderDescription => 'CRM для кондитеров и пекарей';

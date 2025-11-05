@@ -6,8 +6,9 @@ import 'package:ui_kit/widgets/base/animated_text/animated_text_with_links.dart'
 
 import '../../../../../l10n/localization_extension.dart';
 
-
-/// Секция "Контактная информация"
+/// {@template contact_section.class}
+/// Контактная информация
+/// {@endtemplate}
 class ContactSection extends StatelessWidget {
   /// {@macro contact_section.class}
   const ContactSection({super.key});

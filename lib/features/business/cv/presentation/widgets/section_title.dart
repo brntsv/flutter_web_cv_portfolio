@@ -3,7 +3,9 @@ import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 
+/// {@template section_title.class}
 /// Заголовок секции
+/// {@endtemplate}
 class SectionTitle extends StatelessWidget {
   /// {@macro section_title.class}
   const SectionTitle({

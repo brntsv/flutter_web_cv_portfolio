@@ -37,13 +37,13 @@ class AboutThisPageWidget extends StatelessWidget {
             children: [
               AnimatedTextWithLinks(
                 text: l10n.blogFooterDesc,
-                appearDuration: 6,
+                appearDuration: 1,
                 appearClass: 2,
               ),
               AnimatedTextWithLinks(
                 text: l10n.blogFooterDesc2,
                 appearDuration: 6,
-                appearClass: 2,
+                appearClass: 3,
               ),
             ],
           ),

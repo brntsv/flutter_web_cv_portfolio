@@ -26,7 +26,6 @@ final class ProjectStoreLinks {
     googlePlay:
         'https://play.google.com/store/apps/details?id=com.creonit.novex',
     rustore: 'https://www.rustore.ru/catalog/app/com.creonit.novex',
-    appGallery: 'https://appgallery.huawei.com/#/app/C107281171',
   );
 
   /// Получить ссылки на проект по типу

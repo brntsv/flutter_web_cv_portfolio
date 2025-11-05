@@ -6,7 +6,9 @@ import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 import '../../../../../l10n/localization_extension.dart';
 import 'section_title.dart';
 
-/// Секция "О себе"
+/// {@template about_me_section.class}
+/// О себе
+/// {@endtemplate}
 class AboutMeSection extends StatelessWidget {
   /// {@macro about_me_section.class}
   const AboutMeSection({super.key});

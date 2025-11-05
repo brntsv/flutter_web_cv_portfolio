@@ -6,7 +6,9 @@ import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 import '../../../../../l10n/localization_extension.dart';
 import 'section_title.dart';
 
-/// Секция "Навыки"
+/// {@template skills_section.class}
+/// Навыки
+/// {@endtemplate}
 class SkillsSection extends StatelessWidget {
   /// {@macro skills_section.class}
   const SkillsSection({super.key});

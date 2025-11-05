@@ -155,7 +155,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutMeDesc.
   ///
   /// In ru, this message translates to:
-  /// **'3+ года создаю мобильные приложения для различных сфер — от e-commerce до недвижимости. Не только пишу код, но и настраиваю процессы: внедрил CI/CD, создал систему автоматизации релизов, стандартизировал подходы к разработке в команде.'**
+  /// **'Делаю мобильные приложения быстрыми, устойчивыми и удобными. Люблю архитектуру и автоматизацию релизов. Работаю от целей и UX, а не от формального ТЗ.'**
   String get aboutMeDesc;
 
   /// No description provided for @projects.
@@ -170,10 +170,94 @@ abstract class AppLocalizations {
   /// **'Опыт работы'**
   String get experience;
 
+  /// No description provided for @mukaPeriod.
+  ///
+  /// In ru, this message translates to:
+  /// **'март 2025 — октябрь 2025'**
+  String get mukaPeriod;
+
+  /// No description provided for @mukaPosition.
+  ///
+  /// In ru, this message translates to:
+  /// **'Flutter Developer в Muka Team'**
+  String get mukaPosition;
+
+  /// No description provided for @mukaResponsibilityItem1.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Архитектура модульного приложения: слои data/domain/presentation, DI (get_it/injectable), навигация, кодогенерация;'**
+  String get mukaResponsibilityItem1;
+
+  /// No description provided for @mukaResponsibilityItem2.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Полный цикл: оценка/планирование, реализация, код‑ревью, релизы;'**
+  String get mukaResponsibilityItem2;
+
+  /// No description provided for @mukaResponsibilityItem3.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Инфраструктура: флейворы/окружения, автоматизация сборок и публикаций (Makefile, fastlane);'**
+  String get mukaResponsibilityItem3;
+
+  /// No description provided for @mukaResponsibilityItem4.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Ключевые фичи: OTP-авторизация, i18n/l10n, проксирование/моки, устойчивые ретраи и обработка ошибок;'**
+  String get mukaResponsibilityItem4;
+
+  /// No description provided for @mukaResponsibilityItem5.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Качество и безопасность: линтинг/статанализ, документация, обфускация (ProGuard/R8).'**
+  String get mukaResponsibilityItem5;
+
+  /// No description provided for @mukaAchievementItem1.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Запустил MVP с нуля и довёл до публикации во все магазины (App Store, Google Play, RuStore, AppGallery);'**
+  String get mukaAchievementItem1;
+
+  /// No description provided for @mukaAchievementItem2.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Автоматизировал релизы (Makefile + fastlane), ускорив выпуск и снизив риски ошибок;'**
+  String get mukaAchievementItem2;
+
+  /// No description provided for @mukaAchievementItem3.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Спроектировал масштабируемую архитектуру с чёткими границами модулей;'**
+  String get mukaAchievementItem3;
+
+  /// No description provided for @mukaAchievementItem4.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Добавил нативное scroll-to-top по активному табу и ввёл скелетоны (shimmer) для страниц (инициатива вне ТЗ) → улучшение вовлечённости и восприятия скорости;'**
+  String get mukaAchievementItem4;
+
+  /// No description provided for @mukaAchievementItem5.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Ввёл проксирование/моки для API → быстрее проверка гипотез и отладка.'**
+  String get mukaAchievementItem5;
+
+  /// No description provided for @app.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приложение:'**
+  String get app;
+
+  /// No description provided for @projectsMuka.
+  ///
+  /// In ru, this message translates to:
+  /// **'— Мука и Порядок [RuStore](https://www.rustore.ru/catalog/app/com.flour.order)'**
+  String get projectsMuka;
+
   /// No description provided for @nanAgencyPeriod.
   ///
   /// In ru, this message translates to:
-  /// **'май. 2023 — наст. вр.'**
+  /// **'май 2023 — наст. вр.'**
   String get nanAgencyPeriod;
 
   /// No description provided for @nanAgencyPosition.
@@ -191,38 +275,32 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyResponsibilityItem1.
   ///
   /// In ru, this message translates to:
-  /// **'— Архитектурное планирование и проектирование новых фич;'**
+  /// **'— Архитектура и декомпозиция фич, планирование и оценка (позитив/реалист/пессимист);'**
   String get nanAgencyResponsibilityItem1;
 
   /// No description provided for @nanAgencyResponsibilityItem2.
   ///
   /// In ru, this message translates to:
-  /// **'— Поддержка проектов - фикс багов, обновление версий фреймворка и пакетов;'**
+  /// **'— Сопровождение: обновления Flutter/SDK/пакетов, миграции, рефакторинг и снижение техдолга;'**
   String get nanAgencyResponsibilityItem2;
 
   /// No description provided for @nanAgencyResponsibilityItem3.
   ///
   /// In ru, this message translates to:
-  /// **'— Оценка задач по системе Позитивная - Реалистичная - Пессимистичная;'**
+  /// **'— Производительность: профилирование с DevTools (CPU/memory), оптимизация;'**
   String get nanAgencyResponsibilityItem3;
 
   /// No description provided for @nanAgencyResponsibilityItem4.
   ///
   /// In ru, this message translates to:
-  /// **'— Рефакторинг проектов;'**
+  /// **'— Сборки и релизы: конфигурации и окружения, автоматизация (Makefile, fastlane, GitLab CI);'**
   String get nanAgencyResponsibilityItem4;
 
   /// No description provided for @nanAgencyResponsibilityItem5.
   ///
   /// In ru, this message translates to:
-  /// **'— Cборки ipa, appbundle и apk. Выпуск релизов в Testflight, Google Play, App Gallery;'**
+  /// **'— Коммуникации: согласование UX/UI, код‑ревью, документация решений.'**
   String get nanAgencyResponsibilityItem5;
-
-  /// No description provided for @nanAgencyResponsibilityItem6.
-  ///
-  /// In ru, this message translates to:
-  /// **'— Координация с дизайнерами по вопросам UX/UI реализации.'**
-  String get nanAgencyResponsibilityItem6;
 
   /// No description provided for @achievements.
   ///
@@ -233,56 +311,38 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyAchievementItem1.
   ///
   /// In ru, this message translates to:
-  /// **'— Настроил CI/CD через GitLab для автоматизации сборок и релизов;'**
+  /// **'— Crash-free вырос с 59% до 99% (AppMetrica);'**
   String get nanAgencyAchievementItem1;
 
   /// No description provided for @nanAgencyAchievementItem2.
   ///
   /// In ru, this message translates to:
-  /// **'— Создал локальную систему автоматизации (Makefile + fastlane) для деплоя в TestFlight, Google Play Console и Firebase App Distribution;'**
+  /// **'— Внедрил CI/CD в GitLab и локальную автоматизацию релизов (Makefile + fastlane);'**
   String get nanAgencyAchievementItem2;
 
   /// No description provided for @nanAgencyAchievementItem3.
   ///
   /// In ru, this message translates to:
-  /// **'— Настроил общие правила analysis_options для всех проектов;'**
+  /// **'— Унифицировал правила статанализа (analysis_options) во всех проектах;'**
   String get nanAgencyAchievementItem3;
 
   /// No description provided for @nanAgencyAchievementItem4.
   ///
   /// In ru, this message translates to:
-  /// **'— Интегрировал сервис Searchbooster в приложение;'**
+  /// **'— Ускорил продукт за счёт оптимизации загрузки/кеширования изображений и стабилизации сети;'**
   String get nanAgencyAchievementItem4;
 
   /// No description provided for @nanAgencyAchievementItem5.
   ///
   /// In ru, this message translates to:
-  /// **'— Интегрировал сервис DaData в приложение;'**
+  /// **'— Интегрировал SearchBooster и DaData, расширив функциональность поиска и форм;'**
   String get nanAgencyAchievementItem5;
 
   /// No description provided for @nanAgencyAchievementItem6.
   ///
   /// In ru, this message translates to:
-  /// **'— Повысил производительность работы приложения путем задания размеров кеширования изображений;'**
+  /// **'— Довёл отдельный продукт до MVP; стандартизировал ТЗ через шаблоны/манифест.'**
   String get nanAgencyAchievementItem6;
-
-  /// No description provided for @nanAgencyAchievementItem7.
-  ///
-  /// In ru, this message translates to:
-  /// **'— Устранил креши приложения, профилировал приложение с помощью инструментов флаттера;'**
-  String get nanAgencyAchievementItem7;
-
-  /// No description provided for @nanAgencyAchievementItem8.
-  ///
-  /// In ru, this message translates to:
-  /// **'— Инициировал и внедрил систему стандартизации ТЗ через создание шаблонов и манифеста для клиентов, что улучшило понимание требований;'**
-  String get nanAgencyAchievementItem8;
-
-  /// No description provided for @nanAgencyAchievementItem9.
-  ///
-  /// In ru, this message translates to:
-  /// **'— MVP приложения для риэлторов.'**
-  String get nanAgencyAchievementItem9;
 
   /// No description provided for @nanAgencyProjects.
   ///
@@ -293,13 +353,13 @@ abstract class AppLocalizations {
   /// No description provided for @projectsRealtOne.
   ///
   /// In ru, this message translates to:
-  /// **'— Realt.One [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU) | [App Store](https://apps.apple.com/us/app/realt-one/id6742776096)'**
+  /// **'— Realt One [App Store](https://apps.apple.com/us/app/realt-one/id6742776096) | [Google Play](https://play.google.com/store/apps/details?id=com.realtone.realt_one&hl=RU)'**
   String get projectsRealtOne;
 
   /// No description provided for @projectsNovex.
   ///
   /// In ru, this message translates to:
-  /// **'— Novex [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU) | [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837)'**
+  /// **'— Novex [App Store](https://apps.apple.com/ru/app/n%D0%BEvex-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/id1608874837) | [Google Play](https://play.google.com/store/apps/details?id=com.creonit.novex&hl=RU)'**
   String get projectsNovex;
 
   /// No description provided for @skills.
@@ -445,12 +505,6 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'[Telegram](https://t.me/bntsv)'**
   String get telegram;
-
-  /// No description provided for @twitter.
-  ///
-  /// In ru, this message translates to:
-  /// **'[Twitter](https://x.com/obeyhofer)'**
-  String get twitter;
 
   /// No description provided for @flourAndOrderDescription.
   ///

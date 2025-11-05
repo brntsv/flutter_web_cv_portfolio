@@ -37,17 +37,17 @@ class SocialsWidget extends StatelessWidget {
             children: [
               AnimatedTextWithLinks(
                 text: l10n.telegram,
-                appearDuration: 6,
+                appearDuration: 1,
                 appearClass: 2,
               ),
               AnimatedTextWithLinks(
                 text: l10n.linkedin,
                 appearDuration: 6,
-                appearClass: 2,
+                appearClass: 3,
               ),
               AnimatedTextWithLinks(
                 text: l10n.github,
-                appearDuration: 6,
+                appearDuration: 1,
                 appearClass: 2,
               ),
               // AnimatedTextWithLinks(

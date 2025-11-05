@@ -77,15 +77,15 @@ class _BlogPageState extends State<BlogPage> {
                             AnimatedText(
                               text: l10n.yourName,
                               style: textStyle.h1,
-                              appearDuration: 6,
-                              appearClass: 2,
+                              appearDuration: 3,
+                              appearClass: 20,
                             ),
 
                             /// О себе
                             AnimatedText(
                               text: l10n.aboutMeBlog,
                               style: textStyle.baseText,
-                              appearDuration: 6,
+                              appearDuration: 4,
                               appearClass: 2,
                             ),
 
@@ -97,15 +97,16 @@ class _BlogPageState extends State<BlogPage> {
                                   title: l10n.cv,
                                   backgroundColor: color.graphiteGray,
                                   textColor: color.white,
-                                  appearDuration: 6,
+                                  appearDuration: 4,
                                   appearClass: 3,
                                   iconWidgetRight: BaseIcon(
                                     icon: Assets.images.iconLightning,
                                     color: color.spotifyGreen,
                                     size: BaseConst.base20,
                                   ),
-                                  onPressed: () =>
-                                      context.push(const CvRoute()),
+                                  onPressed: () => context.push(
+                                    const CvRoute(),
+                                  ),
                                 ),
 
                                 /// Кнопка Портфолио
@@ -113,15 +114,16 @@ class _BlogPageState extends State<BlogPage> {
                                   title: l10n.portfolio,
                                   backgroundColor: color.graphiteGray,
                                   textColor: color.white,
-                                  appearDuration: 6,
-                                  appearClass: 2,
+                                  appearDuration: 3,
+                                  appearClass: 4,
                                   iconWidgetRight: BaseIcon(
                                     icon: Assets.images.iconLightning,
                                     color: color.twitchPurpleLight,
                                     size: BaseConst.base20,
                                   ),
-                                  onPressed: () =>
-                                      context.push(PortfolioRoute()),
+                                  onPressed: () => context.push(
+                                    PortfolioRoute(),
+                                  ),
                                 ),
                               ],
                             ),
