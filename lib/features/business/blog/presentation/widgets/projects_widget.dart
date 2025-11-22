@@ -20,10 +20,7 @@ class ProjectsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     final textStyle = textStyles(context);
-    return
-
-        /// Проекты
-        Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: BaseConst.base12,
       children: [

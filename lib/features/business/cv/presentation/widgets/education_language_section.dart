@@ -37,7 +37,7 @@ class _EducationSection extends StatelessWidget {
       children: [
         SectionTitle(
           title: l10n.education,
-          appearClass: 3,
+          appearClass: 1,
         ),
         const SizedBox(height: BaseConst.base16),
         AnimatedText(
@@ -51,8 +51,8 @@ class _EducationSection extends StatelessWidget {
         AnimatedText(
           text: l10n.educationDegree,
           style: textStyle.baseText,
-          appearDuration: 6,
-          appearClass: 3,
+          appearDuration: 3,
+          appearClass: 1,
         ),
         const SizedBox(height: BaseConst.base8),
         AnimatedText(
@@ -79,7 +79,7 @@ class _LanguagesSection extends StatelessWidget {
       children: [
         SectionTitle(
           title: l10n.languages,
-          appearClass: 3,
+          appearClass: 1,
         ),
         const SizedBox(height: BaseConst.base16),
         AnimatedText(
@@ -92,8 +92,8 @@ class _LanguagesSection extends StatelessWidget {
         AnimatedText(
           text: l10n.languageRussian,
           style: textStyle.baseText,
-          appearDuration: 6,
-          appearClass: 3,
+          appearDuration: 3,
+          appearClass: 1,
         ),
       ],
     );

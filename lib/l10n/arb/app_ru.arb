@@ -12,7 +12,7 @@
     "aboutMeDesc": "Делаю мобильные приложения быстрыми, устойчивыми и удобными. Люблю архитектуру и автоматизацию релизов. Работаю от целей и UX, а не от формального ТЗ.",
     "projects": "Проекты",
     "experience": "Опыт работы",
-    "mukaPeriod": "март 2025 — октябрь 2025",
+    "mukaPeriod": "март 2025 — ноябрь 2025",
     "mukaPosition": "Flutter Developer в Muka Team",
     "mukaResponsibilityItem1": "— Архитектура модульного приложения: слои data/domain/presentation, DI (get_it/injectable), навигация, кодогенерация;",
     "mukaResponsibilityItem2": "— Полный цикл: оценка/планирование, реализация, код‑ревью, релизы;",
@@ -71,5 +71,8 @@
     "flourAndOrderDescription": "CRM для кондитеров и пекарей",
     "realtOneDescription": "Приложение для риэлторов",
     "novexDescription": "E-comm приложение для сети хозяйственных магазинов",
-    "viewScreenshots": "Смотреть скриншоты"
+    "viewScreenshots": "Смотреть скриншоты",
+    "contributing": "Contributing",
+    "nativeWebscroll": "[native_web_scroll](https://pub.dev/packages/native_web_scroll)",
+    "nativeWebscrollDesc": "  нативный веб скролл для Flutter for Web"
 }

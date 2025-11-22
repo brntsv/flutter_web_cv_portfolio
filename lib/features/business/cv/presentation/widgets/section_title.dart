@@ -32,7 +32,7 @@ class SectionTitle extends StatelessWidget {
         AnimatedText(
           text: title,
           style: textStyle.h2,
-          appearDuration: 6,
+          appearDuration: 3,
           appearClass: appearClass,
         ),
         Divider(

@@ -12,8 +12,8 @@
     "aboutMeDesc": "Create fast, stable, and user-friendly mobile applications. Love architecture and release automation. Work from goals and UX, not from formal Technical Specifications.",
     "projects": "Projects",
     "experience": "Work Experience",
-    "mukaPeriod": "march 2025 — october 2025",
-    "mukaPosition": "Flutter Developer в Muka Team",
+    "mukaPeriod": "march 2025 — november 2025",
+    "mukaPosition": "Flutter Developer at Muka Team",
     "mukaResponsibilityItem1": "— Architectural planning and decomposition of features, planning and estimation (positive/realistic/pessimistic);",
     "mukaResponsibilityItem2": "— Support: updating Flutter/SDK/packages, migrations, refactoring and reducing technical debt;",
     "mukaResponsibilityItem3": "— Performance: profiling with DevTools (CPU/memory), optimization;",
@@ -68,8 +68,11 @@
     "linkedin": "[Linkedin](https://www.linkedin.com/in/bntsv/)",
     "github": "[Github](https://github.com/brntsv)",
     "telegram": "[Telegram](https://t.me/bntsv)",
-    "flourAndOrderDescription": "CRM for bakers and bakers",
+    "flourAndOrderDescription": "CRM for bakers",
     "realtOneDescription": "app for realtors",
     "novexDescription": "app for a network of household stores",
-    "viewScreenshots": "View screenshots"
+    "viewScreenshots": "View screenshots",
+    "contributing": "Contributing",
+    "nativeWebscroll": "[native_web_scroll](https://pub.dev/packages/native_web_scroll)",
+    "nativeWebscrollDesc": "  native web scrolling for Flutter for Web"
 }

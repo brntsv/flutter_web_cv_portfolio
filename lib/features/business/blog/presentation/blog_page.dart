@@ -13,6 +13,7 @@ import '../../../../l10n/localization_extension.dart';
 import '../../../locale_mode/widgets/language_switcher.dart';
 import '../../../navigation/router.dart';
 import 'widgets/about_this_page_widget.dart';
+import 'widgets/contributing_widget.dart';
 import 'widgets/projects_widget.dart';
 import 'widgets/socials_widget.dart';
 
@@ -130,6 +131,9 @@ class _BlogPageState extends State<BlogPage> {
 
                             /// Проекты
                             const ProjectsWidget(),
+
+                            /// Contribute
+                            const ContributingWidget(),
 
                             /// Соцсети
                             const SocialsWidget(),

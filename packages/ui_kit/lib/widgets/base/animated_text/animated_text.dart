@@ -33,9 +33,6 @@ class AnimatedText extends StatelessWidget {
     // Разбиваем текст на слова
     final words = text.split(' ');
 
-    // Общая продолжительность анимации
-    final totalDuration = appearDuration;
-
     return Text.rich(
       TextSpan(
         children: List.generate(words.length, (index) {
@@ -46,7 +43,7 @@ class AnimatedText extends StatelessWidget {
               style: style ?? textStyles(context).baseText,
               wordIndex: index,
               appearClass: appearClass,
-              appearDuration: totalDuration,
+              appearDuration: appearDuration,
             ),
           );
         }),

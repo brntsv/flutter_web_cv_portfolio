@@ -150,8 +150,8 @@ class _ExperienceItem extends StatelessWidget {
           child: AnimatedText(
             text: data.period,
             style: textStyle.baseText,
-            appearDuration: 6,
-            appearClass: 2,
+            appearDuration: 3,
+            appearClass: 1,
           ),
         ),
 
@@ -166,8 +166,8 @@ class _ExperienceItem extends StatelessWidget {
               AnimatedText(
                 text: data.position,
                 style: textStyle.h3.copyWith(fontWeight: FontWeight.bold),
-                appearDuration: 6,
-                appearClass: 2,
+                appearDuration: 3,
+                appearClass: 1,
               ),
 
               // Обязанности
@@ -175,14 +175,14 @@ class _ExperienceItem extends StatelessWidget {
                 text: l10n.responsibilities,
                 style: textStyle.baseText.copyWith(fontWeight: FontWeight.bold),
                 appearDuration: 6,
-                appearClass: 2,
+                appearClass: 3,
               ),
               ...data.responsibilities.map(
                 (t) => AnimatedText(
                   text: t,
                   style: textStyle.baseText,
                   appearDuration: 6,
-                  appearClass: 2,
+                  appearClass: 3,
                 ),
               ),
 
@@ -191,14 +191,14 @@ class _ExperienceItem extends StatelessWidget {
                 text: l10n.achievements,
                 style: textStyle.baseText.copyWith(fontWeight: FontWeight.bold),
                 appearDuration: 6,
-                appearClass: 2,
+                appearClass: 3,
               ),
               ...data.achievements.map(
                 (t) => AnimatedText(
                   text: t,
                   style: textStyle.baseText,
                   appearDuration: 8,
-                  appearClass: 2,
+                  appearClass: 4,
                 ),
               ),
 
@@ -208,15 +208,15 @@ class _ExperienceItem extends StatelessWidget {
                   text: data.projectsTitle,
                   style:
                       textStyle.baseText.copyWith(fontWeight: FontWeight.bold),
-                  appearDuration: 8,
-                  appearClass: 2,
+                  appearDuration: 6,
+                  appearClass: 3,
                 ),
                 ...data.projects.map(
                   (p) => AnimatedClickableText(
                     text: p.title,
                     description: p.description,
-                    appearDuration: 6,
-                    appearClass: 2,
+                    appearDuration: 8,
+                    appearClass: 4,
                     onTap: p.onTap,
                   ),
                 ),

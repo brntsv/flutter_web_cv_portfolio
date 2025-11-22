@@ -173,7 +173,7 @@ abstract class AppLocalizations {
   /// No description provided for @mukaPeriod.
   ///
   /// In ru, this message translates to:
-  /// **'март 2025 — октябрь 2025'**
+  /// **'март 2025 — ноябрь 2025'**
   String get mukaPeriod;
 
   /// No description provided for @mukaPosition.
@@ -529,6 +529,24 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Смотреть скриншоты'**
   String get viewScreenshots;
+
+  /// No description provided for @contributing.
+  ///
+  /// In ru, this message translates to:
+  /// **'Contributing'**
+  String get contributing;
+
+  /// No description provided for @nativeWebscroll.
+  ///
+  /// In ru, this message translates to:
+  /// **'[native_web_scroll](https://pub.dev/packages/native_web_scroll)'**
+  String get nativeWebscroll;
+
+  /// No description provided for @nativeWebscrollDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'  нативный веб скролл для Flutter for Web'**
+  String get nativeWebscrollDesc;
 }
 
 class _AppLocalizationsDelegate

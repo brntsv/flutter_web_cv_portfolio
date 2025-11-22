@@ -13,11 +13,15 @@ class AnimatedTextWithLinks extends StatelessWidget {
     required this.text,
     required this.appearDuration,
     required this.appearClass,
+    this.description = '',
     super.key,
   });
 
   /// Текст
   final String text;
+
+  /// Описание
+  final String description;
 
   /// Длительность анимации
   final double appearDuration;
@@ -45,13 +49,13 @@ class AnimatedTextWithLinks extends StatelessWidget {
             final isLastWord = i == words.length - 1;
             spans.add(
               WidgetSpan(
-          child: AnimatedWord(
+                child: AnimatedWord(
                   word: '$word${isLastWord ? '' : ' '}',
                   style: textStyle.baseText,
                   wordIndex: wordIndex + i,
                   appearClass: appearClass,
                   appearDuration: appearDuration,
-          ),
+                ),
               ),
             );
           }
@@ -86,17 +90,36 @@ class AnimatedTextWithLinks extends StatelessWidget {
           final isLastWord = i == words.length - 1;
           spans.add(
             WidgetSpan(
-          child: AnimatedWord(
+              child: AnimatedWord(
                 word: '$word${isLastWord ? '' : ' '}',
                 style: textStyle.baseText,
                 wordIndex: wordIndex + i,
                 appearClass: appearClass,
                 appearDuration: appearDuration,
-          ),
+              ),
             ),
           );
         }
-        // wordIndex increment is not necessary beyond final rendering
+        wordIndex += words.length;
+      }
+    }
+
+    if (description.isNotEmpty) {
+      final descWords = description.split(' ');
+      for (var i = 0; i < descWords.length; i++) {
+        final word = descWords[i];
+        final isLastWord = i == descWords.length - 1;
+        spans.add(
+          WidgetSpan(
+            child: AnimatedWord(
+              word: '$word${isLastWord ? '' : ' '}',
+              style: textStyle.baseText,
+              wordIndex: wordIndex + i,
+              appearClass: appearClass,
+              appearDuration: appearDuration,
+            ),
+          ),
+        );
       }
     }
 

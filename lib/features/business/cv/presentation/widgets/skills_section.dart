@@ -22,7 +22,7 @@ class SkillsSection extends StatelessWidget {
       children: [
         SectionTitle(
           title: l10n.skills,
-          appearClass: 3,
+          appearClass: 1,
         ),
         const SizedBox(height: BaseConst.base16),
         _SkillsWrap(skillsText: l10n.skillsList),

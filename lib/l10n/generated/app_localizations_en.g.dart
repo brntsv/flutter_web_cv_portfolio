@@ -46,10 +46,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get experience => 'Work Experience';
 
   @override
-  String get mukaPeriod => 'march 2025 — october 2025';
+  String get mukaPeriod => 'march 2025 — november 2025';
 
   @override
-  String get mukaPosition => 'Flutter Developer в Muka Team';
+  String get mukaPosition => 'Flutter Developer at Muka Team';
 
   @override
   String get mukaResponsibilityItem1 =>
@@ -243,7 +243,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get telegram => '[Telegram](https://t.me/bntsv)';
 
   @override
-  String get flourAndOrderDescription => 'CRM for bakers and bakers';
+  String get flourAndOrderDescription => 'CRM for bakers';
 
   @override
   String get realtOneDescription => 'app for realtors';
@@ -253,4 +253,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get viewScreenshots => 'View screenshots';
+
+  @override
+  String get contributing => 'Contributing';
+
+  @override
+  String get nativeWebscroll =>
+      '[native_web_scroll](https://pub.dev/packages/native_web_scroll)';
+
+  @override
+  String get nativeWebscrollDesc =>
+      '  native web scrolling for Flutter for Web';
 }

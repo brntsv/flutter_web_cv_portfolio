@@ -46,7 +46,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get experience => 'Опыт работы';
 
   @override
-  String get mukaPeriod => 'март 2025 — октябрь 2025';
+  String get mukaPeriod => 'март 2025 — ноябрь 2025';
 
   @override
   String get mukaPosition => 'Flutter Developer в Muka Team';
@@ -254,4 +254,14 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get viewScreenshots => 'Смотреть скриншоты';
+
+  @override
+  String get contributing => 'Contributing';
+
+  @override
+  String get nativeWebscroll =>
+      '[native_web_scroll](https://pub.dev/packages/native_web_scroll)';
+
+  @override
+  String get nativeWebscrollDesc => '  нативный веб скролл для Flutter for Web';
 }

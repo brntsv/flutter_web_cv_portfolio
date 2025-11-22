@@ -25,7 +25,7 @@ class AboutThisPageWidget extends StatelessWidget {
           text: l10n.aboutThisPage,
           style: textStyle.h3,
           appearDuration: 6,
-          appearClass: 2,
+          appearClass: 3,
         ),
         Padding(
           padding: const EdgeInsets.only(

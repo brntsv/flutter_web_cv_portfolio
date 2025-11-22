@@ -77,8 +77,8 @@ class _CvPageState extends State<CvPage> {
                             AnimatedText(
                               text: '${l10n.yourName}, ${l10n.yourJob}',
                               style: textStyle.h1,
-                              appearDuration: 6,
-                              appearClass: 2,
+                              appearDuration: 4,
+                              appearClass: 20,
                             ),
 
                             /// Контактная информация

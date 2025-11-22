@@ -28,8 +28,8 @@ class AboutMeSection extends StatelessWidget {
         AnimatedText(
           text: l10n.aboutMeDesc,
           style: textStyle.baseText,
-          appearDuration: 6,
-          appearClass: 2,
+          appearDuration: 7,
+          appearClass: 18,
         ),
       ],
     );

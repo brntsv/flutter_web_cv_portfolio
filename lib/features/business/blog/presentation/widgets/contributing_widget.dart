@@ -6,12 +6,12 @@ import 'package:ui_kit/widgets/base/animated_text/animated_text_with_links.dart'
 
 import '../../../../../l10n/localization_extension.dart';
 
-/// {@template socials_widget.class}
-/// Виджет для отображения социальных сетей
+/// {@template contributing_widget.class}
+/// Виджет для отображения Contributions
 /// {@endtemplate}
-class SocialsWidget extends StatelessWidget {
-  /// {@macro socials_widget.class}
-  const SocialsWidget({super.key});
+class ContributingWidget extends StatelessWidget {
+  /// {@macro contributing_widget.class}
+  const ContributingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class SocialsWidget extends StatelessWidget {
       spacing: BaseConst.base12,
       children: [
         AnimatedText(
-          text: l10n.socials,
+          text: l10n.contributing,
           style: textStyle.h3,
           appearDuration: 6,
           appearClass: 2,
@@ -36,17 +36,8 @@ class SocialsWidget extends StatelessWidget {
             spacing: BaseConst.base4,
             children: [
               AnimatedTextWithLinks(
-                text: l10n.telegram,
-                appearDuration: 1,
-                appearClass: 2,
-              ),
-              AnimatedTextWithLinks(
-                text: l10n.linkedin,
-                appearDuration: 6,
-                appearClass: 3,
-              ),
-              AnimatedTextWithLinks(
-                text: l10n.github,
+                text: l10n.nativeWebscroll,
+                description: l10n.nativeWebscrollDesc,
                 appearDuration: 1,
                 appearClass: 2,
               ),
