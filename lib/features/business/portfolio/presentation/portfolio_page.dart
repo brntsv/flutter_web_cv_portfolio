@@ -6,6 +6,7 @@ import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/buttons/base_icon_button.dart';
+import 'package:ui_kit/widgets/base/images/base_image.dart';
 
 import '../../../locale_mode/widgets/language_switcher.dart';
 import '../domain/entities/project_entity.dart';
@@ -41,11 +42,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
     _projects = [
       ProjectEntity(
         appType: ProjectType.flourAndOrder,
-        screenshots: [
-          Container(color: Colors.red.shade200),
-          Container(color: Colors.green.shade200),
-          Container(color: Colors.orange.shade200),
-        ],
+        screenshots: Assets.images.screenshots.muka.values
+            .map((asset) => BaseImage.asset(assetPath: asset.keyName))
+            .toList(),
       ),
       ProjectEntity(
         appType: ProjectType.realtOne,

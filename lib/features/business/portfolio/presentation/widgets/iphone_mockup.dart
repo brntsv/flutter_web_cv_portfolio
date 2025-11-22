@@ -4,12 +4,12 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:ui_kit/widgets/base/indicators/base_dot_swiper_pagination_builder.dart';
+import 'package:ui_kit/widgets/base/indicators/base_smooth_page_indicator.dart';
 
 /// {@template iphone_mockup}
 /// Виджет, имитирующий макет iPhone с пролистываемым контентом.
 /// {@endtemplate}
-class IphoneMockup extends StatelessWidget {
+class IphoneMockup extends StatefulWidget {
   /// {@macro iphone_mockup}
   const IphoneMockup({
     required this.screenshots,
@@ -18,6 +18,13 @@ class IphoneMockup extends StatelessWidget {
 
   /// Список виджетов для отображения в качестве скриншотов.
   final List<Widget> screenshots;
+
+  @override
+  State<IphoneMockup> createState() => _IphoneMockupState();
+}
+
+class _IphoneMockupState extends State<IphoneMockup> {
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +36,7 @@ class IphoneMockup extends StatelessWidget {
     const screenInset = borderWidth;
     const screenRadius = frameRadius - screenInset;
 
-    final isSingleScreenshot = screenshots.length <= 1;
-
-    const pagination = SwiperPagination(
-      builder: BaseDotSwiperPaginationBuilder(
-        spaceBetween: BaseConst.base10,
-      ),
-    );
+    final isSingleScreenshot = widget.screenshots.length <= 1;
 
     final swiper = ScrollConfiguration(
       behavior: ScrollConfiguration.of(context).copyWith(
@@ -45,20 +46,23 @@ class IphoneMockup extends StatelessWidget {
         },
       ),
       child: Swiper(
-        itemCount: screenshots.length,
+        itemCount: widget.screenshots.length,
         loop: !isSingleScreenshot,
         autoplay: !isSingleScreenshot,
         autoplayDelay: 10000,
-        itemBuilder: (context, index) => screenshots[index],
-        pagination: isSingleScreenshot ? null : pagination,
+        itemBuilder: (context, index) => widget.screenshots[index],
+        onIndexChanged: (index) {
+          setState(() => _currentIndex = index);
+        },
       ),
     );
 
     return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: BaseConst.base16),
-        child: SizedBox.expand(
-          child: FittedBox(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        spacing: BaseConst.base16,
+        children: [
+          FittedBox(
             child: Container(
               width: BaseConst.iphoneMockupWidth,
               height: BaseConst.iphoneMockupHeight,
@@ -76,7 +80,13 @@ class IphoneMockup extends StatelessWidget {
               ),
             ),
           ),
-        ),
+          if (widget.screenshots.length > 1) ...[
+            BaseSmoothPageIndicator(
+              activeIndex: _currentIndex,
+              count: widget.screenshots.length,
+            ),
+          ],
+        ],
       ),
     );
   }

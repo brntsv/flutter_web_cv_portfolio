@@ -25,6 +25,8 @@ dependencies:
   shimmer: 3.0.0
   # Пакет для работы с Swiper
   card_swiper: 3.0.1
+  # Пакет для работы с индикаторами страниц
+  smooth_page_indicator: 1.2.1
 
 
 dev_dependencies:
@@ -57,6 +59,7 @@ flutter:
     - assets/images/
     - assets/images/project_icons/
     - assets/images/store_badges/
+    - assets/images/screenshots/muka/
 
   fonts:
     - family: Inter

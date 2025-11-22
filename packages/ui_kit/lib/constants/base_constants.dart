@@ -74,7 +74,7 @@ sealed class BaseConst {
   static const String svgFormat = '.svg';
 
   // * Dimensions
-  static const double iphoneMockupWidth = 280;
+  static const double iphoneMockupWidth = 258;
   static const double iphoneMockupHeight = 560;
 
   // * Duration
