@@ -62,6 +62,10 @@ class $AssetsImagesScreenshotsGen {
   $AssetsImagesScreenshotsFlourAndOrderGen get flourAndOrder =>
       const $AssetsImagesScreenshotsFlourAndOrderGen();
 
+  /// Directory path: assets/images/screenshots/novex
+  $AssetsImagesScreenshotsNovexGen get novex =>
+      const $AssetsImagesScreenshotsNovexGen();
+
   /// Directory path: assets/images/screenshots/realt_one
   $AssetsImagesScreenshotsRealtOneGen get realtOne =>
       const $AssetsImagesScreenshotsRealtOneGen();
@@ -210,6 +214,84 @@ class $AssetsImagesScreenshotsFlourAndOrderGen {
         muka16,
         muka17,
         muka18
+      ];
+}
+
+class $AssetsImagesScreenshotsNovexGen {
+  const $AssetsImagesScreenshotsNovexGen();
+
+  /// File path: assets/images/screenshots/novex/novex_01.png
+  AssetGenImage get novex01 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_01.png');
+
+  /// File path: assets/images/screenshots/novex/novex_02.png
+  AssetGenImage get novex02 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_02.png');
+
+  /// File path: assets/images/screenshots/novex/novex_03.png
+  AssetGenImage get novex03 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_03.png');
+
+  /// File path: assets/images/screenshots/novex/novex_04.png
+  AssetGenImage get novex04 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_04.png');
+
+  /// File path: assets/images/screenshots/novex/novex_05.png
+  AssetGenImage get novex05 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_05.png');
+
+  /// File path: assets/images/screenshots/novex/novex_06.png
+  AssetGenImage get novex06 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_06.png');
+
+  /// File path: assets/images/screenshots/novex/novex_07.png
+  AssetGenImage get novex07 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_07.png');
+
+  /// File path: assets/images/screenshots/novex/novex_08.png
+  AssetGenImage get novex08 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_08.png');
+
+  /// File path: assets/images/screenshots/novex/novex_09.png
+  AssetGenImage get novex09 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_09.png');
+
+  /// File path: assets/images/screenshots/novex/novex_10.png
+  AssetGenImage get novex10 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_10.png');
+
+  /// File path: assets/images/screenshots/novex/novex_11.png
+  AssetGenImage get novex11 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_11.png');
+
+  /// File path: assets/images/screenshots/novex/novex_12.png
+  AssetGenImage get novex12 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_12.png');
+
+  /// File path: assets/images/screenshots/novex/novex_13.png
+  AssetGenImage get novex13 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_13.png');
+
+  /// File path: assets/images/screenshots/novex/novex_14.png
+  AssetGenImage get novex14 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_14.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        novex01,
+        novex02,
+        novex03,
+        novex04,
+        novex05,
+        novex06,
+        novex07,
+        novex08,
+        novex09,
+        novex10,
+        novex11,
+        novex12,
+        novex13,
+        novex14
       ];
 }
 

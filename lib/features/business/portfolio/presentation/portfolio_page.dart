@@ -54,12 +54,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
       ),
       ProjectEntity(
         appType: ProjectType.novex,
-        screenshots: [
-          Container(color: Colors.purple.shade200),
-          Container(color: Colors.indigo.shade200),
-          Container(color: Colors.lime.shade200),
-          Container(color: Colors.pink.shade200),
-        ],
+        screenshots: Assets.images.screenshots.novex.values
+            .map((asset) => BaseImage.asset(assetPath: asset.keyName))
+            .toList(),
       ),
     ];
 

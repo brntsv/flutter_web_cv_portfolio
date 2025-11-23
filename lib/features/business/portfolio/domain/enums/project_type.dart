@@ -47,10 +47,10 @@ enum ProjectType {
         //     color.flourAndOrderBeige,
         //     color.flourAndOrderRed.withValues(alpha: .2),
         //   ],
-        novex => [
-            color.novexBlue.withValues(alpha: .6),
-            color.novexBlue,
-          ],
+        // novex => [
+        //     color.novexBlue.withValues(alpha: .6),
+        //     color.novexBlue,
+        //   ],
         _ => []
       };
 
@@ -58,7 +58,7 @@ enum ProjectType {
   Color backgroundColor(ColorsExt color) => switch (this) {
         flourAndOrder => color.flourAndOrderBeige,
         realtOne => color.spotifyGreen.withValues(alpha: .3),
-        novex => color.novexBlue,
+        novex => color.novexBlue.withValues(alpha: .4),
       };
 
   /// Получить бейджи магазинов
