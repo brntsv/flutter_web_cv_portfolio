@@ -122,98 +122,103 @@ class $AssetsImagesStoreBadgesGen {
 class $AssetsImagesScreenshotsFlourAndOrderGen {
   const $AssetsImagesScreenshotsFlourAndOrderGen();
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_01.png
-  AssetGenImage get muka01 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_01.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_01.png
+  AssetGenImage get flour01 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_01.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_02.png
-  AssetGenImage get muka02 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_02.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_02.png
+  AssetGenImage get flour02 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_02.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_03.png
-  AssetGenImage get muka03 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_03.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_03.png
+  AssetGenImage get flour03 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_03.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_04.png
-  AssetGenImage get muka04 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_04.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_04.png
+  AssetGenImage get flour04 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_04.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_05.png
-  AssetGenImage get muka05 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_05.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_05.png
+  AssetGenImage get flour05 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_05.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_06.png
-  AssetGenImage get muka06 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_06.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_06.png
+  AssetGenImage get flour06 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_06.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_07.png
-  AssetGenImage get muka07 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_07.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_07.png
+  AssetGenImage get flour07 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_07.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_08.png
-  AssetGenImage get muka08 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_08.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_08.png
+  AssetGenImage get flour08 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_08.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_09.png
-  AssetGenImage get muka09 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_09.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_09.png
+  AssetGenImage get flour09 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_09.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_10.png
-  AssetGenImage get muka10 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_10.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_10.png
+  AssetGenImage get flour10 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_10.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_11.png
-  AssetGenImage get muka11 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_11.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_11.png
+  AssetGenImage get flour11 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_11.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_12.png
-  AssetGenImage get muka12 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_12.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_12.png
+  AssetGenImage get flour12 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_12.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_13.png
-  AssetGenImage get muka13 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_13.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_13.png
+  AssetGenImage get flour13 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_13.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_14.png
-  AssetGenImage get muka14 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_14.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_14.png
+  AssetGenImage get flour14 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_14.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_15.png
-  AssetGenImage get muka15 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_15.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_15.png
+  AssetGenImage get flour15 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_15.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_16.png
-  AssetGenImage get muka16 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_16.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_16.png
+  AssetGenImage get flour16 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_16.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_17.png
-  AssetGenImage get muka17 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_17.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_17.png
+  AssetGenImage get flour17 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_17.png');
 
-  /// File path: assets/images/screenshots/flour_and_order/muka_18.png
-  AssetGenImage get muka18 => const AssetGenImage(
-      'assets/images/screenshots/flour_and_order/muka_18.png');
+  /// File path: assets/images/screenshots/flour_and_order/flour_18.png
+  AssetGenImage get flour18 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_18.png');
+
+  /// File path: assets/images/screenshots/flour_and_order/flour_19.png
+  AssetGenImage get flour19 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/flour_19.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        muka01,
-        muka02,
-        muka03,
-        muka04,
-        muka05,
-        muka06,
-        muka07,
-        muka08,
-        muka09,
-        muka10,
-        muka11,
-        muka12,
-        muka13,
-        muka14,
-        muka15,
-        muka16,
-        muka17,
-        muka18
+        flour01,
+        flour02,
+        flour03,
+        flour04,
+        flour05,
+        flour06,
+        flour07,
+        flour08,
+        flour09,
+        flour10,
+        flour11,
+        flour12,
+        flour13,
+        flour14,
+        flour15,
+        flour16,
+        flour17,
+        flour18,
+        flour19
       ];
 }
 
@@ -276,6 +281,10 @@ class $AssetsImagesScreenshotsNovexGen {
   AssetGenImage get novex14 =>
       const AssetGenImage('assets/images/screenshots/novex/novex_14.png');
 
+  /// File path: assets/images/screenshots/novex/novex_15.png
+  AssetGenImage get novex15 =>
+      const AssetGenImage('assets/images/screenshots/novex/novex_15.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         novex01,
@@ -291,7 +300,8 @@ class $AssetsImagesScreenshotsNovexGen {
         novex11,
         novex12,
         novex13,
-        novex14
+        novex14,
+        novex15
       ];
 }
 
