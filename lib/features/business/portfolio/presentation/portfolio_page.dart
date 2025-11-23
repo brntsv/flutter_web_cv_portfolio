@@ -42,16 +42,15 @@ class _PortfolioPageState extends State<PortfolioPage> {
     _projects = [
       ProjectEntity(
         appType: ProjectType.flourAndOrder,
-        screenshots: Assets.images.screenshots.muka.values
+        screenshots: Assets.images.screenshots.flourAndOrder.values
             .map((asset) => BaseImage.asset(assetPath: asset.keyName))
             .toList(),
       ),
       ProjectEntity(
         appType: ProjectType.realtOne,
-        screenshots: [
-          Container(color: Colors.blue.shade200),
-          Container(color: Colors.yellow.shade200),
-        ],
+        screenshots: Assets.images.screenshots.realtOne.values
+            .map((asset) => BaseImage.asset(assetPath: asset.keyName))
+            .toList(),
       ),
       ProjectEntity(
         appType: ProjectType.novex,

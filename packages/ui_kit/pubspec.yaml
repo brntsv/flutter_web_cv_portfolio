@@ -59,7 +59,8 @@ flutter:
     - assets/images/
     - assets/images/project_icons/
     - assets/images/store_badges/
-    - assets/images/screenshots/muka/
+    - assets/images/screenshots/flour_and_order/
+    - assets/images/screenshots/realt_one/
 
   fonts:
     - family: Inter

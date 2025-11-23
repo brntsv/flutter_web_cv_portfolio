@@ -31,10 +31,9 @@ class _IphoneMockupState extends State<IphoneMockup> {
     final color = colors(context);
 
     // Радиусы/рамки: экранный радиус = радиус корпуса − толщина рамки
-    const frameRadius = BaseConst.base60;
+    const frameRadius = BaseConst.base48;
     const borderWidth = BaseConst.base6;
-    const screenInset = borderWidth;
-    const screenRadius = frameRadius - screenInset;
+    const screenRadius = frameRadius - borderWidth;
 
     final isSingleScreenshot = widget.screenshots.length <= 1;
 
@@ -58,35 +57,37 @@ class _IphoneMockupState extends State<IphoneMockup> {
     );
 
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        spacing: BaseConst.base16,
-        children: [
-          FittedBox(
-            child: Container(
-              width: BaseConst.iphoneMockupWidth,
-              height: BaseConst.iphoneMockupHeight,
-              clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(frameRadius),
-                border: Border.all(
-                  color: color.gray,
-                  width: borderWidth,
+      child: SizedBox.expand(
+        child: FittedBox(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            spacing: BaseConst.base16,
+            children: [
+              Container(
+                width: BaseConst.iphoneMockupWidth,
+                height: BaseConst.iphoneMockupHeight,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(frameRadius),
+                  border: Border.all(
+                    color: color.gray,
+                    width: borderWidth,
+                  ),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(screenRadius),
+                  child: swiper,
                 ),
               ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(screenRadius),
-                child: swiper,
-              ),
-            ),
+              if (widget.screenshots.length > 1) ...[
+                BaseSmoothPageIndicator(
+                  activeIndex: _currentIndex,
+                  count: widget.screenshots.length,
+                ),
+              ],
+            ],
           ),
-          if (widget.screenshots.length > 1) ...[
-            BaseSmoothPageIndicator(
-              activeIndex: _currentIndex,
-              count: widget.screenshots.length,
-            ),
-          ],
-        ],
+        ),
       ),
     );
   }

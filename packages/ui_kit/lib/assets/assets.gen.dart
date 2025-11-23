@@ -58,9 +58,13 @@ class $AssetsImagesProjectIconsGen {
 class $AssetsImagesScreenshotsGen {
   const $AssetsImagesScreenshotsGen();
 
-  /// Directory path: assets/images/screenshots/muka
-  $AssetsImagesScreenshotsMukaGen get muka =>
-      const $AssetsImagesScreenshotsMukaGen();
+  /// Directory path: assets/images/screenshots/flour_and_order
+  $AssetsImagesScreenshotsFlourAndOrderGen get flourAndOrder =>
+      const $AssetsImagesScreenshotsFlourAndOrderGen();
+
+  /// Directory path: assets/images/screenshots/realt_one
+  $AssetsImagesScreenshotsRealtOneGen get realtOne =>
+      const $AssetsImagesScreenshotsRealtOneGen();
 }
 
 class $AssetsImagesStoreBadgesGen {
@@ -111,80 +115,80 @@ class $AssetsImagesStoreBadgesGen {
       ];
 }
 
-class $AssetsImagesScreenshotsMukaGen {
-  const $AssetsImagesScreenshotsMukaGen();
+class $AssetsImagesScreenshotsFlourAndOrderGen {
+  const $AssetsImagesScreenshotsFlourAndOrderGen();
 
-  /// File path: assets/images/screenshots/muka/muka_01.png
-  AssetGenImage get muka01 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_01.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_01.png
+  AssetGenImage get muka01 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_01.png');
 
-  /// File path: assets/images/screenshots/muka/muka_02.png
-  AssetGenImage get muka02 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_02.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_02.png
+  AssetGenImage get muka02 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_02.png');
 
-  /// File path: assets/images/screenshots/muka/muka_03.png
-  AssetGenImage get muka03 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_03.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_03.png
+  AssetGenImage get muka03 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_03.png');
 
-  /// File path: assets/images/screenshots/muka/muka_04.png
-  AssetGenImage get muka04 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_04.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_04.png
+  AssetGenImage get muka04 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_04.png');
 
-  /// File path: assets/images/screenshots/muka/muka_05.png
-  AssetGenImage get muka05 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_05.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_05.png
+  AssetGenImage get muka05 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_05.png');
 
-  /// File path: assets/images/screenshots/muka/muka_06.png
-  AssetGenImage get muka06 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_06.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_06.png
+  AssetGenImage get muka06 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_06.png');
 
-  /// File path: assets/images/screenshots/muka/muka_07.png
-  AssetGenImage get muka07 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_07.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_07.png
+  AssetGenImage get muka07 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_07.png');
 
-  /// File path: assets/images/screenshots/muka/muka_08.png
-  AssetGenImage get muka08 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_08.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_08.png
+  AssetGenImage get muka08 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_08.png');
 
-  /// File path: assets/images/screenshots/muka/muka_09.png
-  AssetGenImage get muka09 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_09.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_09.png
+  AssetGenImage get muka09 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_09.png');
 
-  /// File path: assets/images/screenshots/muka/muka_10.png
-  AssetGenImage get muka10 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_10.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_10.png
+  AssetGenImage get muka10 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_10.png');
 
-  /// File path: assets/images/screenshots/muka/muka_11.png
-  AssetGenImage get muka11 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_11.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_11.png
+  AssetGenImage get muka11 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_11.png');
 
-  /// File path: assets/images/screenshots/muka/muka_12.png
-  AssetGenImage get muka12 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_12.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_12.png
+  AssetGenImage get muka12 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_12.png');
 
-  /// File path: assets/images/screenshots/muka/muka_13.png
-  AssetGenImage get muka13 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_13.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_13.png
+  AssetGenImage get muka13 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_13.png');
 
-  /// File path: assets/images/screenshots/muka/muka_14.png
-  AssetGenImage get muka14 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_14.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_14.png
+  AssetGenImage get muka14 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_14.png');
 
-  /// File path: assets/images/screenshots/muka/muka_15.png
-  AssetGenImage get muka15 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_15.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_15.png
+  AssetGenImage get muka15 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_15.png');
 
-  /// File path: assets/images/screenshots/muka/muka_16.png
-  AssetGenImage get muka16 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_16.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_16.png
+  AssetGenImage get muka16 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_16.png');
 
-  /// File path: assets/images/screenshots/muka/muka_17.png
-  AssetGenImage get muka17 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_17.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_17.png
+  AssetGenImage get muka17 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_17.png');
 
-  /// File path: assets/images/screenshots/muka/muka_18.png
-  AssetGenImage get muka18 =>
-      const AssetGenImage('assets/images/screenshots/muka/muka_18.png');
+  /// File path: assets/images/screenshots/flour_and_order/muka_18.png
+  AssetGenImage get muka18 => const AssetGenImage(
+      'assets/images/screenshots/flour_and_order/muka_18.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
@@ -206,6 +210,109 @@ class $AssetsImagesScreenshotsMukaGen {
         muka16,
         muka17,
         muka18
+      ];
+}
+
+class $AssetsImagesScreenshotsRealtOneGen {
+  const $AssetsImagesScreenshotsRealtOneGen();
+
+  /// File path: assets/images/screenshots/realt_one/realt_01.png
+  AssetGenImage get realt01 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_01.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_02.png
+  AssetGenImage get realt02 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_02.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_03.png
+  AssetGenImage get realt03 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_03.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_04.png
+  AssetGenImage get realt04 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_04.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_05.png
+  AssetGenImage get realt05 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_05.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_06.png
+  AssetGenImage get realt06 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_06.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_07.png
+  AssetGenImage get realt07 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_07.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_08.png
+  AssetGenImage get realt08 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_08.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_09.png
+  AssetGenImage get realt09 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_09.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_10.png
+  AssetGenImage get realt10 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_10.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_11.png
+  AssetGenImage get realt11 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_11.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_12.png
+  AssetGenImage get realt12 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_12.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_13.png
+  AssetGenImage get realt13 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_13.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_14.png
+  AssetGenImage get realt14 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_14.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_15.png
+  AssetGenImage get realt15 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_15.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_16.png
+  AssetGenImage get realt16 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_16.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_17.png
+  AssetGenImage get realt17 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_17.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_18.png
+  AssetGenImage get realt18 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_18.png');
+
+  /// File path: assets/images/screenshots/realt_one/realt_19.png
+  AssetGenImage get realt19 =>
+      const AssetGenImage('assets/images/screenshots/realt_one/realt_19.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        realt01,
+        realt02,
+        realt03,
+        realt04,
+        realt05,
+        realt06,
+        realt07,
+        realt08,
+        realt09,
+        realt10,
+        realt11,
+        realt12,
+        realt13,
+        realt14,
+        realt15,
+        realt16,
+        realt17,
+        realt18,
+        realt19
       ];
 }
 
