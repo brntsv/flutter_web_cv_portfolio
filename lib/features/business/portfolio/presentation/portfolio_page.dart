@@ -126,6 +126,11 @@ class _PortfolioPageState extends State<PortfolioPage> {
                         index: entry.key,
                       ),
                     ),
+                if (context.isMobile) ...[
+                  const SliverToBoxAdapter(
+                    child: SizedBox(height: BaseConst.base24),
+                  ),
+                ],
               ],
             ),
           ),
