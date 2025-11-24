@@ -41,19 +41,6 @@ enum ProjectType {
         novex => l10n.novexDescription,
       };
 
-  /// Цвета градиента (зависят от темы → нужен BuildContext)
-  List<Color> gradientColors(ColorsExt color) => switch (this) {
-        // flourAndOrder => [
-        //     color.flourAndOrderBeige,
-        //     color.flourAndOrderRed.withValues(alpha: .2),
-        //   ],
-        // novex => [
-        //     color.novexBlue.withValues(alpha: .6),
-        //     color.novexBlue,
-        //   ],
-        _ => []
-      };
-
   /// Обычный цвет фона, если градиент не используется/не задан
   Color backgroundColor(ColorsExt color) => switch (this) {
         flourAndOrder => color.flourAndOrderBeige,

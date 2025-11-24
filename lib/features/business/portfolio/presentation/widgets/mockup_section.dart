@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:ui_kit/widgets/base/gradients/base_sinusoidal_gradient_container.dart';
 
 import '../../domain/entities/project_entity.dart';
 import 'iphone_mockup.dart';
@@ -28,27 +27,17 @@ class MockupSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = colors(context);
-    return switch (project.appType.gradientColors(color).length >= 2) {
-      true => BaseSinusoidalGradientContainer(
-          startColor: project.appType.gradientColors(color).first,
-          endColor: project.appType.gradientColors(color).last,
-          borderRadius: borderRadius,
-          child: IphoneMockup(
-            screenshots: project.screenshots,
-          ),
-        ),
-      false => Container(
-          padding: context.screenSize.height > BaseConst.base700
-              ? const EdgeInsets.all(BaseConst.base72)
-              : EdgeInsets.zero,
-          decoration: BoxDecoration(
-            color: project.appType.backgroundColor(color),
-            borderRadius: borderRadius,
-          ),
-          child: Center(
-            child: IphoneMockup(screenshots: project.screenshots),
-          ),
-        ),
-    };
+    return Container(
+      padding: context.screenSize.height > BaseConst.base700
+          ? const EdgeInsets.all(BaseConst.base72)
+          : EdgeInsets.zero,
+      decoration: BoxDecoration(
+        color: project.appType.backgroundColor(color),
+        borderRadius: borderRadius,
+      ),
+      child: Center(
+        child: IphoneMockup(screenshots: project.screenshots),
+      ),
+    );
   }
 }
