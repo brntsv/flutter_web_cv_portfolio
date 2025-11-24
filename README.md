@@ -1,12 +1,21 @@
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+This repository contains a personal web page built with **Flutter for Web**.  
+It serves as a central hub with links to the author's **CV** and **project portfolio**.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter Web**: UI and application logic.
+- **Firebase Hosting**: Static hosting and delivery.
+- **Makefile**: Convenience commands for building and deploying.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Development
+
+**Build & deploy:**
+`make deploy`
+
+You can customize the content, sections, and styling in the `lib/` directory,  
+and manage shared UI components in the `packages/` folder (e.g. `ui_kit`, `utils`).
+
+The project is inspired by [filiph/filiphnet](https://github.com/filiph/filiphnet),  
+adapting a similar idea of a personal homepage but implemented entirely in Flutter.
