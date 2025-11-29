@@ -8,7 +8,8 @@ import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/buttons/base_icon_button.dart';
 import 'package:ui_kit/widgets/base/images/base_image.dart';
 
-import '../../../locale_mode/widgets/language_switcher.dart';
+import '../../common/presentation/mixins/switcher_visibility_mixin.dart';
+import '../../common/presentation/widgets/top_right_language_switcher.dart';
 import '../domain/entities/project_entity.dart';
 import '../domain/enums/project_type.dart';
 import 'widgets/project_section.dart';
@@ -31,10 +32,10 @@ class PortfolioPage extends StatefulWidget {
   State<PortfolioPage> createState() => _PortfolioPageState();
 }
 
-class _PortfolioPageState extends State<PortfolioPage> {
+class _PortfolioPageState extends State<PortfolioPage>
+    with SwitcherVisibilityMixin<PortfolioPage> {
   late final ScrollController _scrollController;
   late final List<ProjectEntity> _projects;
-  bool _showSwitcher = true;
 
   static const double _threshold = BaseConst.base64;
 
@@ -118,35 +119,24 @@ class _PortfolioPageState extends State<PortfolioPage> {
     return Scaffold(
       body: Stack(
         children: [
-          NativeScrollBuilder(
-            controller: _scrollController,
-            builder: (context, scrollController) =>
-                NotificationListener<ScrollNotification>(
-              onNotification: (n) {
-                if (!context.isMobile) return true;
-                final visible = n.metrics.pixels <= _threshold;
-                if (visible != _showSwitcher) {
-                  setState(() => _showSwitcher = visible);
-                }
-                return false;
-              },
-              child: CustomScrollView(
-                controller: scrollController,
-                slivers: [
-                  ..._projects.asMap().entries.map(
-                        (entry) => ProjectSection(
-                          project: entry.value,
-                          index: entry.key,
-                        ),
-                      ),
-                  if (context.isMobile) ...[
-                    const SliverToBoxAdapter(
-                      child: SizedBox(height: BaseConst.base24),
-                    ),
-                  ],
-                ],
-              ),
-            ),
+          SelectionArea(
+            child: switch (context.isMobile) {
+              true => _PortfolioContent(
+                  controller: _scrollController,
+                  threshold: _threshold,
+                  projects: _projects,
+                  onSwitcherVisibilityChanged: updateSwitcherVisibility,
+                ),
+              false => NativeScrollBuilder(
+                  controller: _scrollController,
+                  builder: (context, scrollController) => _PortfolioContent(
+                    controller: scrollController,
+                    threshold: _threshold,
+                    projects: _projects,
+                    onSwitcherVisibilityChanged: updateSwitcherVisibility,
+                  ),
+                ),
+            },
           ),
 
           // Кнопка назад в левом верхнем углу (только на широких экранах)
@@ -163,20 +153,50 @@ class _PortfolioPageState extends State<PortfolioPage> {
             ),
           ],
 
-          Positioned(
-            top: BaseConst.base48,
-            right: BaseConst.base48,
-            child: AnimatedOpacity(
-              duration: BaseConst.duration200,
-              opacity: _showSwitcher ? 1 : 0,
-              child: IgnorePointer(
-                ignoring: !_showSwitcher,
-                child: const LanguageSwitcher(),
-              ),
-            ),
-          ),
+          TopRightLanguageSwitcher(isVisible: showSwitcher),
         ],
       ),
     );
   }
+}
+
+class _PortfolioContent extends StatelessWidget {
+  const _PortfolioContent({
+    required this.controller,
+    required this.threshold,
+    required this.projects,
+    required this.onSwitcherVisibilityChanged,
+  });
+
+  final ScrollController controller;
+  final double threshold;
+  final List<ProjectEntity> projects;
+  final ValueChanged<bool> onSwitcherVisibilityChanged;
+
+  @override
+  Widget build(BuildContext context) =>
+      NotificationListener<ScrollNotification>(
+        onNotification: (n) {
+          if (!context.isMobile) return true;
+          final visible = n.metrics.pixels <= threshold;
+          onSwitcherVisibilityChanged(visible);
+          return false;
+        },
+        child: CustomScrollView(
+          controller: controller,
+          slivers: [
+            ...projects.asMap().entries.map(
+                  (entry) => ProjectSection(
+                    project: entry.value,
+                    index: entry.key,
+                  ),
+                ),
+            if (context.isMobile) ...[
+              const SliverToBoxAdapter(
+                child: SizedBox(height: BaseConst.base24),
+              ),
+            ],
+          ],
+        ),
+      );
 }

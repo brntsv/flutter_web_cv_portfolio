@@ -9,7 +9,8 @@ import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 import 'package:ui_kit/widgets/base/buttons/base_animated_icon_button.dart';
 
 import '../../../../l10n/localization_extension.dart';
-import '../../../locale_mode/widgets/language_switcher.dart';
+import '../../common/presentation/mixins/switcher_visibility_mixin.dart';
+import '../../common/presentation/widgets/top_right_language_switcher.dart';
 import 'widgets/about_me_section.dart';
 import 'widgets/contact_section.dart';
 import 'widgets/education_language_section.dart';
@@ -28,81 +29,32 @@ final class CvPage extends StatefulWidget {
   State<CvPage> createState() => _CvPageState();
 }
 
-class _CvPageState extends State<CvPage> {
-  bool _showSwitcher = true;
-
+class _CvPageState extends State<CvPage> with SwitcherVisibilityMixin<CvPage> {
   static const double _threshold = BaseConst.base24;
 
   @override
   Widget build(BuildContext context) {
-    final l10n = context.l10n;
     final color = colors(context);
-    final textStyle = textStyles(context);
 
     return Scaffold(
       backgroundColor: color.white,
       body: Stack(
         children: [
           SelectionArea(
-            child: NativeScrollBuilder(
-              builder: (context, scrollController) =>
-                  NotificationListener<ScrollNotification>(
-                onNotification: (n) {
-                  if (!context.isMobile) return true;
-                  final visible = n.metrics.pixels <= _threshold;
-                  if (visible != _showSwitcher) {
-                    setState(() => _showSwitcher = visible);
-                  }
-                  return false;
-                },
-                child: SingleChildScrollView(
-                  controller: scrollController,
-                  child: Center(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: BaseConst.base110,
-                        horizontal: BaseConst.base22,
-                      ),
-                      child: ConstrainedBox(
-                        constraints: BoxConstraints(
-                          maxWidth: context.isMobile
-                              ? context.screenSize.width
-                              : BaseConst.base700,
-                        ),
-                        child: Column(
-                          spacing: BaseConst.base32,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            /// Имя
-                            AnimatedText(
-                              text: '${l10n.yourName}, ${l10n.yourJob}',
-                              style: textStyle.h1,
-                              appearDuration: 4,
-                              appearClass: 20,
-                            ),
-
-                            /// Контактная информация
-                            const ContactSection(),
-
-                            /// О себе
-                            const AboutMeSection(),
-
-                            /// Опыт работы
-                            const ExperienceSection(),
-
-                            /// Навыки
-                            const SkillsSection(),
-
-                            /// Образование и языки
-                            const EducationLanguagesSection(),
-                          ],
-                        ),
-                      ),
-                    ),
+            child: switch (context.isMobile) {
+              true => _CvContent(
+                  controller: null,
+                  threshold: _threshold,
+                  onSwitcherVisibilityChanged: updateSwitcherVisibility,
+                ),
+              false => NativeScrollBuilder(
+                  builder: (context, scrollController) => _CvContent(
+                    controller: scrollController,
+                    threshold: _threshold,
+                    onSwitcherVisibilityChanged: updateSwitcherVisibility,
                   ),
                 ),
-              ),
-            ),
+            },
           ),
 
           // Кнопка назад в левом верхнем углу (только на широких экранах)
@@ -121,19 +73,81 @@ class _CvPageState extends State<CvPage> {
             ),
           ],
 
-          Positioned(
-            top: BaseConst.base48,
-            right: BaseConst.base48,
-            child: AnimatedOpacity(
-              duration: BaseConst.duration200,
-              opacity: _showSwitcher ? 1 : 0,
-              child: IgnorePointer(
-                ignoring: !_showSwitcher,
-                child: const LanguageSwitcher(),
+          TopRightLanguageSwitcher(isVisible: showSwitcher),
+        ],
+      ),
+    );
+  }
+}
+
+class _CvContent extends StatelessWidget {
+  const _CvContent({
+    required this.controller,
+    required this.threshold,
+    required this.onSwitcherVisibilityChanged,
+  });
+
+  final ScrollController? controller;
+  final double threshold;
+  final ValueChanged<bool> onSwitcherVisibilityChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = context.l10n;
+    final textStyle = textStyles(context);
+
+    return NotificationListener<ScrollNotification>(
+      onNotification: (n) {
+        if (!context.isMobile) return true;
+        final visible = n.metrics.pixels <= threshold;
+        onSwitcherVisibilityChanged(visible);
+        return false;
+      },
+      child: SingleChildScrollView(
+        controller: controller,
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: BaseConst.base110,
+              horizontal: BaseConst.base22,
+            ),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                maxWidth: context.isMobile
+                    ? context.screenSize.width
+                    : BaseConst.base700,
+              ),
+              child: Column(
+                spacing: BaseConst.base32,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  /// Имя
+                  AnimatedText(
+                    text: '${l10n.yourName}, ${l10n.yourJob}',
+                    style: textStyle.h1,
+                    appearDuration: 4,
+                    appearClass: 20,
+                  ),
+
+                  /// Контактная информация
+                  const ContactSection(),
+
+                  /// О себе
+                  const AboutMeSection(),
+
+                  /// Опыт работы
+                  const ExperienceSection(),
+
+                  /// Навыки
+                  const SkillsSection(),
+
+                  /// Образование и языки
+                  const EducationLanguagesSection(),
+                ],
               ),
             ),
           ),
-        ],
+        ),
       ),
     );
   }
