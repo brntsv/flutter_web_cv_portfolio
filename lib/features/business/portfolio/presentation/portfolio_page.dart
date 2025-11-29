@@ -34,6 +34,9 @@ class PortfolioPage extends StatefulWidget {
 class _PortfolioPageState extends State<PortfolioPage> {
   late final ScrollController _scrollController;
   late final List<ProjectEntity> _projects;
+  bool _showSwitcher = true;
+
+  static const double _threshold = BaseConst.base64;
 
   @override
   void initState() {
@@ -117,21 +120,32 @@ class _PortfolioPageState extends State<PortfolioPage> {
         children: [
           NativeScrollBuilder(
             controller: _scrollController,
-            builder: (context, scrollController) => CustomScrollView(
-              controller: scrollController,
-              slivers: [
-                ..._projects.asMap().entries.map(
-                      (entry) => ProjectSection(
-                        project: entry.value,
-                        index: entry.key,
+            builder: (context, scrollController) =>
+                NotificationListener<ScrollNotification>(
+              onNotification: (n) {
+                if (!context.isMobile) return true;
+                final visible = n.metrics.pixels <= _threshold;
+                if (visible != _showSwitcher) {
+                  setState(() => _showSwitcher = visible);
+                }
+                return false;
+              },
+              child: CustomScrollView(
+                controller: scrollController,
+                slivers: [
+                  ..._projects.asMap().entries.map(
+                        (entry) => ProjectSection(
+                          project: entry.value,
+                          index: entry.key,
+                        ),
                       ),
+                  if (context.isMobile) ...[
+                    const SliverToBoxAdapter(
+                      child: SizedBox(height: BaseConst.base24),
                     ),
-                if (context.isMobile) ...[
-                  const SliverToBoxAdapter(
-                    child: SizedBox(height: BaseConst.base24),
-                  ),
+                  ],
                 ],
-              ],
+              ),
             ),
           ),
 
@@ -149,10 +163,17 @@ class _PortfolioPageState extends State<PortfolioPage> {
             ),
           ],
 
-          const Positioned(
+          Positioned(
             top: BaseConst.base48,
             right: BaseConst.base48,
-            child: LanguageSwitcher(),
+            child: AnimatedOpacity(
+              duration: BaseConst.duration200,
+              opacity: _showSwitcher ? 1 : 0,
+              child: IgnorePointer(
+                ignoring: !_showSwitcher,
+                child: const LanguageSwitcher(),
+              ),
+            ),
           ),
         ],
       ),
