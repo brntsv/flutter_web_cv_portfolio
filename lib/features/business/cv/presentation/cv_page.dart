@@ -41,20 +41,13 @@ class _CvPageState extends State<CvPage> with SwitcherVisibilityMixin<CvPage> {
       body: Stack(
         children: [
           SelectionArea(
-            child: switch (context.isMobile) {
-              true => _CvContent(
-                  controller: null,
-                  threshold: _threshold,
-                  onSwitcherVisibilityChanged: updateSwitcherVisibility,
-                ),
-              false => NativeScrollBuilder(
-                  builder: (context, scrollController) => _CvContent(
-                    controller: scrollController,
-                    threshold: _threshold,
-                    onSwitcherVisibilityChanged: updateSwitcherVisibility,
-                  ),
-                ),
-            },
+            child: NativeScrollBuilder(
+              builder: (context, scrollController) => _CvContent(
+                controller: scrollController,
+                threshold: _threshold,
+                onSwitcherVisibilityChanged: updateSwitcherVisibility,
+              ),
+            ),
           ),
 
           // Кнопка назад в левом верхнем углу (только на широких экранах)

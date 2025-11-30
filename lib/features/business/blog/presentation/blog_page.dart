@@ -43,20 +43,13 @@ class _BlogPageState extends State<BlogPage>
       body: Stack(
         children: [
           SelectionArea(
-            child: switch (context.isMobile) {
-              true => _BlogContent(
-                  controller: null,
-                  threshold: _threshold,
-                  onSwitcherVisibilityChanged: updateSwitcherVisibility,
-                ),
-              false => NativeScrollBuilder(
-                  builder: (context, scrollController) => _BlogContent(
-                    controller: scrollController,
-                    threshold: _threshold,
-                    onSwitcherVisibilityChanged: updateSwitcherVisibility,
-                  ),
-                ),
-            },
+            child: NativeScrollBuilder(
+              builder: (context, scrollController) => _BlogContent(
+                controller: scrollController,
+                threshold: _threshold,
+                onSwitcherVisibilityChanged: updateSwitcherVisibility,
+              ),
+            ),
           ),
           TopRightLanguageSwitcher(isVisible: showSwitcher),
         ],

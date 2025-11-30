@@ -103,23 +103,15 @@ class _PortfolioPageState extends State<PortfolioPage>
       body: Stack(
         children: [
           SelectionArea(
-            child: switch (context.isMobile) {
-              true => _PortfolioContent(
-                  controller: _scrollController,
-                  threshold: _threshold,
-                  projects: _projects,
-                  onSwitcherVisibilityChanged: updateSwitcherVisibility,
-                ),
-              false => NativeScrollBuilder(
-                  controller: _scrollController,
-                  builder: (context, scrollController) => _PortfolioContent(
-                    controller: scrollController,
-                    threshold: _threshold,
-                    projects: _projects,
-                    onSwitcherVisibilityChanged: updateSwitcherVisibility,
-                  ),
-                ),
-            },
+            child: NativeScrollBuilder(
+              controller: _scrollController,
+              builder: (context, scrollController) => _PortfolioContent(
+                controller: scrollController,
+                threshold: _threshold,
+                projects: _projects,
+                onSwitcherVisibilityChanged: updateSwitcherVisibility,
+              ),
+            ),
           ),
 
           // Кнопка назад в левом верхнем углу (только на широких экранах)
