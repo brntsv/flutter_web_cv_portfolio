@@ -21,7 +21,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get email => 'brntsv.n@gmail.com';
 
   @override
-  String get phone => '+7 999 450 32 85';
+  String get phone => '+7 913 017 65 94';
 
   @override
   String get location => 'Novosibirsk, Russia';

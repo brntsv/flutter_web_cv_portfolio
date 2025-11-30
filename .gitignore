@@ -54,4 +54,5 @@ packages/**/pubspec.lock
 # Firebase
 .firebase/
 
+# Build
 packages/utils/build

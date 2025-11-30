@@ -1,6 +1,8 @@
 part of 'locale_bloc.dart';
 
+/// {@template locale_event.class}
 /// События для блока языка
+/// {@endtemplate}
 sealed class LocaleEvent extends Equatable {
   const LocaleEvent();
 
@@ -8,15 +10,19 @@ sealed class LocaleEvent extends Equatable {
   List<Object> get props => [];
 }
 
+/// {@template load_locale.class}
 /// Событие для загрузки языка
+/// {@endtemplate}
 final class LoadLocale extends LocaleEvent {
-  /// Событие для загрузки языка
+  /// {@macro load_locale.class}
   const LoadLocale();
 }
 
+/// {@template change_locale.class}
 /// Событие для изменения языка
+/// {@endtemplate}
 final class ChangeLocale extends LocaleEvent {
-  /// Событие для изменения языка
+  /// {@macro change_locale.class}
   const ChangeLocale(this.locale);
 
   /// Язык

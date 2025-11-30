@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 /// {@template store_links_entity.class}
-/// Ссылки на магазины
+/// Ссылки на сторы
 /// {@endtemplate}
 final class StoreLinksEntity extends Equatable {
   /// {@macro store_links_entity.class}

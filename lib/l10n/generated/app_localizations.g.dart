@@ -125,7 +125,7 @@ abstract class AppLocalizations {
   /// No description provided for @phone.
   ///
   /// In ru, this message translates to:
-  /// **'+7 999 450 32 85'**
+  /// **'+7 913 017 65 94'**
   String get phone;
 
   /// No description provided for @location.

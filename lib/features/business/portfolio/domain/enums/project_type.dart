@@ -85,12 +85,7 @@ enum ProjectType {
     if (googlePlayLink != null) {
       items.add(
         StoreBadgeEntity(
-          imageUrl: StoreType.googlePlay.badgeUrl(
-            isRu: isRu,
-            hasAppStore: appStoreLink != null,
-            hasRustore: rustoreLink != null,
-            hasAppGallery: appGalleryLink != null,
-          ),
+          imageUrl: StoreType.googlePlay.badgeUrl(isRu: isRu),
           linkUrl: googlePlayLink,
         ),
       );

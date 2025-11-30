@@ -2,7 +2,7 @@ import '../entities/store_links_entity.dart';
 import '../enums/project_type.dart';
 
 /// {@template project_store_links.class}
-/// Ссылки на магазины проектов
+/// Ссылки на сторы проектов
 /// {@endtemplate}
 final class ProjectStoreLinks {
   const ProjectStoreLinks._();

@@ -17,7 +17,7 @@ class IphoneMockup extends StatefulWidget {
     super.key,
   });
 
-  /// Список виджетов для отображения в качестве скриншотов.
+  /// Список скриншотов
   final List<String> screenshots;
 
   @override

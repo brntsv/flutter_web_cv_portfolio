@@ -1,7 +1,7 @@
 import 'package:ui_kit/assets/assets.gen.dart';
 
 /// {@template store_type.enum}
-/// Тип магазина
+/// Тип стора
 /// {@endtemplate}
 enum StoreType {
   /// App Store
@@ -16,16 +16,8 @@ enum StoreType {
   /// App Gallery
   appGallery;
 
-  /// Получить ссылку на бейдж с учётом контекста проекта
-  /// - Для Google Play: если есть только App Store + Google Play → чёрный бейдж
-  ///   иначе (если есть другие сторы) → белый бейдж
-  String badgeUrl({
-    required bool isRu,
-    bool hasAppStore = false,
-    bool hasRustore = false,
-    bool hasAppGallery = false,
-  }) =>
-      switch (this) {
+  /// Получить ссылку на бейдж
+  String badgeUrl({required bool isRu}) => switch (this) {
         // App Store
         appStore => isRu
             ? Assets.images.storeBadges.appstoreRu

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 /// {@template store_badge_entity.class}
-/// Ссылка на магазин с данными для бейджа
+/// Ссылка на стор с данными для бейджа
 /// {@endtemplate}
 final class StoreBadgeEntity extends Equatable {
   /// {@macro store_badge_entity.class}
