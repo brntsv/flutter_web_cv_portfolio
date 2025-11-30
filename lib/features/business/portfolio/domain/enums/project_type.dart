@@ -36,9 +36,34 @@ enum ProjectType {
 
   /// Описание проекта
   String projectDescription(AppLocalizations l10n) => switch (this) {
-        flourAndOrder => l10n.flourAndOrderDescription,
-        realtOne => l10n.realtOneDescription,
-        novex => l10n.novexDescription,
+        flourAndOrder => l10n.flourAndOrderDescriptionIntro,
+        realtOne => l10n.realtOneDescriptionIntro,
+        novex => l10n.novexDescriptionIntro,
+      };
+
+  /// Описаниe проекта, буллет‑список
+  List<String> projectDescriptionItems(AppLocalizations l10n) => switch (this) {
+        flourAndOrder => [
+          l10n.flourAndOrderDescriptionItem1,
+          l10n.flourAndOrderDescriptionItem2,
+          l10n.flourAndOrderDescriptionItem3,
+          l10n.flourAndOrderDescriptionItem4,
+          l10n.flourAndOrderDescriptionItem5,
+        ],
+        realtOne => [
+            l10n.realtOneDescriptionItem1,
+            l10n.realtOneDescriptionItem2,
+            l10n.realtOneDescriptionItem3,
+            l10n.realtOneDescriptionItem4,
+          ],
+        novex => [
+            l10n.novexDescriptionItem1,
+            l10n.novexDescriptionItem2,
+            l10n.novexDescriptionItem3,
+            l10n.novexDescriptionItem4,
+            l10n.novexDescriptionItem5,
+            l10n.novexDescriptionItem6,
+          ],
       };
 
   /// Обычный цвет фона, если градиент не используется/не задан

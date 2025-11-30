@@ -329,7 +329,7 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyAchievementItem4.
   ///
   /// In ru, this message translates to:
-  /// **'— Ускорил продукт за счёт оптимизации загрузки/кеширования изображений и стабилизации сети;'**
+  /// **'— Ускорил продукт за счёт оптимизации загрузки/кеширования изображений;'**
   String get nanAgencyAchievementItem4;
 
   /// No description provided for @nanAgencyAchievementItem5.
@@ -506,23 +506,113 @@ abstract class AppLocalizations {
   /// **'[Telegram](https://t.me/bntsv)'**
   String get telegram;
 
-  /// No description provided for @flourAndOrderDescription.
+  /// No description provided for @flourAndOrderDescriptionIntro.
   ///
   /// In ru, this message translates to:
-  /// **'CRM для кондитеров и пекарей'**
-  String get flourAndOrderDescription;
+  /// **'Планировщик заказов для кондитеров и пекарей'**
+  String get flourAndOrderDescriptionIntro;
 
-  /// No description provided for @realtOneDescription.
+  /// No description provided for @flourAndOrderDescriptionItem1.
   ///
   /// In ru, this message translates to:
-  /// **'Приложение для риэлторов'**
-  String get realtOneDescription;
+  /// **'Спроектировал MVP с нуля: выделил слои приложения, собрал подходящий стек пакетов и ui_kit, чтобы продукт было проще развивать дальше'**
+  String get flourAndOrderDescriptionItem1;
 
-  /// No description provided for @novexDescription.
+  /// No description provided for @flourAndOrderDescriptionItem2.
   ///
   /// In ru, this message translates to:
-  /// **'E-comm приложение для сети хозяйственных магазинов'**
-  String get novexDescription;
+  /// **'Обращал внимание на пробелы в ТЗ и UX-сценариях, уточнял требования с заказчиком и предлагал более удобные пользовательские потоки, закрывая пропущенные тесткейсы и снижая риск доработок на поздних этапах'**
+  String get flourAndOrderDescriptionItem2;
+
+  /// No description provided for @flourAndOrderDescriptionItem3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Настроил сборки и публикацию во все целевые магазины: App Store, Google Play, RuStore и AppGallery через скрипты на Makefile + fastlane'**
+  String get flourAndOrderDescriptionItem3;
+
+  /// No description provided for @flourAndOrderDescriptionItem4.
+  ///
+  /// In ru, this message translates to:
+  /// **'Реализовал оплаты как через нативные шторки in_app_purchase, так и через WebView с ЮKassa, чтобы покрыть разные сценарии и платформенные ограничения'**
+  String get flourAndOrderDescriptionItem4;
+
+  /// No description provided for @flourAndOrderDescriptionItem5.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавил контроль соединения на базе internet_connection_checker и собственного интерсептора, чтобы обрабатывать сетевые ошибки'**
+  String get flourAndOrderDescriptionItem5;
+
+  /// No description provided for @realtOneDescriptionIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приложение для риэлторов, в данный момент работает с объектами в Новосибирске и в Москве'**
+  String get realtOneDescriptionIntro;
+
+  /// No description provided for @realtOneDescriptionItem1.
+  ///
+  /// In ru, this message translates to:
+  /// **'С нуля спроектировал и собрал MVP: определил слои приложения и подобрал стек пакетов так, чтобы продукт было удобно развивать дальше'**
+  String get realtOneDescriptionItem1;
+
+  /// No description provided for @realtOneDescriptionItem2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сформулировал требования к новому API и согласовал их с командой бэкенда, а также интегрировал несколько уже существующих API заказчика, приведя их к единому контракту и слою абстракций'**
+  String get realtOneDescriptionItem2;
+
+  /// No description provided for @realtOneDescriptionItem3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Реализовал ключевые фичи для работы с объектами: шахматку (срез дома), экран этажей и интерактивный генплан; и там, и там использовал CustomPainter — оверлеи строятся по координатам, которые присылает бэкенд'**
+  String get realtOneDescriptionItem3;
+
+  /// No description provided for @realtOneDescriptionItem4.
+  ///
+  /// In ru, this message translates to:
+  /// **'Реализовал специфичный функционал под запросы заказчика: уведомления, сохранение базы клиентов, формирование заявок; чтобы несколько экранов реагировали на действия друг друга, настроил обмен событиями между BLoC’ами через собственную реализацию EventBus'**
+  String get realtOneDescriptionItem4;
+
+  /// No description provided for @novexDescriptionIntro.
+  ///
+  /// In ru, this message translates to:
+  /// **'E-commerce приложение для сети хозяйственных магазинов в Сибири'**
+  String get novexDescriptionIntro;
+
+  /// No description provided for @novexDescriptionItem1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повысил crash-free с ~59% до 99% (по данным AppMetrica), найдя и исправив критические баги, из‑за которых приложение падало у части пользователей'**
+  String get novexDescriptionItem1;
+
+  /// No description provided for @novexDescriptionItem2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ускорил загрузку экранов за счёт оптимизации загрузки и кеширования изображений; подробнее о подходе в [статье](https://medium.com/make-android/save-your-memory-usage-by-optimizing-network-image-in-flutter-cbc9f8af47cd)'**
+  String get novexDescriptionItem2;
+
+  /// No description provided for @novexDescriptionItem3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Интегрировал SearchBooster, расширив возможности поиска по каталогу'**
+  String get novexDescriptionItem3;
+
+  /// No description provided for @novexDescriptionItem4.
+  ///
+  /// In ru, this message translates to:
+  /// **'Настроил GitLab CI/CD, что сократило время выхода новых версий'**
+  String get novexDescriptionItem4;
+
+  /// No description provided for @novexDescriptionItem5.
+  ///
+  /// In ru, this message translates to:
+  /// **'Работал над крупными фичами: редизайн ключевых экранов, новое отображение наличия товара, добавление новых способов доставки, голосовой поиск'**
+  String get novexDescriptionItem5;
+
+  /// No description provided for @novexDescriptionItem6.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавил шиммер‑скелетоны, благодаря чему загрузка контента воспринимается быстрее'**
+  String get novexDescriptionItem6;
 
   /// No description provided for @viewScreenshots.
   ///

@@ -243,13 +243,76 @@ class AppLocalizationsEn extends AppLocalizations {
   String get telegram => '[Telegram](https://t.me/bntsv)';
 
   @override
-  String get flourAndOrderDescription => 'CRM for bakers';
+  String get flourAndOrderDescriptionIntro =>
+      'Order planner for confectioners and bakers';
 
   @override
-  String get realtOneDescription => 'app for realtors';
+  String get flourAndOrderDescriptionItem1 =>
+      'Designed the MVP from scratch: defined application layers, assembled an appropriate package stack and a ui_kit to make the product easier to evolve';
 
   @override
-  String get novexDescription => 'app for a network of household stores';
+  String get flourAndOrderDescriptionItem2 =>
+      'Spotted gaps in the requirements and UX scenarios, clarified them with the client and proposed smoother user flows, covering missing test cases and reducing the risk of late rework';
+
+  @override
+  String get flourAndOrderDescriptionItem3 =>
+      'Set up builds and distribution to all target stores — App Store, Google Play, RuStore and AppGallery — via Makefile + fastlane scripts';
+
+  @override
+  String get flourAndOrderDescriptionItem4 =>
+      'Implemented payments both via native in_app_purchase sheets and a WebView with YooKassa to cover different scenarios and platform limitations';
+
+  @override
+  String get flourAndOrderDescriptionItem5 =>
+      'Added connectivity checks based on internet_connection_checker and a custom interceptor to handle network errors';
+
+  @override
+  String get realtOneDescriptionIntro =>
+      'An app for realtors, currently working with properties in Novosibirsk and Moscow';
+
+  @override
+  String get realtOneDescriptionItem1 =>
+      'Designed and built the MVP from scratch: defined application layers and selected a package stack that makes the product easy to grow';
+
+  @override
+  String get realtOneDescriptionItem2 =>
+      'Defined requirements for a new API and aligned them with the backend team, and integrated several existing client APIs by unifying them under a single contract and abstraction layer';
+
+  @override
+  String get realtOneDescriptionItem3 =>
+      'Implemented key features for working with properties: a building grid view (“chessboard”), floor screen and interactive master plan; in all of them used CustomPainter — overlays are built from coordinates provided by the backend';
+
+  @override
+  String get realtOneDescriptionItem4 =>
+      'Delivered customer-specific functionality: notifications, client base storage and lead creation; wired screens together via an EventBus between BLoCs so several screens react to each other\'s actions';
+
+  @override
+  String get novexDescriptionIntro =>
+      'E-commerce app for a household goods retail chain in Siberia';
+
+  @override
+  String get novexDescriptionItem1 =>
+      'Increased crash-free rate from ~59% to 99% (AppMetrica) by finding and fixing critical bugs that were causing crashes for part of the user base';
+
+  @override
+  String get novexDescriptionItem2 =>
+      'Improved screen load times by optimizing image loading and caching; the approach is described in [this article](https://medium.com/make-android/save-your-memory-usage-by-optimizing-network-image-in-flutter-cbc9f8af47cd)';
+
+  @override
+  String get novexDescriptionItem3 =>
+      'Integrated SearchBooster, expanding catalog search capabilities';
+
+  @override
+  String get novexDescriptionItem4 =>
+      'Set up GitLab CI/CD, which reduced time-to-release for new versions';
+
+  @override
+  String get novexDescriptionItem5 =>
+      'Worked on major features: redesign of key screens, new stock availability display, additional delivery options, voice search';
+
+  @override
+  String get novexDescriptionItem6 =>
+      'Added shimmer skeletons, making content loading feel faster';
 
   @override
   String get viewScreenshots => 'View screenshots';

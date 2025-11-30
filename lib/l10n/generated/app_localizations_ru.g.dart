@@ -144,7 +144,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get nanAgencyAchievementItem4 =>
-      '— Ускорил продукт за счёт оптимизации загрузки/кеширования изображений и стабилизации сети;';
+      '— Ускорил продукт за счёт оптимизации загрузки/кеширования изображений;';
 
   @override
   String get nanAgencyAchievementItem5 =>
@@ -243,14 +243,76 @@ class AppLocalizationsRu extends AppLocalizations {
   String get telegram => '[Telegram](https://t.me/bntsv)';
 
   @override
-  String get flourAndOrderDescription => 'CRM для кондитеров и пекарей';
+  String get flourAndOrderDescriptionIntro =>
+      'Планировщик заказов для кондитеров и пекарей';
 
   @override
-  String get realtOneDescription => 'Приложение для риэлторов';
+  String get flourAndOrderDescriptionItem1 =>
+      'Спроектировал MVP с нуля: выделил слои приложения, собрал подходящий стек пакетов и ui_kit, чтобы продукт было проще развивать дальше';
 
   @override
-  String get novexDescription =>
-      'E-comm приложение для сети хозяйственных магазинов';
+  String get flourAndOrderDescriptionItem2 =>
+      'Обращал внимание на пробелы в ТЗ и UX-сценариях, уточнял требования с заказчиком и предлагал более удобные пользовательские потоки, закрывая пропущенные тесткейсы и снижая риск доработок на поздних этапах';
+
+  @override
+  String get flourAndOrderDescriptionItem3 =>
+      'Настроил сборки и публикацию во все целевые магазины: App Store, Google Play, RuStore и AppGallery через скрипты на Makefile + fastlane';
+
+  @override
+  String get flourAndOrderDescriptionItem4 =>
+      'Реализовал оплаты как через нативные шторки in_app_purchase, так и через WebView с ЮKassa, чтобы покрыть разные сценарии и платформенные ограничения';
+
+  @override
+  String get flourAndOrderDescriptionItem5 =>
+      'Добавил контроль соединения на базе internet_connection_checker и собственного интерсептора, чтобы обрабатывать сетевые ошибки';
+
+  @override
+  String get realtOneDescriptionIntro =>
+      'Приложение для риэлторов, в данный момент работает с объектами в Новосибирске и в Москве';
+
+  @override
+  String get realtOneDescriptionItem1 =>
+      'С нуля спроектировал и собрал MVP: определил слои приложения и подобрал стек пакетов так, чтобы продукт было удобно развивать дальше';
+
+  @override
+  String get realtOneDescriptionItem2 =>
+      'Сформулировал требования к новому API и согласовал их с командой бэкенда, а также интегрировал несколько уже существующих API заказчика, приведя их к единому контракту и слою абстракций';
+
+  @override
+  String get realtOneDescriptionItem3 =>
+      'Реализовал ключевые фичи для работы с объектами: шахматку (срез дома), экран этажей и интерактивный генплан; и там, и там использовал CustomPainter — оверлеи строятся по координатам, которые присылает бэкенд';
+
+  @override
+  String get realtOneDescriptionItem4 =>
+      'Реализовал специфичный функционал под запросы заказчика: уведомления, сохранение базы клиентов, формирование заявок; чтобы несколько экранов реагировали на действия друг друга, настроил обмен событиями между BLoC’ами через собственную реализацию EventBus';
+
+  @override
+  String get novexDescriptionIntro =>
+      'E-commerce приложение для сети хозяйственных магазинов в Сибири';
+
+  @override
+  String get novexDescriptionItem1 =>
+      'Повысил crash-free с ~59% до 99% (по данным AppMetrica), найдя и исправив критические баги, из‑за которых приложение падало у части пользователей';
+
+  @override
+  String get novexDescriptionItem2 =>
+      'Ускорил загрузку экранов за счёт оптимизации загрузки и кеширования изображений; подробнее о подходе в [статье](https://medium.com/make-android/save-your-memory-usage-by-optimizing-network-image-in-flutter-cbc9f8af47cd)';
+
+  @override
+  String get novexDescriptionItem3 =>
+      'Интегрировал SearchBooster, расширив возможности поиска по каталогу';
+
+  @override
+  String get novexDescriptionItem4 =>
+      'Настроил GitLab CI/CD, что сократило время выхода новых версий';
+
+  @override
+  String get novexDescriptionItem5 =>
+      'Работал над крупными фичами: редизайн ключевых экранов, новое отображение наличия товара, добавление новых способов доставки, голосовой поиск';
+
+  @override
+  String get novexDescriptionItem6 =>
+      'Добавил шиммер‑скелетоны, благодаря чему загрузка контента воспринимается быстрее';
 
   @override
   String get viewScreenshots => 'Смотреть скриншоты';

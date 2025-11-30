@@ -5,6 +5,8 @@ import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/images/base_image.dart';
 import 'package:ui_kit/widgets/base/text/base_auto_shrink_text.dart';
+import 'package:ui_kit/widgets/base/text/base_bullet_list_with_links.dart';
+import 'package:ui_kit/widgets/base/text/base_text_wth_links.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 import '../../../../locale_mode/bloc/locale_bloc.dart';
@@ -54,6 +56,7 @@ class DescriptionSection extends StatelessWidget {
           Row(
             spacing: BaseConst.base16,
             children: [
+              /// Иконка проекта
               BaseImage.asset(
                 assetPath: project.iconPath,
                 borderRadius: BorderRadius.circular(BaseConst.base14),
@@ -61,6 +64,8 @@ class DescriptionSection extends StatelessWidget {
                   context.isMobile ? BaseConst.base56 : BaseConst.base72,
                 ),
               ),
+
+              /// Название проекта
               Expanded(
                 child: BaseAutoShrinkText(
                   project.projectTitle(l10n),
@@ -69,10 +74,26 @@ class DescriptionSection extends StatelessWidget {
               ),
             ],
           ),
-          Text(
-            project.projectDescription(l10n),
-            style: textStyle.baseTextDesc,
+
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: BaseConst.base16,
+            children: [
+              /// Заголовок/интро
+              BaseTextWithLinks(
+                text: project.projectDescription(l10n),
+                style: textStyle.baseTextDesc,
+              ),
+
+              /// Буллет‑список
+              BaseBulletListWithLinks(
+                items: project.projectDescriptionItems(l10n),
+                style: textStyle.baseTextDesc,
+              ),
+            ],
           ),
+
+          /// Сторы проекта
           if (badges.isNotEmpty) ...[
             StoreBadgesWidget(badges: badges),
           ],
