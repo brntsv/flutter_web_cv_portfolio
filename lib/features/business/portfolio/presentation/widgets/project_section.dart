@@ -3,7 +3,7 @@ import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:utils/size/measure_size.dart';
 
-import '../../domain/entities/project_entity.dart';
+import '../../domain/enums/project_type.dart';
 import 'description_section.dart';
 import 'iphone_mockup.dart';
 import 'mockup_section.dart';
@@ -20,7 +20,7 @@ class ProjectSection extends StatefulWidget {
   });
 
   /// Данные проекта для отображения.
-  final ProjectEntity project;
+  final ProjectType project;
 
   /// Порядковый индекс секции в списке (для чередования колонок).
   final int index;

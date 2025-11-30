@@ -4,6 +4,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
+import 'package:ui_kit/widgets/base/images/base_image.dart';
 import 'package:ui_kit/widgets/base/indicators/base_smooth_page_indicator.dart';
 
 /// {@template iphone_mockup}
@@ -17,7 +18,7 @@ class IphoneMockup extends StatefulWidget {
   });
 
   /// Список виджетов для отображения в качестве скриншотов.
-  final List<Widget> screenshots;
+  final List<String> screenshots;
 
   @override
   State<IphoneMockup> createState() => _IphoneMockupState();
@@ -49,7 +50,9 @@ class _IphoneMockupState extends State<IphoneMockup> {
         loop: !isSingleScreenshot,
         autoplay: !isSingleScreenshot,
         autoplayDelay: 10000,
-        itemBuilder: (context, index) => widget.screenshots[index],
+        itemBuilder: (context, index) => BaseImage.asset(
+          assetPath: widget.screenshots[index],
+        ),
         onIndexChanged: (index) {
           setState(() => _currentIndex = index);
         },

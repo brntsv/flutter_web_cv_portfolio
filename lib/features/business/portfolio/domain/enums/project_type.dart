@@ -48,6 +48,20 @@ enum ProjectType {
         novex => color.novexBlue.withValues(alpha: .4),
       };
 
+  /// Скриншоты проекта
+  List<String> get screenshots => switch (this) {
+        ProjectType.flourAndOrder => Assets
+            .images.screenshots.flourAndOrder.values
+            .map((asset) => asset.keyName)
+            .toList(),
+        ProjectType.realtOne => Assets.images.screenshots.realtOne.values
+            .map((asset) => asset.keyName)
+            .toList(),
+        ProjectType.novex => Assets.images.screenshots.novex.values
+            .map((asset) => asset.keyName)
+            .toList(),
+      };
+
   /// Получить бейджи магазинов
   List<StoreBadgeEntity> badges({bool isRu = true}) {
     final storeLinks = ProjectStoreLinks.byType(this);

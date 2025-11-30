@@ -8,7 +8,7 @@ import 'package:ui_kit/widgets/base/text/base_auto_shrink_text.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 import '../../../../locale_mode/bloc/locale_bloc.dart';
-import '../../domain/entities/project_entity.dart';
+import '../../domain/enums/project_type.dart';
 import 'store_badges_widget.dart';
 
 /// {@template description_section}
@@ -22,7 +22,7 @@ class DescriptionSection extends StatelessWidget {
   });
 
   /// Данные проекта для отображения.
-  final ProjectEntity project;
+  final ProjectType project;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class DescriptionSection extends StatelessWidget {
     final textStyle = textStyles(context);
 
     final isRu = context.select<LocaleBloc, bool>((bloc) => bloc.state.isRu);
-    final badges = project.appType.badges(isRu: isRu);
+    final badges = project.badges(isRu: isRu);
 
     return Container(
       decoration: BoxDecoration(
@@ -55,7 +55,7 @@ class DescriptionSection extends StatelessWidget {
             spacing: BaseConst.base16,
             children: [
               BaseImage.asset(
-                assetPath: project.appType.iconPath,
+                assetPath: project.iconPath,
                 borderRadius: BorderRadius.circular(BaseConst.base14),
                 size: Size.square(
                   context.isMobile ? BaseConst.base56 : BaseConst.base72,
@@ -63,15 +63,14 @@ class DescriptionSection extends StatelessWidget {
               ),
               Expanded(
                 child: BaseAutoShrinkText(
-                  project.appType.projectTitle(l10n),
+                  project.projectTitle(l10n),
                   style: textStyle.h4,
                 ),
               ),
             ],
           ),
           Text(
-            // 'asfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj aasfasf sarfs af afs jhafsuias hf saduhs akuh ukah uksa asddas lkds aklj a',
-            project.appType.projectDescription(l10n),
+            project.projectDescription(l10n),
             style: textStyle.baseTextDesc,
           ),
           if (badges.isNotEmpty) ...[

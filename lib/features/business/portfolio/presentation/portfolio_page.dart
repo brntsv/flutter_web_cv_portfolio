@@ -6,11 +6,9 @@ import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/buttons/base_icon_button.dart';
-import 'package:ui_kit/widgets/base/images/base_image.dart';
 
 import '../../common/presentation/mixins/switcher_visibility_mixin.dart';
 import '../../common/presentation/widgets/top_right_language_switcher.dart';
-import '../domain/entities/project_entity.dart';
 import '../domain/enums/project_type.dart';
 import 'widgets/project_section.dart';
 
@@ -35,7 +33,7 @@ class PortfolioPage extends StatefulWidget {
 class _PortfolioPageState extends State<PortfolioPage>
     with SwitcherVisibilityMixin<PortfolioPage> {
   late final ScrollController _scrollController;
-  late final List<ProjectEntity> _projects;
+  late final List<ProjectType> _projects;
 
   static const double _threshold = BaseConst.base64;
 
@@ -44,24 +42,9 @@ class _PortfolioPageState extends State<PortfolioPage>
     super.initState();
     _scrollController = ScrollController();
     _projects = [
-      ProjectEntity(
-        appType: ProjectType.flourAndOrder,
-        screenshots: Assets.images.screenshots.flourAndOrder.values
-            .map((asset) => BaseImage.asset(assetPath: asset.keyName))
-            .toList(),
-      ),
-      ProjectEntity(
-        appType: ProjectType.realtOne,
-        screenshots: Assets.images.screenshots.realtOne.values
-            .map((asset) => BaseImage.asset(assetPath: asset.keyName))
-            .toList(),
-      ),
-      ProjectEntity(
-        appType: ProjectType.novex,
-        screenshots: Assets.images.screenshots.novex.values
-            .map((asset) => BaseImage.asset(assetPath: asset.keyName))
-            .toList(),
-      ),
+      ProjectType.flourAndOrder,
+      ProjectType.realtOne,
+      ProjectType.novex,
     ];
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -75,7 +58,7 @@ class _PortfolioPageState extends State<PortfolioPage>
   int? _resolveInitialIndex() {
     final type = widget.initialProject;
     if (type == null) return null;
-    final i = _projects.indexWhere((e) => e.appType == type);
+    final i = _projects.indexWhere((e) => e == type);
     return i >= 0 ? i : null;
   }
 
@@ -170,7 +153,7 @@ class _PortfolioContent extends StatelessWidget {
 
   final ScrollController controller;
   final double threshold;
-  final List<ProjectEntity> projects;
+  final List<ProjectType> projects;
   final ValueChanged<bool> onSwitcherVisibilityChanged;
 
   @override

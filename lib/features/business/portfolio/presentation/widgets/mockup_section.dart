@@ -3,7 +3,7 @@ import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 
-import '../../domain/entities/project_entity.dart';
+import '../../domain/enums/project_type.dart';
 import 'iphone_mockup.dart';
 
 /// {@template mockup_section}
@@ -19,7 +19,7 @@ class MockupSection extends StatelessWidget {
   });
 
   /// Данные проекта для отображения.
-  final ProjectEntity project;
+  final ProjectType project;
 
   /// Радиусы углов для контейнера.
   final BorderRadius? borderRadius;
@@ -32,7 +32,7 @@ class MockupSection extends StatelessWidget {
           ? const EdgeInsets.all(BaseConst.base72)
           : EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: project.appType.backgroundColor(color),
+        color: project.backgroundColor(color),
         borderRadius: borderRadius,
       ),
       child: Center(
