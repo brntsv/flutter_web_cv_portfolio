@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
 
-// Removed mixin usage; logic handled in AnimatedWord
-import 'animated_word.dart';
+import 'base_animated_word.dart';
 
 /// {@template animated_clickable_text.class}
 /// Анимированный кликабельный текст с коллбэком при нажатии
 /// Используется для навигации в пределах приложения
 /// {@endtemplate}
-class AnimatedClickableText extends StatelessWidget {
+class BaseAnimatedClickableText extends StatelessWidget {
   /// {@macro animated_clickable_text.class}
-  const AnimatedClickableText({
+  const BaseAnimatedClickableText({
     required this.text,
     required this.appearDuration,
     required this.appearClass,
@@ -46,7 +45,7 @@ class AnimatedClickableText extends StatelessWidget {
       final isLastWord = i == words.length - 1;
       spans.add(
         WidgetSpan(
-          child: AnimatedWord(
+          child: BaseAnimatedWord(
             word: '$word${isLastWord && description.isEmpty ? '' : ' '}',
             style: textStyle.baseText.copyWith(
               color: onTap != null ? color.blue : color.black,
@@ -67,7 +66,7 @@ class AnimatedClickableText extends StatelessWidget {
         final isLastWord = i == descWords.length - 1;
         spans.add(
           WidgetSpan(
-            child: AnimatedWord(
+            child: BaseAnimatedWord(
               word: '$word${isLastWord ? '' : ' '}',
               style: textStyle.baseText,
               wordIndex: words.length + i,

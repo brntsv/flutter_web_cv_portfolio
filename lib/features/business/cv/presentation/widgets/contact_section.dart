@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_text_with_links.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_text.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_text_with_links.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 
@@ -25,21 +25,21 @@ class ContactSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AnimatedText(
+              BaseAnimatedText(
                 text: l10n.email,
                 style: textStyle.baseText,
                 appearDuration: 3,
                 appearClass: 1,
               ),
               const SizedBox(height: BaseConst.base8),
-              AnimatedText(
+              BaseAnimatedText(
                 text: l10n.phone,
                 style: textStyle.baseText,
                 appearDuration: 6,
                 appearClass: 3,
               ),
               const SizedBox(height: BaseConst.base8),
-              AnimatedText(
+              BaseAnimatedText(
                 text: l10n.location,
                 style: textStyle.baseText,
                 appearDuration: 3,
@@ -53,12 +53,12 @@ class ContactSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: BaseConst.base8,
             children: [
-              AnimatedTextWithLinks(
+              BaseAnimatedTextWithLinks(
                 text: l10n.telegramUrl,
                 appearDuration: 6,
                 appearClass: 3,
               ),
-              AnimatedTextWithLinks(
+              BaseAnimatedTextWithLinks(
                 text: l10n.githubUrl,
                 appearDuration: 3,
                 appearClass: 1,

@@ -5,9 +5,9 @@ import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 import 'package:ui_kit/widgets/base/buttons/base_animated_elevated_button.dart';
 import 'package:ui_kit/widgets/base/images/base_icon.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_text.dart';
 
 import '../../../../l10n/localization_extension.dart';
 import '../../../navigation/router.dart';
@@ -101,7 +101,7 @@ class _BlogContent extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   /// Имя
-                  AnimatedText(
+                  BaseAnimatedText(
                     text: l10n.yourName,
                     style: textStyle.h1,
                     appearDuration: 3,
@@ -109,7 +109,7 @@ class _BlogContent extends StatelessWidget {
                   ),
 
                   /// О себе
-                  AnimatedText(
+                  BaseAnimatedText(
                     text: l10n.aboutMeBlog,
                     style: textStyle.baseText,
                     appearDuration: 4,

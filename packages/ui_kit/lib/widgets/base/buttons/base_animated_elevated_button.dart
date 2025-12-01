@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../../constants/base_constants.dart';
 import '../../../theme/theme.dart';
-import '../animated_text/animation_timing_mixin.dart';
+import '../text/animated/base_animation_timing_mixin.dart';
 import '../images/base_icon.dart';
 
 /// {@template animated_elevated_button.class}
 /// Анимированная базовая кнопка.
 /// {@endtemplate}
-class BaseAnimatedElevatedButton extends StatelessWidget with AnimationTimingMixin {
+class BaseAnimatedElevatedButton extends StatelessWidget with BaseAnimationTimingMixin {
   /// {@macro animated_elevated_button.class}
   const BaseAnimatedElevatedButton({
     required this.title,

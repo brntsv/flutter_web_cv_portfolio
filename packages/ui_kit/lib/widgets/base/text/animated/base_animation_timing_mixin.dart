@@ -1,5 +1,5 @@
 /// Миксин для работы с тайминговыми параметрами анимации текста
-mixin AnimationTimingMixin {
+mixin BaseAnimationTimingMixin {
   /// Функция для получения класса анимации (1-20) для слова
   int getAnimationClass(int wordIndex, int baseClassNum) {
     // Создаем хеш, который даст распределение слов между классами

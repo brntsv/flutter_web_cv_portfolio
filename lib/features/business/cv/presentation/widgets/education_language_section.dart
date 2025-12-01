@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_text.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 import 'section_title.dart';
@@ -40,7 +40,7 @@ class _EducationSection extends StatelessWidget {
           appearClass: 1,
         ),
         const SizedBox(height: BaseConst.base16),
-        AnimatedText(
+        BaseAnimatedText(
           text: l10n.educationInstitution,
           style: textStyle.baseText.copyWith(
             fontWeight: FontWeight.bold,
@@ -48,14 +48,14 @@ class _EducationSection extends StatelessWidget {
           appearDuration: 6,
           appearClass: 3,
         ),
-        AnimatedText(
+        BaseAnimatedText(
           text: l10n.educationDegree,
           style: textStyle.baseText,
           appearDuration: 3,
           appearClass: 1,
         ),
         const SizedBox(height: BaseConst.base8),
-        AnimatedText(
+        BaseAnimatedText(
           text: l10n.educationYears,
           style: textStyle.baseText,
           appearDuration: 6,
@@ -82,14 +82,14 @@ class _LanguagesSection extends StatelessWidget {
           appearClass: 1,
         ),
         const SizedBox(height: BaseConst.base16),
-        AnimatedText(
+        BaseAnimatedText(
           text: l10n.languageEnglish,
           style: textStyle.baseText,
           appearDuration: 6,
           appearClass: 3,
         ),
         const SizedBox(height: BaseConst.base8),
-        AnimatedText(
+        BaseAnimatedText(
           text: l10n.languageRussian,
           style: textStyle.baseText,
           appearDuration: 3,

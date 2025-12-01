@@ -5,8 +5,8 @@ import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 import 'package:ui_kit/widgets/base/buttons/base_animated_icon_button.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_text.dart';
 
 import '../../../../l10n/localization_extension.dart';
 import '../../common/presentation/mixins/switcher_visibility_mixin.dart';
@@ -115,7 +115,7 @@ class _CvContent extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   /// Имя
-                  AnimatedText(
+                  BaseAnimatedText(
                     text: '${l10n.yourName}, ${l10n.yourJob}',
                     style: textStyle.h1,
                     appearDuration: 4,

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_clickable_text.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_clickable_text.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_text.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 import '../../../../navigation/router.dart';
@@ -24,7 +24,7 @@ class ProjectsWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: BaseConst.base12,
       children: [
-        AnimatedText(
+        BaseAnimatedText(
           text: l10n.projects,
           style: textStyle.h3,
           appearDuration: 6,
@@ -38,14 +38,14 @@ class ProjectsWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: BaseConst.base4,
             children: [
-              AnimatedClickableText(
+              BaseAnimatedClickableText(
                 text: l10n.flourAndOrder,
                 description: l10n.flourAndOrderDesc,
                 appearDuration: 1,
                 appearClass: 2,
                 onTap: () => context.push(PortfolioRoute()),
               ),
-              AnimatedClickableText(
+              BaseAnimatedClickableText(
                 text: l10n.realtOne,
                 description: l10n.realtOneDesc,
                 appearDuration: 6,
@@ -56,7 +56,7 @@ class ProjectsWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              AnimatedClickableText(
+              BaseAnimatedClickableText(
                 text: l10n.novex,
                 description: l10n.novexDesc,
                 appearDuration: 1,

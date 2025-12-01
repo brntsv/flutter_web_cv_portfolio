@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_clickable_text.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
 import 'package:ui_kit/widgets/base/text/animated/base_animated_bullet_list_with_links.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_clickable_text.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_text.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 import '../../../../navigation/router.dart';
@@ -148,7 +148,7 @@ class _ExperienceItem extends StatelessWidget {
       children: [
         // Период работы
         Expanded(
-          child: AnimatedText(
+          child: BaseAnimatedText(
             text: data.period,
             style: textStyle.baseText,
             appearDuration: 3,
@@ -164,7 +164,7 @@ class _ExperienceItem extends StatelessWidget {
             spacing: BaseConst.base8,
             children: [
               // Позиция
-              AnimatedText(
+              BaseAnimatedText(
                 text: data.position,
                 style: textStyle.h3.copyWith(fontWeight: FontWeight.bold),
                 appearDuration: 3,
@@ -172,7 +172,7 @@ class _ExperienceItem extends StatelessWidget {
               ),
 
               // Обязанности
-              AnimatedText(
+              BaseAnimatedText(
                 text: l10n.responsibilities,
                 style: textStyle.baseText.copyWith(fontWeight: FontWeight.bold),
                 appearDuration: 6,
@@ -186,7 +186,7 @@ class _ExperienceItem extends StatelessWidget {
               ),
 
               // Достижения
-              AnimatedText(
+              BaseAnimatedText(
                 text: l10n.achievements,
                 style: textStyle.baseText.copyWith(fontWeight: FontWeight.bold),
                 appearDuration: 6,
@@ -202,7 +202,7 @@ class _ExperienceItem extends StatelessWidget {
 
               // Проекты (если есть)
               if (data.projects.isNotEmpty) ...[
-                AnimatedText(
+                BaseAnimatedText(
                   text: data.projectsTitle,
                   style:
                       textStyle.baseText.copyWith(fontWeight: FontWeight.bold),
@@ -210,7 +210,7 @@ class _ExperienceItem extends StatelessWidget {
                   appearClass: 3,
                 ),
                 ...data.projects.map(
-                  (p) => AnimatedClickableText(
+                  (p) => BaseAnimatedClickableText(
                     text: p.title,
                     description: p.description,
                     appearDuration: 8,

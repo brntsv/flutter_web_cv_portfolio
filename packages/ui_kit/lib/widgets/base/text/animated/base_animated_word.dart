@@ -2,14 +2,14 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
 
-import 'animation_timing_mixin.dart';
+import 'base_animation_timing_mixin.dart';
 
 /// {@template animated_word.class}
 /// Анимированное слово (опционально кликабельное)
 /// {@endtemplate}
-class AnimatedWord extends StatelessWidget with AnimationTimingMixin {
+class BaseAnimatedWord extends StatelessWidget with BaseAnimationTimingMixin {
   /// {@macro animated_word.class}
-  const AnimatedWord({
+  const BaseAnimatedWord({
     required this.word,
     required this.style,
     required this.wordIndex,

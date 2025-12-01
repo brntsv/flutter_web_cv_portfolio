@@ -3,7 +3,7 @@ import 'package:ui_kit/theme/theme.dart';
 import 'package:utils/url_launcher/url_launcher.dart';
 
 import '../../../../constants/base_constants.dart';
-import '../../animated_text/animated_word.dart';
+import 'base_animated_word.dart';
 
 /// {@template base_animated_bullet_list_with_links.class}
 /// Список пунктов с маркером и анимированным текстом (в т.ч. markdown‑ссылки).
@@ -56,7 +56,7 @@ class BaseAnimatedBulletListWithLinks extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: BaseConst.base8,
               children: [
-                AnimatedWord(
+                BaseAnimatedWord(
                   word: bullet,
                   wordIndex: i,
                   appearClass: appearClass,
@@ -123,7 +123,7 @@ class _AnimatedTextWithLinks extends StatelessWidget {
           WidgetSpan(
             alignment: PlaceholderAlignment.baseline,
             baseline: TextBaseline.alphabetic,
-            child: AnimatedWord(
+            child: BaseAnimatedWord(
               word: '$word${isLast ? '' : ' '}',
               style: segmentStyle,
               wordIndex: wordIndex++,

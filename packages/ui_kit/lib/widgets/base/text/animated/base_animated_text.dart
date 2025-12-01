@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
 
-import 'animated_word.dart';
+import 'base_animated_word.dart';
 
 /// {@template animated_text.class}
 /// Анимированный текст
 /// {@endtemplate}
-class AnimatedText extends StatelessWidget {
+class BaseAnimatedText extends StatelessWidget {
   /// {@macro animated_text.class}
-  const AnimatedText({
+  const BaseAnimatedText({
     required this.text,
     required this.appearDuration,
     required this.appearClass,
@@ -38,7 +38,7 @@ class AnimatedText extends StatelessWidget {
         children: List.generate(words.length, (index) {
           final isLast = index == words.length - 1;
           return WidgetSpan(
-            child: AnimatedWord(
+            child: BaseAnimatedWord(
               word: '${words[index]}${isLast ? '' : ' '}',
               style: style ?? textStyles(context).baseText,
               wordIndex: index,

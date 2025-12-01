@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kit/constants/base_constants.dart';
 import 'package:ui_kit/theme/theme.dart';
-import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_text.dart';
 
 /// {@template section_title.class}
 /// Заголовок секции
@@ -29,7 +29,7 @@ class SectionTitle extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: BaseConst.base8,
       children: [
-        AnimatedText(
+        BaseAnimatedText(
           text: title,
           style: textStyle.h2,
           appearDuration: 3,

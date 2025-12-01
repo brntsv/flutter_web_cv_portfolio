@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:utils/url_launcher/url_launcher.dart';
 
-import 'animated_word.dart';
+import 'base_animated_word.dart';
 
 /// {@template animated_text_with_links.class}
 /// Анимированный текст с Markdown ссылками
 /// {@endtemplate}
-class AnimatedTextWithLinks extends StatelessWidget {
+class BaseAnimatedTextWithLinks extends StatelessWidget {
   /// {@macro animated_text_with_links.class}
-  const AnimatedTextWithLinks({
+  const BaseAnimatedTextWithLinks({
     required this.text,
     required this.appearDuration,
     required this.appearClass,
@@ -49,7 +49,7 @@ class AnimatedTextWithLinks extends StatelessWidget {
             final isLastWord = i == words.length - 1;
             spans.add(
               WidgetSpan(
-                child: AnimatedWord(
+                child: BaseAnimatedWord(
                   word: '$word${isLastWord ? '' : ' '}',
                   style: textStyle.baseText,
                   wordIndex: wordIndex + i,
@@ -67,7 +67,7 @@ class AnimatedTextWithLinks extends StatelessWidget {
       final linkUrl = match.group(2)!;
       spans.add(
         WidgetSpan(
-          child: AnimatedWord(
+          child: BaseAnimatedWord(
             word: linkText,
             style: textStyle.baseText.copyWith(color: color.blue),
             wordIndex: wordIndex,
@@ -90,7 +90,7 @@ class AnimatedTextWithLinks extends StatelessWidget {
           final isLastWord = i == words.length - 1;
           spans.add(
             WidgetSpan(
-              child: AnimatedWord(
+              child: BaseAnimatedWord(
                 word: '$word${isLastWord ? '' : ' '}',
                 style: textStyle.baseText,
                 wordIndex: wordIndex + i,
@@ -111,7 +111,7 @@ class AnimatedTextWithLinks extends StatelessWidget {
         final isLastWord = i == descWords.length - 1;
         spans.add(
           WidgetSpan(
-            child: AnimatedWord(
+            child: BaseAnimatedWord(
               word: '$word${isLastWord ? '' : ' '}',
               style: textStyle.baseText,
               wordIndex: wordIndex + i,
