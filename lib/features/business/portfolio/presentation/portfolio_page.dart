@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:native_web_scroll/native_web_scroll.dart';
 import 'package:ui_kit/assets/assets.gen.dart';
 import 'package:ui_kit/constants/base_constants.dart';
@@ -35,6 +36,9 @@ class _PortfolioPageState extends State<PortfolioPage>
   late final ScrollController _scrollController;
   late final List<ProjectType> _projects;
 
+  // Ключи для сливеров-секций с проектами
+  final Map<ProjectType, GlobalKey> _itemKeys = {};
+
   static const double _threshold = BaseConst.base64;
 
   @override
@@ -46,6 +50,11 @@ class _PortfolioPageState extends State<PortfolioPage>
       ProjectType.realtOne,
       ProjectType.novex,
     ];
+
+    // создаём ключи для всех проектов
+    for (final p in _projects) {
+      _itemKeys[p] = GlobalKey();
+    }
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final idx = _resolveInitialIndex();
@@ -63,30 +72,22 @@ class _PortfolioPageState extends State<PortfolioPage>
   }
 
   void _scrollToIndex(int index) {
-    final itemHeight = _sectionHeight(context);
-    _scrollController.jumpTo(index * itemHeight);
-  }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final project = _projects[index];
+      final key = _itemKeys[project];
+      final ctx = key?.currentContext;
+      if (ctx == null) return;
 
-  double _sectionHeight(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+      final renderObject = ctx.findRenderObject();
+      if (renderObject is! RenderSliver) return;
 
-    // Десктоп/таблет: секция = 1 экран
-    if (!context.isMobile) return size.height;
+      final viewport = RenderAbstractViewport.of(renderObject);
 
-    // Мобилка: экран + gap между блоками +
-    // высота макета + верхний паддинг секции
-    const topPadding = BaseConst.base24;
-    const gap = BaseConst.base12;
+      // offset, при котором верх секции окажется у верхнего края вьюпорта
+      final target = viewport.getOffsetToReveal(renderObject, 0).offset;
 
-    // Ширина макета = ширина экрана минус горизонтальные паддинги секции
-    final availableWidth =
-        (size.width - BaseConst.base24 * 2).clamp(0.0, double.infinity);
-
-    // Высота макета по заданному аспекту (width/height)
-    const aspect = BaseConst.iphoneMockupWidth / BaseConst.iphoneMockupHeight;
-    final mockupHeight = availableWidth / aspect;
-
-    return topPadding + size.height + gap + mockupHeight;
+      _scrollController.jumpTo(target);
+    });
   }
 
   @override
@@ -110,6 +111,7 @@ class _PortfolioPageState extends State<PortfolioPage>
                 threshold: _threshold,
                 projects: _projects,
                 onSwitcherVisibilityChanged: updateSwitcherVisibility,
+                itemKeys: _itemKeys,
               ),
             ),
           ),
@@ -141,12 +143,14 @@ class _PortfolioContent extends StatelessWidget {
     required this.threshold,
     required this.projects,
     required this.onSwitcherVisibilityChanged,
+    required this.itemKeys,
   });
 
   final ScrollController controller;
   final double threshold;
   final List<ProjectType> projects;
   final ValueChanged<bool> onSwitcherVisibilityChanged;
+  final Map<ProjectType, GlobalKey> itemKeys;
 
   @override
   Widget build(BuildContext context) =>
@@ -162,6 +166,7 @@ class _PortfolioContent extends StatelessWidget {
           slivers: [
             ...projects.asMap().entries.map(
                   (entry) => ProjectSection(
+                    key: itemKeys[entry.value],
                     project: entry.value,
                     index: entry.key,
                   ),
