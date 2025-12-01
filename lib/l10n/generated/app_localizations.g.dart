@@ -371,7 +371,7 @@ abstract class AppLocalizations {
   /// No description provided for @skillsList.
   ///
   /// In ru, this message translates to:
-  /// **'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   EventBus   AppLinks   Push Notifications   fastlane   Makefile   GitLab CI/CD   mason   Firebase   Supabase   Shorebird   Animations   geolocator   geodesy   fvm   git'**
+  /// **'Dart   Flutter   flutter_bloc   dio   retrofit   auto_route   get_it   injectable   rxdart   EventBus    drift   AppLinks   Push Notifications    flavors   fastlane   Makefile   GitLab CI/CD   mason   Firebase   Supabase   Shorebird    flutter_lints    analysis_options   Animations   geolocator   geodesy   fvm   git'**
   String get skillsList;
 
   /// No description provided for @education.
