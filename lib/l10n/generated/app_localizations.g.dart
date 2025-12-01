@@ -299,7 +299,7 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyResponsibilityItem5.
   ///
   /// In ru, this message translates to:
-  /// **'Сборки и релизы: окружения, автоматизация (Makefile, fastlane, GitLab CI/CD), публикации в сторы;'**
+  /// **'Сборки и релизы: окружения, автоматизация (Makefile, fastlane, GitLab CI/CD), публикации в сторы.'**
   String get nanAgencyResponsibilityItem5;
 
   /// No description provided for @achievements.
@@ -341,7 +341,7 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyAchievementItem6.
   ///
   /// In ru, this message translates to:
-  /// **'Интегрировал SearchBooster и DaData, усилив поиск по каталогу и работу с формами;'**
+  /// **'Интегрировал SearchBooster и DaData, усилив поиск по каталогу и работу с формами.'**
   String get nanAgencyAchievementItem6;
 
   /// No description provided for @nanAgencyProjects.

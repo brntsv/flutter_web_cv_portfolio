@@ -46,50 +46,50 @@ class AppLocalizationsEn extends AppLocalizations {
   String get experience => 'Work Experience';
 
   @override
-  String get flourAndOrderPeriod => 'март 2025 — ноябрь 2025';
+  String get flourAndOrderPeriod => 'march 2025 — november 2025';
 
   @override
-  String get flourAndOrderPosition => 'Flutter Developer в Muka Team';
+  String get flourAndOrderPosition => 'Flutter Developer at Muka Team';
 
   @override
   String get flourAndOrderResponsibilityItem1 =>
-      'Архитектура и разработка MVP: слои приложения, стек пакетов, ui_kit;';
+      'Architecture and MVP development: application layers, package stack, ui_kit;';
 
   @override
   String get flourAndOrderResponsibilityItem2 =>
-      'Планирование фич и проработка требований: поиск и закрытие пробелов в ТЗ и UX-сценариях;';
+      'Feature planning and requirements refinement: identifying and closing gaps in specs and UX scenarios;';
 
   @override
   String get flourAndOrderResponsibilityItem3 =>
-      'Интеграция платежей, push-уведомлений, метрик и сторонних сервисов;';
+      'Integration of payments, push notifications, analytics/metrics and third-party services;';
 
   @override
   String get flourAndOrderResponsibilityItem4 =>
-      'Настройка сборок, окружений и релизов (Makefile + fastlane, сторы);';
+      'Build, environments and releases setup (Makefile, fastlane, app stores);';
 
   @override
   String get flourAndOrderResponsibilityItem5 =>
-      'Качество и UX: обработка сетевых ошибок, шиммеры и подсказки для пользователей.';
+      'Quality and UX: network error handling, shimmers and user hints.';
 
   @override
   String get flourAndOrderAchievementItem1 =>
-      'Запустил MVP «Мука и Порядок» с нуля и довёл до публикации в App Store, Google Play, RuStore и AppGallery;';
+      'Launched the “Flour and Order” MVP from scratch and delivered it to App Store, Google Play, RuStore and AppGallery;';
 
   @override
   String get flourAndOrderAchievementItem2 =>
-      'Спроектировал масштабируемую архитектуру с ui_kit, упростив дальнейшее развитие продукта;';
+      'Designed a scalable architecture with a ui_kit, simplifying further product development;';
 
   @override
   String get flourAndOrderAchievementItem3 =>
-      'Автоматизировал сборки и релизы через Makefile + fastlane, сократив время вывода версий;';
+      'Automated builds and releases with Makefile + fastlane, reducing time-to-release;';
 
   @override
   String get flourAndOrderAchievementItem4 =>
-      'Добавил шиммер‑скелетоны и анимированные подсказки, улучшив онбординг и вовлечённость пользователей;';
+      'Added shimmer skeletons and animated hints, improving onboarding and user engagement;';
 
   @override
   String get flourAndOrderAchievementItem5 =>
-      'Реализовал контроль соединения (internet_connection_checker + интерсептор) для обработки сетевых ошибок.';
+      'Implemented connectivity control (internet_connection_checker + interceptor), reducing errors caused by unstable internet.';
 
   @override
   String get app => 'Application:';
@@ -109,15 +109,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get nanAgencyResponsibilityItem1 =>
-      'Architecture and design of MVP/features: application layers, package stack, navigation;';
+      'Architecture and design of MVP/features: application layers, package stack, ui_kit;';
 
   @override
   String get nanAgencyResponsibilityItem2 =>
-      'Requirements and API refinement: formalizing contracts, integrating external services through an abstraction layer;';
+      'Requirements and API refinement together with the backend team: aligning on data formats, error scenarios and integration with third-party services;';
 
   @override
   String get nanAgencyResponsibilityItem3 =>
-      'Development of complex interfaces and domain features (catalog, search, maps/schemes of properties);';
+      'Development of complex interfaces and domain features (property schemes, catalog, cart, search, maps);';
 
   @override
   String get nanAgencyResponsibilityItem4 =>
@@ -125,7 +125,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get nanAgencyResponsibilityItem5 =>
-      'Builds and releases: environments, automation (Makefile, fastlane, GitLab CI/CD), publishing to app stores;';
+      'Builds and releases: environments, automation (Makefile, fastlane, GitLab CI/CD), publishing to app stores.';
 
   @override
   String get achievements => 'Achievements:';
@@ -152,7 +152,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get nanAgencyAchievementItem6 =>
-      'Integrated SearchBooster and DaData, strengthening catalog search and form handling;';
+      'Integrated SearchBooster and DaData, strengthening catalog search and form handling.';
 
   @override
   String get nanAgencyProjects =>

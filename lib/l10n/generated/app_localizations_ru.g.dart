@@ -125,7 +125,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get nanAgencyResponsibilityItem5 =>
-      'Сборки и релизы: окружения, автоматизация (Makefile, fastlane, GitLab CI/CD), публикации в сторы;';
+      'Сборки и релизы: окружения, автоматизация (Makefile, fastlane, GitLab CI/CD), публикации в сторы.';
 
   @override
   String get achievements => 'Достижения:';
@@ -152,7 +152,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get nanAgencyAchievementItem6 =>
-      'Интегрировал SearchBooster и DaData, усилив поиск по каталогу и работу с формами;';
+      'Интегрировал SearchBooster и DaData, усилив поиск по каталогу и работу с формами.';
 
   @override
   String get nanAgencyProjects =>
