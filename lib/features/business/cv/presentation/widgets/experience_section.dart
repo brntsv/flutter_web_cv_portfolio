@@ -4,6 +4,7 @@ import 'package:ui_kit/extensions/build_context_extension.dart';
 import 'package:ui_kit/theme/theme.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_clickable_text.dart';
 import 'package:ui_kit/widgets/base/animated_text/animated_text.dart';
+import 'package:ui_kit/widgets/base/text/animated/base_animated_bullet_list_with_links.dart';
 
 import '../../../../../l10n/localization_extension.dart';
 import '../../../../navigation/router.dart';
@@ -24,21 +25,21 @@ class ExperienceSection extends StatelessWidget {
     final items = <_ExperienceItemData>[
       // Muka
       _ExperienceItemData(
-        period: l10n.mukaPeriod,
-        position: l10n.mukaPosition,
+        period: l10n.flourAndOrderPeriod,
+        position: l10n.flourAndOrderPosition,
         responsibilities: [
-          l10n.mukaResponsibilityItem1,
-          l10n.mukaResponsibilityItem2,
-          l10n.mukaResponsibilityItem3,
-          l10n.mukaResponsibilityItem4,
-          l10n.mukaResponsibilityItem5,
+          l10n.flourAndOrderResponsibilityItem1,
+          l10n.flourAndOrderResponsibilityItem2,
+          l10n.flourAndOrderResponsibilityItem3,
+          l10n.flourAndOrderResponsibilityItem4,
+          l10n.flourAndOrderResponsibilityItem5,
         ],
         achievements: [
-          l10n.mukaAchievementItem1,
-          l10n.mukaAchievementItem2,
-          l10n.mukaAchievementItem3,
-          l10n.mukaAchievementItem4,
-          l10n.mukaAchievementItem5,
+          l10n.flourAndOrderAchievementItem1,
+          l10n.flourAndOrderAchievementItem2,
+          l10n.flourAndOrderAchievementItem3,
+          l10n.flourAndOrderAchievementItem4,
+          l10n.flourAndOrderAchievementItem5,
         ],
         projectsTitle: l10n.app,
         projects: [
@@ -177,13 +178,11 @@ class _ExperienceItem extends StatelessWidget {
                 appearDuration: 6,
                 appearClass: 3,
               ),
-              ...data.responsibilities.map(
-                (t) => AnimatedText(
-                  text: t,
-                  style: textStyle.baseText,
-                  appearDuration: 6,
-                  appearClass: 3,
-                ),
+              BaseAnimatedBulletListWithLinks(
+                items: data.responsibilities,
+                style: textStyle.baseText,
+                appearDuration: 6,
+                appearClass: 3,
               ),
 
               // Достижения
@@ -193,13 +192,12 @@ class _ExperienceItem extends StatelessWidget {
                 appearDuration: 6,
                 appearClass: 3,
               ),
-              ...data.achievements.map(
-                (t) => AnimatedText(
-                  text: t,
-                  style: textStyle.baseText,
-                  appearDuration: 8,
-                  appearClass: 4,
-                ),
+              BaseAnimatedBulletListWithLinks(
+                items: data.achievements,
+                style: textStyle.baseText,
+                appearDuration: 8,
+                appearClass: 4,
+                bullet: '—',
               ),
 
               // Проекты (если есть)

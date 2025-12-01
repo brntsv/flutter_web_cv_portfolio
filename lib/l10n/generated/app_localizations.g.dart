@@ -155,7 +155,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutMeDesc.
   ///
   /// In ru, this message translates to:
-  /// **'Делаю мобильные приложения быстрыми, устойчивыми и удобными. Люблю архитектуру и автоматизацию релизов. Работаю от целей и UX, а не от формального ТЗ.'**
+  /// **'Делаю мобильные приложения устойчивыми, понятными и готовыми к росту. Умею с нуля запускать MVP, продумывать архитектуру и требования вместе с командой, автоматизировать сборки и улучшать продукт за счёт метрик, UX и производительности.'**
   String get aboutMeDesc;
 
   /// No description provided for @projects.
@@ -170,77 +170,77 @@ abstract class AppLocalizations {
   /// **'Опыт работы'**
   String get experience;
 
-  /// No description provided for @mukaPeriod.
+  /// No description provided for @flourAndOrderPeriod.
   ///
   /// In ru, this message translates to:
   /// **'март 2025 — ноябрь 2025'**
-  String get mukaPeriod;
+  String get flourAndOrderPeriod;
 
-  /// No description provided for @mukaPosition.
+  /// No description provided for @flourAndOrderPosition.
   ///
   /// In ru, this message translates to:
   /// **'Flutter Developer в Muka Team'**
-  String get mukaPosition;
+  String get flourAndOrderPosition;
 
-  /// No description provided for @mukaResponsibilityItem1.
+  /// No description provided for @flourAndOrderResponsibilityItem1.
   ///
   /// In ru, this message translates to:
-  /// **'— Архитектура модульного приложения: слои data/domain/presentation, DI (get_it/injectable), навигация, кодогенерация;'**
-  String get mukaResponsibilityItem1;
+  /// **'Архитектура и разработка MVP: слои приложения, стек пакетов, ui_kit;'**
+  String get flourAndOrderResponsibilityItem1;
 
-  /// No description provided for @mukaResponsibilityItem2.
+  /// No description provided for @flourAndOrderResponsibilityItem2.
   ///
   /// In ru, this message translates to:
-  /// **'— Полный цикл: оценка/планирование, реализация, код‑ревью, релизы;'**
-  String get mukaResponsibilityItem2;
+  /// **'Планирование фич и проработка требований: поиск и закрытие пробелов в ТЗ и UX-сценариях;'**
+  String get flourAndOrderResponsibilityItem2;
 
-  /// No description provided for @mukaResponsibilityItem3.
+  /// No description provided for @flourAndOrderResponsibilityItem3.
   ///
   /// In ru, this message translates to:
-  /// **'— Инфраструктура: флейворы/окружения, автоматизация сборок и публикаций (Makefile, fastlane);'**
-  String get mukaResponsibilityItem3;
+  /// **'Интеграция платежей, push-уведомлений, метрик и сторонних сервисов;'**
+  String get flourAndOrderResponsibilityItem3;
 
-  /// No description provided for @mukaResponsibilityItem4.
+  /// No description provided for @flourAndOrderResponsibilityItem4.
   ///
   /// In ru, this message translates to:
-  /// **'— Ключевые фичи: OTP-авторизация, i18n/l10n, проксирование/моки, устойчивые ретраи и обработка ошибок;'**
-  String get mukaResponsibilityItem4;
+  /// **'Настройка сборок, окружений и релизов (Makefile + fastlane, сторы);'**
+  String get flourAndOrderResponsibilityItem4;
 
-  /// No description provided for @mukaResponsibilityItem5.
+  /// No description provided for @flourAndOrderResponsibilityItem5.
   ///
   /// In ru, this message translates to:
-  /// **'— Качество и безопасность: линтинг/статанализ, документация, обфускация (ProGuard/R8).'**
-  String get mukaResponsibilityItem5;
+  /// **'Качество и UX: обработка сетевых ошибок, шиммеры и подсказки для пользователей.'**
+  String get flourAndOrderResponsibilityItem5;
 
-  /// No description provided for @mukaAchievementItem1.
+  /// No description provided for @flourAndOrderAchievementItem1.
   ///
   /// In ru, this message translates to:
-  /// **'— Запустил MVP с нуля и довёл до публикации во все магазины (App Store, Google Play, RuStore, AppGallery);'**
-  String get mukaAchievementItem1;
+  /// **'Запустил MVP «Мука и Порядок» с нуля и довёл до публикации в App Store, Google Play, RuStore и AppGallery;'**
+  String get flourAndOrderAchievementItem1;
 
-  /// No description provided for @mukaAchievementItem2.
+  /// No description provided for @flourAndOrderAchievementItem2.
   ///
   /// In ru, this message translates to:
-  /// **'— Автоматизировал релизы (Makefile + fastlane), ускорив выпуск и снизив риски ошибок;'**
-  String get mukaAchievementItem2;
+  /// **'Спроектировал масштабируемую архитектуру с ui_kit, упростив дальнейшее развитие продукта;'**
+  String get flourAndOrderAchievementItem2;
 
-  /// No description provided for @mukaAchievementItem3.
+  /// No description provided for @flourAndOrderAchievementItem3.
   ///
   /// In ru, this message translates to:
-  /// **'— Спроектировал масштабируемую архитектуру с чёткими границами модулей;'**
-  String get mukaAchievementItem3;
+  /// **'Автоматизировал сборки и релизы через Makefile + fastlane, сократив время вывода версий;'**
+  String get flourAndOrderAchievementItem3;
 
-  /// No description provided for @mukaAchievementItem4.
+  /// No description provided for @flourAndOrderAchievementItem4.
   ///
   /// In ru, this message translates to:
-  /// **'— Добавил нативное scroll-to-top по активному табу и ввёл скелетоны (shimmer) для страниц (инициатива вне ТЗ) → улучшение вовлечённости и восприятия скорости;'**
-  String get mukaAchievementItem4;
+  /// **'Добавил шиммер‑скелетоны и анимированные подсказки, улучшив онбординг и вовлечённость пользователей;'**
+  String get flourAndOrderAchievementItem4;
 
-  /// No description provided for @mukaAchievementItem5.
+  /// No description provided for @flourAndOrderAchievementItem5.
   ///
   /// In ru, this message translates to:
-  /// **'— Ввёл проксирование/моки для API → быстрее проверка гипотез и отладка.'**
-  String get mukaAchievementItem5;
+  /// **'Реализовал контроль соединения (internet_connection_checker + интерсептор) для обработки сетевых ошибок.'**
+  String get flourAndOrderAchievementItem5;
 
   /// No description provided for @app.
   ///
@@ -275,31 +275,31 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyResponsibilityItem1.
   ///
   /// In ru, this message translates to:
-  /// **'— Архитектура и декомпозиция фич, планирование и оценка (позитив/реалист/пессимист);'**
+  /// **'Архитектура и дизайн MVP/фич: слои приложения, стек пакетов, ui_kit;'**
   String get nanAgencyResponsibilityItem1;
 
   /// No description provided for @nanAgencyResponsibilityItem2.
   ///
   /// In ru, this message translates to:
-  /// **'— Сопровождение: обновления Flutter/SDK/пакетов, миграции, рефакторинг и снижение техдолга;'**
+  /// **'Проработка требований и API вместе с бэкендом: договаривался о форматах данных, сценариях ошибок и интеграции со сторонними сервисами;'**
   String get nanAgencyResponsibilityItem2;
 
   /// No description provided for @nanAgencyResponsibilityItem3.
   ///
   /// In ru, this message translates to:
-  /// **'— Производительность: профилирование с DevTools (CPU/memory), оптимизация;'**
+  /// **'Разработка сложных интерфейсов и доменных фич (схемы строительных объектов, каталог, корзина, поиск, карты);'**
   String get nanAgencyResponsibilityItem3;
 
   /// No description provided for @nanAgencyResponsibilityItem4.
   ///
   /// In ru, this message translates to:
-  /// **'— Сборки и релизы: конфигурации и окружения, автоматизация (Makefile, fastlane, GitLab CI);'**
+  /// **'Производительность и стабильность: профилирование, оптимизация, снижение количества падений;'**
   String get nanAgencyResponsibilityItem4;
 
   /// No description provided for @nanAgencyResponsibilityItem5.
   ///
   /// In ru, this message translates to:
-  /// **'— Коммуникации: согласование UX/UI, код‑ревью, документация решений.'**
+  /// **'Сборки и релизы: окружения, автоматизация (Makefile, fastlane, GitLab CI/CD), публикации в сторы;'**
   String get nanAgencyResponsibilityItem5;
 
   /// No description provided for @achievements.
@@ -311,37 +311,37 @@ abstract class AppLocalizations {
   /// No description provided for @nanAgencyAchievementItem1.
   ///
   /// In ru, this message translates to:
-  /// **'— Crash-free вырос с 59% до 99% (AppMetrica);'**
+  /// **'Повысил crash-free с ~59% до 99% (AppMetrica), устранив критические падения;'**
   String get nanAgencyAchievementItem1;
 
   /// No description provided for @nanAgencyAchievementItem2.
   ///
   /// In ru, this message translates to:
-  /// **'— Внедрил CI/CD в GitLab и локальную автоматизацию релизов (Makefile + fastlane);'**
+  /// **'Спроектировал и реализовал MVP с нуля, заложив масштабируемую архитектуру;'**
   String get nanAgencyAchievementItem2;
 
   /// No description provided for @nanAgencyAchievementItem3.
   ///
   /// In ru, this message translates to:
-  /// **'— Унифицировал правила статанализа (analysis_options) во всех проектах;'**
+  /// **'Реализовал ключевые визуальные фичи для недвижимости: шахматку, экран этажей и интерактивный генплан на базе CustomPainter;'**
   String get nanAgencyAchievementItem3;
 
   /// No description provided for @nanAgencyAchievementItem4.
   ///
   /// In ru, this message translates to:
-  /// **'— Ускорил продукт за счёт оптимизации загрузки/кеширования изображений;'**
+  /// **'Ускорил визуальную загрузку экранов за счёт оптимизации загрузки/кеширования изображений и ввода шиммер‑скелетонов;'**
   String get nanAgencyAchievementItem4;
 
   /// No description provided for @nanAgencyAchievementItem5.
   ///
   /// In ru, this message translates to:
-  /// **'— Интегрировал SearchBooster и DaData, расширив функциональность поиска и форм;'**
+  /// **'Настроил GitLab CI/CD и автоматизированные релизы (Makefile + fastlane), сократив время вывода новых версий;'**
   String get nanAgencyAchievementItem5;
 
   /// No description provided for @nanAgencyAchievementItem6.
   ///
   /// In ru, this message translates to:
-  /// **'— Довёл отдельный продукт до MVP; стандартизировал ТЗ через шаблоны/манифест.'**
+  /// **'Интегрировал SearchBooster и DaData, усилив поиск по каталогу и работу с формами;'**
   String get nanAgencyAchievementItem6;
 
   /// No description provided for @nanAgencyProjects.
@@ -461,7 +461,7 @@ abstract class AppLocalizations {
   /// No description provided for @flourAndOrderDesc.
   ///
   /// In ru, this message translates to:
-  /// **' CRM-приложение для кондитеров'**
+  /// **' планировщик заказов для кондитеров'**
   String get flourAndOrderDesc;
 
   /// No description provided for @realtOneDesc.

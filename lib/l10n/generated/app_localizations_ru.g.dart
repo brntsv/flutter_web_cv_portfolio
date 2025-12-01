@@ -37,7 +37,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get aboutMeDesc =>
-      'Делаю мобильные приложения быстрыми, устойчивыми и удобными. Люблю архитектуру и автоматизацию релизов. Работаю от целей и UX, а не от формального ТЗ.';
+      'Делаю мобильные приложения устойчивыми, понятными и готовыми к росту. Умею с нуля запускать MVP, продумывать архитектуру и требования вместе с командой, автоматизировать сборки и улучшать продукт за счёт метрик, UX и производительности.';
 
   @override
   String get projects => 'Проекты';
@@ -46,50 +46,50 @@ class AppLocalizationsRu extends AppLocalizations {
   String get experience => 'Опыт работы';
 
   @override
-  String get mukaPeriod => 'март 2025 — ноябрь 2025';
+  String get flourAndOrderPeriod => 'март 2025 — ноябрь 2025';
 
   @override
-  String get mukaPosition => 'Flutter Developer в Muka Team';
+  String get flourAndOrderPosition => 'Flutter Developer в Muka Team';
 
   @override
-  String get mukaResponsibilityItem1 =>
-      '— Архитектура модульного приложения: слои data/domain/presentation, DI (get_it/injectable), навигация, кодогенерация;';
+  String get flourAndOrderResponsibilityItem1 =>
+      'Архитектура и разработка MVP: слои приложения, стек пакетов, ui_kit;';
 
   @override
-  String get mukaResponsibilityItem2 =>
-      '— Полный цикл: оценка/планирование, реализация, код‑ревью, релизы;';
+  String get flourAndOrderResponsibilityItem2 =>
+      'Планирование фич и проработка требований: поиск и закрытие пробелов в ТЗ и UX-сценариях;';
 
   @override
-  String get mukaResponsibilityItem3 =>
-      '— Инфраструктура: флейворы/окружения, автоматизация сборок и публикаций (Makefile, fastlane);';
+  String get flourAndOrderResponsibilityItem3 =>
+      'Интеграция платежей, push-уведомлений, метрик и сторонних сервисов;';
 
   @override
-  String get mukaResponsibilityItem4 =>
-      '— Ключевые фичи: OTP-авторизация, i18n/l10n, проксирование/моки, устойчивые ретраи и обработка ошибок;';
+  String get flourAndOrderResponsibilityItem4 =>
+      'Настройка сборок, окружений и релизов (Makefile + fastlane, сторы);';
 
   @override
-  String get mukaResponsibilityItem5 =>
-      '— Качество и безопасность: линтинг/статанализ, документация, обфускация (ProGuard/R8).';
+  String get flourAndOrderResponsibilityItem5 =>
+      'Качество и UX: обработка сетевых ошибок, шиммеры и подсказки для пользователей.';
 
   @override
-  String get mukaAchievementItem1 =>
-      '— Запустил MVP с нуля и довёл до публикации во все магазины (App Store, Google Play, RuStore, AppGallery);';
+  String get flourAndOrderAchievementItem1 =>
+      'Запустил MVP «Мука и Порядок» с нуля и довёл до публикации в App Store, Google Play, RuStore и AppGallery;';
 
   @override
-  String get mukaAchievementItem2 =>
-      '— Автоматизировал релизы (Makefile + fastlane), ускорив выпуск и снизив риски ошибок;';
+  String get flourAndOrderAchievementItem2 =>
+      'Спроектировал масштабируемую архитектуру с ui_kit, упростив дальнейшее развитие продукта;';
 
   @override
-  String get mukaAchievementItem3 =>
-      '— Спроектировал масштабируемую архитектуру с чёткими границами модулей;';
+  String get flourAndOrderAchievementItem3 =>
+      'Автоматизировал сборки и релизы через Makefile + fastlane, сократив время вывода версий;';
 
   @override
-  String get mukaAchievementItem4 =>
-      '— Добавил нативное scroll-to-top по активному табу и ввёл скелетоны (shimmer) для страниц (инициатива вне ТЗ) → улучшение вовлечённости и восприятия скорости;';
+  String get flourAndOrderAchievementItem4 =>
+      'Добавил шиммер‑скелетоны и анимированные подсказки, улучшив онбординг и вовлечённость пользователей;';
 
   @override
-  String get mukaAchievementItem5 =>
-      '— Ввёл проксирование/моки для API → быстрее проверка гипотез и отладка.';
+  String get flourAndOrderAchievementItem5 =>
+      'Реализовал контроль соединения (internet_connection_checker + интерсептор) для обработки сетевых ошибок.';
 
   @override
   String get app => 'Приложение:';
@@ -109,50 +109,50 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get nanAgencyResponsibilityItem1 =>
-      '— Архитектура и декомпозиция фич, планирование и оценка (позитив/реалист/пессимист);';
+      'Архитектура и дизайн MVP/фич: слои приложения, стек пакетов, ui_kit;';
 
   @override
   String get nanAgencyResponsibilityItem2 =>
-      '— Сопровождение: обновления Flutter/SDK/пакетов, миграции, рефакторинг и снижение техдолга;';
+      'Проработка требований и API вместе с бэкендом: договаривался о форматах данных, сценариях ошибок и интеграции со сторонними сервисами;';
 
   @override
   String get nanAgencyResponsibilityItem3 =>
-      '— Производительность: профилирование с DevTools (CPU/memory), оптимизация;';
+      'Разработка сложных интерфейсов и доменных фич (схемы строительных объектов, каталог, корзина, поиск, карты);';
 
   @override
   String get nanAgencyResponsibilityItem4 =>
-      '— Сборки и релизы: конфигурации и окружения, автоматизация (Makefile, fastlane, GitLab CI);';
+      'Производительность и стабильность: профилирование, оптимизация, снижение количества падений;';
 
   @override
   String get nanAgencyResponsibilityItem5 =>
-      '— Коммуникации: согласование UX/UI, код‑ревью, документация решений.';
+      'Сборки и релизы: окружения, автоматизация (Makefile, fastlane, GitLab CI/CD), публикации в сторы;';
 
   @override
   String get achievements => 'Достижения:';
 
   @override
   String get nanAgencyAchievementItem1 =>
-      '— Crash-free вырос с 59% до 99% (AppMetrica);';
+      'Повысил crash-free с ~59% до 99% (AppMetrica), устранив критические падения;';
 
   @override
   String get nanAgencyAchievementItem2 =>
-      '— Внедрил CI/CD в GitLab и локальную автоматизацию релизов (Makefile + fastlane);';
+      'Спроектировал и реализовал MVP с нуля, заложив масштабируемую архитектуру;';
 
   @override
   String get nanAgencyAchievementItem3 =>
-      '— Унифицировал правила статанализа (analysis_options) во всех проектах;';
+      'Реализовал ключевые визуальные фичи для недвижимости: шахматку, экран этажей и интерактивный генплан на базе CustomPainter;';
 
   @override
   String get nanAgencyAchievementItem4 =>
-      '— Ускорил продукт за счёт оптимизации загрузки/кеширования изображений;';
+      'Ускорил визуальную загрузку экранов за счёт оптимизации загрузки/кеширования изображений и ввода шиммер‑скелетонов;';
 
   @override
   String get nanAgencyAchievementItem5 =>
-      '— Интегрировал SearchBooster и DaData, расширив функциональность поиска и форм;';
+      'Настроил GitLab CI/CD и автоматизированные релизы (Makefile + fastlane), сократив время вывода новых версий;';
 
   @override
   String get nanAgencyAchievementItem6 =>
-      '— Довёл отдельный продукт до MVP; стандартизировал ТЗ через шаблоны/манифест.';
+      'Интегрировал SearchBooster и DaData, усилив поиск по каталогу и работу с формами;';
 
   @override
   String get nanAgencyProjects =>
@@ -219,7 +219,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get novex => 'Novex';
 
   @override
-  String get flourAndOrderDesc => ' CRM-приложение для кондитеров';
+  String get flourAndOrderDesc => ' планировщик заказов для кондитеров';
 
   @override
   String get realtOneDesc => ' приложение для риэлторов';
