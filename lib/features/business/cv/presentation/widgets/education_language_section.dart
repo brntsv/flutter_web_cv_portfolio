@@ -48,12 +48,6 @@ class _EducationSection extends StatelessWidget {
           appearDuration: 6,
           appearClass: 3,
         ),
-        BaseAnimatedText(
-          text: l10n.educationDegree,
-          style: textStyle.baseText,
-          appearDuration: 3,
-          appearClass: 1,
-        ),
         const SizedBox(height: BaseConst.base8),
         BaseAnimatedText(
           text: l10n.educationYears,
